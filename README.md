@@ -1,97 +1,78 @@
-MPTEST
-======
+MIPS - MATPOWER Interior Point Solver
+=====================================
 
-MPTEST is a set of functions for implementing unit testing in Matlab or
-Octave. It was initially developed for [MATPOWER][1], and is used by
-[MATPOWER][1], [MATPOWER Interior Point Solver (MIPS)][2] and
-[MATPOWER Optimal Scheduling Tool (MOST)][3].
+The [MATPOWER Interior Point Solver (MIPS)][1] is a package of Matlab language
+M-files for solving non-linear programming problems (NLPs) using a primal
+dual interior point method. MIPS is based on [code written in C language][2]
+by Hongye Wang as a graduate student at Cornell University for optimal
+power flow applications. It was later ported to the Matlab language by
+Ray D. Zimmerman for use in [MATPOWER][3].
+
+System Requirements
+-------------------
+
+*   [Matlab][4] version 7 (R14) or later, or
+*   [GNU Octave][5] version 3.4 or later
+*   [MP-Test][6], for running the MIPS test suite
+
 
 Installation
 ------------
 
-1.  Clone the repository, or unzip the zip file into the location
-    of your choice. We will use ``<MPTEST>`` represent the path to the
-    resulting ``mptest`` directory.
+Installation and use of MIPS requires familiarity with the basic operation
+of Matlab or Octave, including setting up your Matlab path.
 
-2.  Add ``<MPTEST>/lib`` and ``<MPTEST>/lib/t`` to your Matlab path.
+1.  Clone the repository or download and extract the zip file of the MIPS
+    distribution from the [MIPS project page][1] to the location of your
+    choice. The files in the resulting `mips` or `mipsXXX` directory,
+    where `XXX` depends on the version of MIPS, should not need to be
+    modified, so it is recommended that they be kept separate from your
+    own code. We will use `<MIPS>` to denote the path to this directory.
 
-3.  Run MPTEST's own tests using ``test_mptest``. You should see something like:
+2.  Add `<MIPS>/lib` and `<MIPS>/lib/t` to your Matlab path.
+
+3.  At the Matlab prompt, type `test_mips` to run the test suite and
+    verify that MIPS is properly installed and functioning. (Note: The
+    tests require a functioning installation of [MP-Test][6]) The result
+    should resemble the following:
 ```matlab
-  >> test_mptest
-  t_test_fcns....ok
-  All tests successful (1 of 1)
-  Elapsed time 0.01 seconds.
-```
-
-Usage
------
-
-*   Write test functions of the following form, where `t_ok` and `t_is` are
-    used to test for specific conditions or matches, respectively.
-```matlab
-  function mytest1(quiet)
-  if nargin < 1
-    quiet = 0;
-  end
-  t_begin(4, quiet);
-  t_ok(pi > 3, 'size of pi');
-  if exist('my_unimplemented_functionality', 'file')
-    t_ok(1, 'unimplemented_test1');
-    t_ok(1, 'unimplemented_test2');
-  else
-    t_skip(2, 'not yet written');
-  end
-  t_is(2+2, 4, 12, '2+2 still equals 4');
-  t_end;
-```
-
-*   Then run your test function:
-```
-  >> mytest1
-  1..4
-  ok 1 - size of pi
-  skipped tests 2..3 : not yet written
-  ok 4 - 2+2 still equals 4
-  All tests successful (2 passed, 2 skipped of 4)
-  Elapsed time 0.00 seconds.
-```
-
-*   If you have several test functions, create a function to run them all as follows:
-```matlab
-  function test_everything(verbose)
-  if nargin < 1
-    verbose = 0;
-  end
-  tests = {};
-  tests{end+1} = 'mytest1';
-  tests{end+1} = 't_test_fcns';
-
-  t_run_tests( tests, verbose );
-```
-
-*   Run all of your tests at once. The output may look something like:
-```
-  >> test_everything
-  mytest1........ok (2 of 4 skipped)
-  t_test_fcns....ok
-  All tests successful (3 passed, 2 skipped of 5)
-  Elapsed time 0.02 seconds.
+  >> test_mips
+  t_mplinsolve....ok
+  t_mips..........ok
+  t_qps_mips......ok
+  All tests successful (136 of 136)
+  Elapsed time 0.11 seconds.
 ```
 
 Documentation
 -------------
 
-Please use the standard Matlab/Octave `help` command for further documentation
-on the individual functions, namely: `t_begin`, `t_end`, `t_ok`, `t_is`,
-`t_skip` and `t_run_tests`.
+There are two primary sources of documentation for MIPS. The first is
+the [MIPS User's Manual][7], which gives an overview of the capabilities
+and structure of MIPS and describes the formulations behind the code. It
+can be found in your MIPS distribution at `<MIPS>/docs/MIPS-manual.pdf`
+and the latest version is always available at:
+<http://github.com/MATPOWER/mips/blob/master/docs/MIPS-manual.pdf>.
+
+And second is the built-in `help` command. As with the built-in
+functions and toolbox routines in Matlab and Octave, you can type `help`
+followed by the name of a command or M-file to get help on that particular
+function. All of the M-files in MIPS have such documentation and this
+should be considered the main reference for the calling options for each
+function, namely: `mips`, `mipsver`, and `qps_mips`.
+
 
 License
 -------
 
-MPTEST is distributed under the 3-clause BSD [license][4].
+MIPS is distributed under the [3-clause BSD license][8].
 
 ----
-[1]: http://github.com/MATPOWER/matpower
-[2]: http://github.com/MATPOWER/mips
-[3]: http://github.com/MATPOWER/most
-[4]: ./LICENSE
+[1]: http://github.com/MATPOWER/mips
+[2]: http://www.pserc.cornell.edu/tspopf/
+[3]: http://github.com/MATPOWER/matpower
+[4]: http://www.mathworks.com/
+[5]: https://www.gnu.org/software/octave/
+[6]: http://github.com/MATPOWER/mptest
+[7]: http://github.com/MATPOWER/mips/blob/master/docs/MIPS-manual.pdf
+[8]: ./LICENSE
