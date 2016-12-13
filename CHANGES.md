@@ -1,20 +1,16 @@
 Change history for MIPS
 =======================
 
-1.2.2
------
+1.2.2 - 2016-12-09
+------------------
 
-12/9/16
-* Bumped version to 1.2.2.
-* Renamed from MATLAB Interior Point Solver to MATPOWER Interior
+* 2016-12-09 - Renamed from MATLAB Interior Point Solver to MATPOWER Interior
   Point Solver.
 
-12/6/16
-* Remove dependence of t_mpsolve() on presence of have_fcn() to
+* 2016-12-06 - Remove dependence of `t_mpsolve()` on presence of `have_fcn()` to
   detect PARDISO installation.
 
-11/1/16
-* Released MATPOWER 6.0b2.
+* 2016-11-01 - Released MATPOWER 6.0b2.
 
 
 Changes since 1.2
