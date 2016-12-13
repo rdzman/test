@@ -66,7 +66,8 @@ t_most_spuc............ok (576 of 720 skipped)
 t_most_uc..............ok (208 of 260 skipped)
 t_most_suc.............ok (148 of 185 skipped)
 All tests successful (762 passed, 932 skipped of 1694)
-Elapsed time 93.13 seconds.```
+Elapsed time 93.13 seconds.
+```
 
 Documentation
 -------------
