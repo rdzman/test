@@ -16,9 +16,9 @@ Change history for MIPS
 1.2.1 (2016-06-01)
 ------------------
 
-* 2015-03-27 - Fixed issue where default value of 'feastol' option was not being
-  set correctly in mips() when called directly (or via qps_mips())
-  with 'feastol' = 0.
+* 2015-03-27 - Fixed issue where default value of `feastol` option was not being
+  set correctly in `mips()` when called directly (or via `qps_mips()`)
+  with `feastol = 0`.
 
 
 1.2 (2015-03-20)
@@ -28,7 +28,7 @@ Change history for MIPS
 
 * 2015-03-19 - Added support for using PARDISO as linear solver for
   computing interior-point update steps in MIPS, via new `mplinsolver()`
-  function and `'linsolver'` option.
+  function and `linsolver` option.
 
 * 2015-02-25 - Switch to more permissive 3-clause BSD license from GPL 3.0.
 
