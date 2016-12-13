@@ -1,8 +1,8 @@
 Change history for MIPS
 =======================
 
-1.2.2 (2016-12-09)
-------------------
+1.2.2 (2016-12-15) - released with MATPOWER 6.0
+-----------------------------------------------
 
 * 2016-12-09 - Renamed from MATLAB Interior Point Solver to MATPOWER Interior
   Point Solver.
@@ -13,18 +13,16 @@ Change history for MIPS
 * 2016-11-01 - Released MATPOWER 6.0b2.
 
 
-1.2.1 (2016-06-01)
-------------------
+1.2.1 (2016-06-01) - released with MATPOWER 6.0b1
+-------------------------------------------------
 
 * 2015-03-27 - Fixed issue where default value of `feastol` option was not being
   set correctly in `mips()` when called directly (or via `qps_mips()`)
   with `feastol = 0`.
 
 
-1.2 (2015-03-20)
-----------------
-
-* 2015-03-20 - Released version 1.2 (with MATPOWER 5.1).
+1.2 (2015-03-20) - released with MATPOWER 5.1
+---------------------------------------------
 
 * 2015-03-19 - Added support for using PARDISO as linear solver for
   computing interior-point update steps in MIPS, via new `mplinsolver()`
@@ -33,24 +31,20 @@ Change history for MIPS
 * 2015-02-25 - Switch to more permissive 3-clause BSD license from GPL 3.0.
 
 
-1.1 (2014-12-17)
-----------------
-
-* 2014-12-17 - Released version 1.1 (with MATPOWER 5.0).
+1.1 (2014-12-17) - released with MATPOWER 5.0
+---------------------------------------------
 
 * 2014-12-02 - Additional user-settable options: `xi`, `sigma`, `z0`,
   `alpha_min`, `rho_min`, `rho_max`, `mu_threshold` and `max_stepsize`.
 
-* **INCOMPATIBLE CHANGE**: The name of the option to `mips()` to specify
-  the maximum number of step-size reductions when `step_control` is on
-  was changed from `max_red` to `sc.red_it` for consistency with
+* 2014-12-02 - **INCOMPATIBLE CHANGE**: The name of the option to `mips()`
+  to specify the maximum number of step-size reductions when `step_control`
+  is on was changed from `max_red` to `sc.red_it` for consistency with
   other MATPOWER options.
 
-* 2014-07-01 - Released MATPOWER 5.0b1.
 
-
-1.0.2 (2013-11-05)
-------------------
+1.0.2 (2013-11-05) - released with MATPOWER 5.0b1 (2014-07-01)
+--------------------------------------------------------------
 
 * 2013-11-05 - Fixed a bug in MIPS where a near-singular matrix could produce
   an extremely large Newton step, resulting in incorrectly satisfying
@@ -66,22 +60,20 @@ Change history for MIPS
 * 2011-12-14 - Released MATPOWER 4.1.
 
 
-1.0 (2011-02-07)
-----------------
+1.0 (2011-02-07) - released with MATPOWER 4.0
+---------------------------------------------
 
-* 2011-02-07 - Released version 1.0 (with MATPOWER 4.0).
-
-
-1.0b5 (2010-12-13)
-------------------
-
-* 2010-12-13 - Released version 1.0b5 (with MATPOWER 4.0b5).
+* _no change_
 
 
-1.0b4 (2010-05-21)
-------------------
+1.0b5 (2010-12-13) - released with MATPOWER 4.0b5
+-------------------------------------------------
 
-* 2010-05-21 - Released version 1.0b4 (with MATPOWER 4.0b4).
+* _no change_
+
+
+1.0b4 (2010-05-21) - released with MATPOWER 4.0b4
+-------------------------------------------------
 
 * 2010-05-10 - Modified input args for Hessian evaluation function for MIPS.
   Requires `cost_mult` as 3rd argument.
@@ -89,10 +81,8 @@ Change history for MIPS
 * 2010-04-27 - Check for NaN's in update step.
 
 
-1.0b4 (2010-04-19)
-------------------
-
-* 2010-04-19 - Released version 1.0b3 (with MATPOWER 4.0b3).
+1.0b3 (2010-04-19) - released with MATPOWER 4.0b3
+-------------------------------------------------
 
 * 2010-04-19 - Changed licensing to GNU General Public license. See
   `LICENSE` and `COPYING` files for details.
@@ -100,10 +90,8 @@ Change history for MIPS
 * 2010-04-06 - GNU Octave compatibility!  (tested with Octave 3.2.3)
 
 
-1.0b2 (2010-03-19)
-------------------
-
-* 2010-03-19 - Released version 1.0b2 (with MATPOWER 4.0b2).
+1.0b2 (2010-03-19) - released with MATPOWER 4.0b2
+-------------------------------------------------
 
 * 2010-03-10 - Added optional input arg to `mipsver()` function to
   trigger return of entire version struct with `Name`, `Version`,
@@ -139,10 +127,8 @@ Change history for MIPS
 * 2010-01-10 - Added acknowledgement of port from Hongye Wang's code.
 
 
-1.0b1 (2009-12-24)
-------------------
-
-* 2009-12-24 - Released version 1.0b1 (with MATPOWER 4.0b1).
+1.0b1 (2009-12-24) - released with MATPOWER 4.0b1
+-------------------------------------------------
 
 * 2009-11-04 - Removed unnecessary `return` statement at end of all M-files. If
   anything it should be an `end` statement, but even that is
