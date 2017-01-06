@@ -24,5 +24,5 @@ tag each release.
 
 
 [1]: LICENSE
-[2]: 
+[2]: CONTRIBUTING.md
 [3]: http://scottchacon.com/2011/08/31/github-flow.html
