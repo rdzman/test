@@ -98,32 +98,32 @@ Click "Fork" on the [repository page][12] on GitHub.
 
 Check out your copy locally and configure the remotes:
 
-   ```bash
-   # clone your fork of the repo into the current directory
-   git clone https://github.com/<your-username>/matpower.git
-   # go to the newly cloned directory
-   cd matpower
-   # assign the original repo to a remote called "upstream"
-   git remote add upstream https://github.com/MATPOWER/matpower.git
-   ```
+    ```bash
+    # clone your fork of the repo into the current directory
+    git clone https://github.com/<your-username>/matpower.git
+    # go to the newly cloned directory
+    cd matpower
+    # assign the original repo to a remote called "upstream"
+    git remote add upstream https://github.com/MATPOWER/matpower.git
+    ```
 
 #### Step 4 : Update
 
 If you cloned a while ago, get the latest changes from upstream:
 
-   ```bash
-   git checkout master
-   git pull upstream master
-   ```
+    ```bash
+    git checkout master
+    git pull upstream master
+    ```
 
 #### Step 5 : Branch
 
 Create a new topic branch for your new feature, change or fix ... always
 from an up-to-date `master` branch:
 
-   ```bash
-   git checkout -b <topic-branch-name>
-   ```
+    ```bash
+    git checkout -b <topic-branch-name>
+    ```
 
 #### Step 6 : Commit
 
