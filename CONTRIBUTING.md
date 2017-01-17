@@ -190,10 +190,10 @@ For example, a good commit message might look something like:
 
 Use `git rebase` (not `git merge`) to sync your work from time to time.
 
-    ```bash
-    git fetch upstream
-    git rebase upstream/master
-    ```
+  ```bash
+  git fetch upstream
+  git rebase upstream/master
+  ```
 
 And use Git's [interactive rebase][13] feature to tidy up your commits
 *before* making them public. See [this article][14] for some helpful background
@@ -209,9 +209,9 @@ MATPOWER test files (e.g. [`t_pf`](lib/t/t_pf.m)) for examples of how to
 write tests.
 
 You can run your tests by typing the name of your test function,
-    ```matlab
-    t_pf
-    ```
+  ```matlab
+  t_pf
+  ```
 or `test_matpower` to run the entire test suite.
 
 #### Step 9 : Push
