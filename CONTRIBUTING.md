@@ -118,7 +118,8 @@ Check out your copy locally and configure the remotes:
 
 #### Step 4 : Update
 
-If you cloned a while ago, get the latest changes from upstream:
+If it has been a while since you first made your clone, get all of the
+latest changes from the upstream repository:
 
   ```bash
   git checkout master
@@ -127,7 +128,7 @@ If you cloned a while ago, get the latest changes from upstream:
 
 #### Step 5 : Branch
 
-Create a new topic branch for your new feature, change or fix ... always
+Create a new topic branch for your new feature, change or fix, always
 from an up-to-date `master` branch:
 
   ```bash
@@ -136,7 +137,8 @@ from an up-to-date `master` branch:
 
 #### Step 6 : Commit
 
-Commit your changes in logical chunks. Do not combine multiple logical
+Edit your local copy of the files to implement your feature, change or fix.
+Then commit your changes in logical chunks. Do not combine multiple logical
 changes in a single commit. And please adhere to the guidlines below for
 commit messages.
 Add and commit:
@@ -154,15 +156,16 @@ what changed and why. Follow these guidelines when writing one:
    for example, "Fix issue #4", not "Fixed issue #4" or "Fixes issue #4".
    All other words in this description should be in lowercase with the
    exception of proper nouns, acronyms, and references to code, such as
-   function/variable names.
+   function or variable names.
 2. Keep the second line blank.
 3. Wrap all other lines at 72 columns.
 
-If your patch fixes an open issue, the issue should be referenced in the first
-line of the commit message with the issue number,
-e.g. `Fix #4, Q limit violations` and at the end of the message with the full
-URL. Use the `Fixes:` prefix for bug fixes. For other references use `Refs:`.
-For example, a good commit message might look something like:
+If your patch fixes an open issue, the issue should be referenced in the
+first line of the commit message with the issue number preceded by a hash
+symbol (`#`), e.g. `Fix #4, Q limit violations` and at the end of the
+message with the full URL. Use the `Fixes:` prefix for bug fixes. For
+other references use `Refs:`. For example, a good commit message might
+look something like:
 
   ```text
   Fix issue #4, Q limit violations in CPF.
@@ -192,10 +195,10 @@ For example, a good commit message might look something like:
 
 Bug fixes and features **should come with tests**, either added to the
 appropriate existing test function in `lib/t`, or in a new test function
-whose name begins with `t_`, in which case it should also be added to
-`test_matpower.m`. See the documentation for [MP-Test][3] and the existing
-MATPOWER test files (e.g. [`t_pf`](lib/t/t_pf.m)) for examples of how to
-write tests.
+with a descriptive name beginning with `t_`, in which case it should also
+be added to `test_matpower.m`. See the documentation for [MP-Test][3] and
+the existing MATPOWER test files (e.g. [`t_pf`](lib/t/t_pf.m)) for
+examples of how to write tests.
 
 You can run your tests by typing the name of your test function at the
 Matlab or Octave prompt, or `test_matpower` to run the entire test suite.
@@ -212,9 +215,9 @@ development branch from time to time, and especially before pushing.
   git rebase upstream/master
   ```
 
-And use Git's [interactive rebase][13] feature to tidy up your commits
-*before* making them public. See [this article][14] for some helpful background
-on `git rebase` vs. `git merge`.
+And use Git's [interactive rebase][13] feature to tidy up your commits if
+necessary *before* making them public. See [this article][14] for some
+helpful background on `git rebase` vs. `git merge`.
 
 #### Step 9 : Push
 
@@ -227,7 +230,7 @@ Push your topic branch up to your fork on GitHub.
 #### Step 10 : [Open a Pull Request][15]
 
 Open a pull request against the `master` branch, by going to the GitHub page
-for your fork (https://github.com/<your-username>/matpower), and selecting
+for your fork (https://github.com/\<your-username\>/matpower), and selecting
 your topic branch. Click the "Pull Request" button and fill out the form
 using a clear, accurate title and description.
 
