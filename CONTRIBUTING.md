@@ -1,5 +1,20 @@
-CONTRIBUTING
-============
+MATPOWER Contributors Guide
+===========================
+
+- licensing
+- issue contributions
+- code contributions
+    - fork
+    - branch
+    - commit
+    - rebase
+    - test
+    - push
+    - discuss and update
+    - landing
+- branching model
+
+--
 
 By submitting a pull request, you represent that you have the right to
 license your contribution to PSERC and the community, and agree by
