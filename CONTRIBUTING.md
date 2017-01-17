@@ -230,7 +230,7 @@ Push your topic branch up to your fork on GitHub.
 #### Step 10 : [Open a Pull Request][15]
 
 Open a pull request against the `master` branch, by going to the GitHub page
-for your fork (https://github.com/\<your-username\>/matpower), and selecting
+for your fork (`https://github.com/<your-username>/matpower`), and selecting
 your topic branch. Click the "Pull Request" button and fill out the form
 using a clear, accurate title and description.
 
@@ -247,10 +247,10 @@ discouraged.
 
 To make changes to an existing pull request, make the changes to your branch.
 When you push that branch to your fork, GitHub will automatically update the
-pull request. Each time the pull request is updated it triggers a CI
-(continuous integration) test run which results in a √ or x next to the
-commit on the pull request page and next to the pull request name in the
-issue tracker.
+pull request. Each time the pull request is updated it triggers a [CI
+(continuous integration) test run][18] which results in a check mark or an
+X next to the commit on the pull request page and next to the pull request
+name in the issue tracker, indicating whether or not all tests passed.
 
 After your pull request has been reviewed and approved by a MATPOWER
 Collaborator, it can be merged into the upstream MATPOWER repository.
@@ -306,3 +306,4 @@ the power systems community. **Thank you!**
 [15]: https://help.github.com/articles/about-pull-requests/
 [16]: LICENSE
 [17]: http://scottchacon.com/2011/08/31/github-flow.html
+[18]: https://travis-ci.org/MATPOWER/matpower
