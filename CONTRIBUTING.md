@@ -98,51 +98,51 @@ Click "Fork" on the [repository page][12] on GitHub.
 
 Check out your copy locally and configure the remotes:
 
-    ```bash
-    # clone your fork of the repo into the current directory
-    git clone https://github.com/<your-username>/matpower.git
-    # go to the newly cloned directory
-    cd matpower
-    # assign the original repo to a remote called "upstream"
-    git remote add upstream https://github.com/MATPOWER/matpower.git
-    ```
+  ```bash
+  # clone your fork of the repo into the current directory
+  git clone https://github.com/<your-username>/matpower.git
+  # go to the newly cloned directory
+  cd matpower
+  # assign the original repo to a remote called "upstream"
+  git remote add upstream https://github.com/MATPOWER/matpower.git
+  ```
 
 #### Step 4 : Update
 
 If you cloned a while ago, get the latest changes from upstream:
 
-    ```bash
-    git checkout master
-    git pull upstream master
-    ```
+  ```bash
+  git checkout master
+  git pull upstream master
+  ```
 
 #### Step 5 : Branch
 
 Create a new topic branch for your new feature, change or fix ... always
 from an up-to-date `master` branch:
 
-    ```bash
-    git checkout -b <topic-branch-name>
-    ```
+  ```bash
+  git checkout -b <topic-branch-name>
+  ```
 
 #### Step 6 : Commit
 
 Make sure git knows your name and email address:
 
-    ```bash
-    git config --global user.name "J. Random User"
-    git config --global user.email "j.random.user@example.com"
-    ```
+  ```bash
+  git config --global user.name "J. Random User"
+  git config --global user.email "j.random.user@example.com"
+  ```
 
 Commit your changes in logical chunks. Do not combine multiple logical
 changes in a single commit. And please adhere to the guidlines below for
 commit messages.
 Add and commit:
 
-    ```bash
-    git add my/changed/files
-    git commit
-    ```
+  ```bash
+  git add my/changed/files
+  git commit
+  ```
 
 Writing good commit messages is important. A commit message should describe
 what changed and why. Follow these guidelines when writing one:
@@ -162,29 +162,29 @@ e.g. `Fix #4, Q limit violations` and at the end of the message with the full
 URL. Use the `Fixes:` prefix for bug fixes. For other references use `Refs:`.
 For example, a good commit message might look something like:
 
-    ```text
-    Fix issue #4, Q limit violations in CPF.
-    
-    More detailed explanatory text, if necessary.  Wrap it to about 72
-    characters or so.  In some contexts, the first line is treated as the
-    subject of an email and the rest of the text as the body.  The blank
-    line separating the summary from the body is critical (unless you omit
-    the body entirely); tools like rebase can get confused if you run the
-    two together.
+  ```text
+  Fix issue #4, Q limit violations in CPF.
+  
+  More detailed explanatory text, if necessary.  Wrap it to about 72
+  characters or so.  In some contexts, the first line is treated as the
+  subject of an email and the rest of the text as the body.  The blank
+  line separating the summary from the body is critical (unless you omit
+  the body entirely); tools like rebase can get confused if you run the
+  two together.
 
-    Further paragraphs come after blank lines.
+  Further paragraphs come after blank lines.
 
-    - Bullet points are okay, too.
+  - Bullet points are okay, too.
 
-    - Typically a hyphen or asterisk is used for the bullet, followed by a
-      single space, with blank lines in between, but conventions vary here.
+  - Typically a hyphen or asterisk is used for the bullet, followed by a
+    single space, with blank lines in between, but conventions vary here.
 
-    - Use a hanging indent
+  - Use a hanging indent
 
-    Fixes: https://github.com/MATPOWER/matpower/issues/4
-    Refs: http://www.mail-archive.com/matpower-l@cornell.edu/msg05557.html
-    Refs: https://github.com/MATPOWER/matpower/pull/5
-    ```
+  Fixes: https://github.com/MATPOWER/matpower/issues/4
+  Refs: http://www.mail-archive.com/matpower-l@cornell.edu/msg05557.html
+  Refs: https://github.com/MATPOWER/matpower/pull/5
+  ```
 
 #### Step 7 : Rebase
 
