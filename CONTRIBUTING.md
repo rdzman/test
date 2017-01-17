@@ -253,7 +253,10 @@ X next to the commit on the pull request page and next to the pull request
 name in the issue tracker, indicating whether or not all tests passed.
 
 After your pull request has been reviewed and approved by a MATPOWER
-Collaborator, it can be merged into the upstream MATPOWER repository.
+Collaborator, it can be merged into the upstream MATPOWER repository. Once
+this has happened the pull request is closed and your contributions are
+part of the project and available to the world! Congratulations and many
+thanks!
 
 
 ### Git Workflow and Branching Model
