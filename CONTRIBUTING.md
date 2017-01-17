@@ -90,6 +90,13 @@ your changes and that they follow the [MATPOWER developer guidelines][9].
 
 #### Step 1 : [Set Up Git][10].
 
+Make sure git knows your name and email address:
+
+  ```bash
+  git config --global user.name "J. Random User"
+  git config --global user.email "j.random.user@example.com"
+  ```
+
 #### Step 2 : [Fork][11] the repository.
 
 Click "Fork" on the [repository page][12] on GitHub.
@@ -106,6 +113,8 @@ Check out your copy locally and configure the remotes:
   # assign the original repo to a remote called "upstream"
   git remote add upstream https://github.com/MATPOWER/matpower.git
   ```
+
+### Making your changes
 
 #### Step 4 : Update
 
@@ -126,13 +135,6 @@ from an up-to-date `master` branch:
   ```
 
 #### Step 6 : Commit
-
-Make sure git knows your name and email address:
-
-  ```bash
-  git config --global user.name "J. Random User"
-  git config --global user.email "j.random.user@example.com"
-  ```
 
 Commit your changes in logical chunks. Do not combine multiple logical
 changes in a single commit. And please adhere to the guidlines below for
@@ -186,9 +188,24 @@ For example, a good commit message might look something like:
   Refs: https://github.com/MATPOWER/matpower/pull/5
   ```
 
-#### Step 7 : Rebase
+#### Step 7 : Test
 
-Use `git rebase` (not `git merge`) to sync your work from time to time.
+Bug fixes and features **should come with tests**, either added to the
+appropriate existing test function in `lib/t`, or in a new test function
+whose name begins with `t_`, in which case it should also be added to
+`test_matpower.m`. See the documentation for [MP-Test][3] and the existing
+MATPOWER test files (e.g. [`t_pf`](lib/t/t_pf.m)) for examples of how to
+write tests.
+
+You can run your tests by typing the name of your test function at the
+Matlab or Octave prompt, or `test_matpower` to run the entire test suite.
+
+### Sharing your changes
+
+#### Step 8 : Rebase
+
+Use `git rebase` (not `git merge`) to sync your work with the upstream
+development branch from time to time, and especially before pushing.
 
   ```bash
   git fetch upstream
@@ -199,51 +216,51 @@ And use Git's [interactive rebase][13] feature to tidy up your commits
 *before* making them public. See [this article][14] for some helpful background
 on `git rebase` vs. `git merge`.
 
-#### Step 8 : Test
-
-Bug fixes and features **should come with tests**, either added to the
-appropriate existing test function in `lib/t`, or in a new test function
-whose name begins with `t_`, in which case it should also be added to
-`test_matpower.m`. See the documentation for [MP-Test][3] and the existing
-MATPOWER test files (e.g. [`t_pf`](lib/t/t_pf.m)) for examples of how to
-write tests.
-
-You can run your tests by typing the name of your test function,
-  ```matlab
-  t_pf
-  ```
-or `test_matpower` to run the entire test suite.
-
 #### Step 9 : Push
 
-#### Step 10 : Submit Pull Request
+Push your topic branch up to your fork on GitHub.
+
+  ```bash
+  git push origin <topic-branch-name>
+  ```
+
+#### Step 10 : [Open a Pull Request][15]
+
+Open a pull request against the `master` branch, by going to the GitHub page
+for your fork (https://github.com/<your-username>/matpower), and selecting
+your topic branch. Click the "Pull Request" button and fill out the form
+using a clear, accurate title and description.
+
+**IMPORTANT:** By submitting a pull request, you represent that you have
+the right to license your contribution to PSERC and the community, and
+agree by submitting the patch that your contributions are licensed under
+the [3-clause BSD license][16]. 
 
 #### Step 11 : Discuss and update
+
+You will probably get feedback or requests for changes to your pull request.
+This is a normal part of the submission process, so don't be surprised or
+discouraged.
+
+To make changes to an existing pull request, make the changes to your branch.
+When you push that branch to your fork, GitHub will automatically update the
+pull request. Each time the pull request is updated it triggers a CI
+(continuous integration) test run which results in a √ or x next to the
+commit on the pull request page and next to the pull request name in the
+issue tracker.
+
+After your pull request has been reviewed and approved by a MATPOWER
+Collaborator, it can be merged into the upstream MATPOWER repository.
 
 
 ### Git Workflow and Branching Model
 
-We use [GitHub Flow][7], meaning that the `master` branch should always
+We use [GitHub Flow][17], meaning that the `master` branch should always
 be ready for release and all new work is done in descriptively named
 branches off of `master`, which are then reviewed via pull requests. The
 only addition is that we do still have a `release` branch that always
 points to the latest versioned release. We also use tags like `6.0` to
 tag each release.
-
-
-
-- how
-    - fork
-    - branch
-    - commit
-    - rebase
-    - test
-        - ci
-    - push
-    - discuss and update
-    - landing
-
-- documentation
 
 
 Licensing
@@ -252,9 +269,7 @@ Licensing
 By submitting a pull request, you represent that you have the right to
 license your contribution to PSERC and the community, and agree by
 submitting the patch that your contributions are licensed under the
-[3-clause BSD license][5].
-
-
+[3-clause BSD license][16].
 
 Documentation
 -------------
@@ -286,8 +301,6 @@ the power systems community. **Thank you!**
 [12]: https://github.com/MATPOWER/matpower
 [13]: https://help.github.com/articles/interactive-rebase
 [14]: https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa#.7gmldhj6m
-
-
-[5]: LICENSE
-[6]: CONTRIBUTING.md
-[7]: http://scottchacon.com/2011/08/31/github-flow.html
+[15]: https://help.github.com/articles/about-pull-requests/
+[16]: LICENSE
+[17]: http://scottchacon.com/2011/08/31/github-flow.html
