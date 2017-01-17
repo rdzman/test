@@ -32,9 +32,9 @@ following directories:
 - `data` - MATPOWER case files
 - `docs` - PDF versions of the User's Manual and other documentation
 - `lib` - the software that implements MATPOWER's core functions
-- `mips` - [MIPS][1] subrepository, with it's own `lib` subdirectory
-- `most` - [MOST][2] subrepository, with it's own `lib` subdirectory
-- `mptest` - [MP-Test][3] subrepository, with it's own `lib` subdirectory
+- `mips` - [MIPS][1] subrepository, with code in it's own `lib` subdirectory
+- `most` - [MOST][2] subrepository, with code in it's own `lib` subdirectory
+- `mptest` - [MP-Test][3] subrepository, with code in it's own `lib` subdirectory
 
 Each of the subrepositories has its own master repository for tracking its
 development and issues. These subrepositories are included in the core
@@ -277,7 +277,6 @@ Documentation
 We can always use help to improve the User's Manual and other documentation.
 
 
-------
 Thanks
 ------
 
