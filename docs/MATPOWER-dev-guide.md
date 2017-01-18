@@ -61,11 +61,12 @@ The following are some guidelines, in no particular order.
     - lower case variable names
     - upper case constant names
     - no `return` in the middle of a function
-    - `%%` for comments intended to document the code
-        - *(why? for consistency ... once upon a time I began doing it
-           that way for some reason which no longer matters)*
-    - `%` to temporarily comment out unused code
-    - `%%-----  heading text  -----%%` for section headings in the code
+    - comments:
+        - `%% descriptive text` to document the code
+        - `% ` to temporarily comment out unused code
+        - `%%-----  heading text  -----%%` for section headings in the code
+        - *Why? For consistency ... once upon a time I began doing it
+           that way for some reason which no longer matters.*
 
 - Fatal errors should generally be reserved for invalid inputs or other
   misuse of a function.
