@@ -51,10 +51,6 @@ submitting code changes (pull requests). A good bug report is extremely
 helpful and benefits the entire community, so if you find a bug, including
 a mistake in the documentation, please report it.
 
-**Note:** *Bugs related to one of the sub-projects, [MIPS][1], [MOST][2]
-or [MP-Test][3] should be submitted to the issue tracker for the respective
-project.*
-
 1. **Confirm it is a bug.** You should be able to demonstrate that it
 is an error caused by the code in this repository. If you do not understand
 a result you are getting, ask a question on the [discussion mailing list][5],
@@ -79,6 +75,10 @@ will avoid the need for the developers to track you down for more information.
       the bug.
     - Describe the result you got and what you expected.
     - Select 'bug' under Labels .
+
+**Note:** *Bugs related to one of the sub-projects, [MIPS][1], [MOST][2]
+or [MP-Test][3] should be submitted to the issue tracker for the respective
+project.*
 
 
 Reviewing Issues
