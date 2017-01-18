@@ -238,8 +238,8 @@ development branch from time to time, and especially before pushing.
   git rebase upstream/master
   ```
 
-And use Git's [interactive rebase][13] feature to tidy up your commits if
-necessary *before* making them public. See [this article][14] for some
+And use Git's [interactive rebase][13] feature to tidy up your commits, if
+necessary, *before* making them public. See [this article][14] for some
 helpful background on `git rebase` vs. `git merge`.
 
 #### Step 9 : Push
@@ -257,10 +257,10 @@ for your fork (`https://github.com/<your-username>/matpower`), and selecting
 your topic branch. Click the "Pull Request" button and fill out the form
 using a clear, accurate title and description.
 
-**IMPORTANT:** By submitting a pull request, you represent that you have
+_**IMPORTANT:** By submitting a pull request, you represent that you have
 the right to license your contribution to PSERC and the community, and
 agree by submitting the patch that your contributions are licensed under
-the [3-clause BSD license][16]. 
+the [3-clause BSD license][16]._
 
 #### Step 11 : Discuss and update
 
