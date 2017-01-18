@@ -120,7 +120,8 @@ Make sure git knows your name and email address:
 
 #### Step 2 : [Fork][11] the repository.
 
-Click "Fork" on the [repository page][12] on GitHub.
+Click "Fork" on the [repository page][12] on GitHub to create your own fork
+of the project.
 
 #### Step 3 : Clone
 
@@ -149,8 +150,8 @@ latest changes from the upstream repository:
 
 #### Step 5 : Branch
 
-Create a new topic branch for your new feature, change or fix, always
-from an up-to-date `master` branch:
+Create a new topic branch where you can work on your new feature, change
+or fix. Always create it from an up-to-date `master` branch:
 
   ```bash
   git checkout -b <topic-branch-name>
@@ -162,6 +163,7 @@ Edit your local copy of the files to implement your feature, change or fix.
 Then commit your changes in logical chunks. Do not combine multiple logical
 changes in a single commit. And please adhere to the guidlines below for
 commit messages.
+
 Add and commit:
 
   ```bash
