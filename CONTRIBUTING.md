@@ -59,7 +59,7 @@ searching [the archives][8] to see if your question has already been
 answered, of course)*.
 
 2. **Check if it has already been reported or fixed.** Make sure the bug
-still exists by attempting to reproduce it with using the latest `master`
+still exists by attempting to reproduce it using the latest `master`
 branch in the repository. Search the issues on GitHub to make sure it has
 not already been reported.
 
@@ -75,7 +75,7 @@ will avoid the need for the developers to track you down for more information.
     - Include a few lines of code or attach a script file that reproduces
       the bug.
     - Describe the result you got and what you expected.
-    - Select 'bug' under Labels .
+    - Select "bug" under "Labels".
 
 _**Note:** Bugs or issues related to one of the sub-projects, [MIPS][1],
 [MOST][2] or [MP-Test][3] should be submitted to the issue tracker for
@@ -86,19 +86,22 @@ Reviewing Issues
 ----------------
 
 If you see an issue or bug report submitted by someone else, please consider
-helping out by seeing if you can reproduce the issue on your system. If so,
-please leave a comment to that effect. Even if you are not comfortable
+helping out by attempting to reproduce the issue on your system. Report your
+experience in a comment on the issue. Even if you are not comfortable
 submitting a patch to fix it, any information you can add to help the
 developers locate a solution is greatly appreciated. Simply leave your
-comments on the issue.
+comments on the issue. The same goes for review of pull requests, which
+are discussed below.
 
 
 Submitting Additions or Modifications to the Code
 -------------------------------------------------
 
-Code contributions are a great help and are always welcome. For larger or
-more complex contributions, it is always a good idea to discuss your ideas
-first on the [developer mailing list][6].
+Code contributions are a great help and are always welcome. This includes
+bug fixes, enhancements to existing functionality, new features or tests,
+and even edits to the included documentation. It is always a good idea to
+discuss your ideas first on the the [developer mailing list][6], especially
+for larger or more complex contributions.
 
 Contributions should be submitted as pull requests, as described below.
 Before submitting your pull request, please make sure you have tested
