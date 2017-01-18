@@ -321,7 +321,7 @@ the power systems community. **Thank you!**
 [6]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
 [7]: https://github.com/MATPOWER/matpower/issues
 [8]: http://www.mail-archive.com/matpower-l@cornell.edu/
-[9]: MATPOWER-dev-guide.md
+[9]: docs/MATPOWER-dev-guide.md
 [10]: https://help.github.com/articles/set-up-git/
 [11]: https://help.github.com/articles/fork-a-repo/
 [12]: https://github.com/MATPOWER/matpower
