@@ -1,13 +1,13 @@
 MATPOWER Developer's Guide
 --------------------------
 
-Consider the following to be a rough draft of an evolving document.
-Please feel free to discuss additions, modifications, etc on the
+Consider this to be a rough draft of an evolving document.
+Please feel free to discuss additions, modifications, etc. on the
 [MATPOWER-DEV-L email list][1].
 
 One of the primary goals for the MATPOWER code is to **keep things as
-simple as possible**. That is, we want to keep the code as simple as
-possible to understand and maintain, without sacrificing performance.
+simple as possible**. That is, we want to keep the code as simple to
+understand and maintain as possible without sacrificing performance.
 
 The following are some guidelines, in no particular order.
 
