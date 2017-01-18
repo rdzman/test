@@ -16,15 +16,7 @@ helps to communicate your respect for the time and efforts of the MATPOWER
 developer community managing and developing this open source project.
 
 
-Mailing Lists
--------------
-
-Your participation is welcomed on the two mailing lists for MATPOWER
-users and developers, [MATPOWER-L][6] and [MATPOWER-DEV-L][8], respectively.
-We can always use help in answering questions from newer users.
-
-
-Repository Organization _(maybe move this to the README)_
+Repository Organization
 -----------------------
 
 This repository is for the MATPOWER core distribution organized in the
@@ -41,18 +33,26 @@ development and issues. These subrepositories are included in the core
 MATPOWER repository using [`git subrepo`][4].
 
 
+Mailing Lists
+-------------
+
+Your participation is welcomed on the two mailing lists for MATPOWER
+users and developers, [MATPOWER-L][5] and [MATPOWER-DEV-L][6], respectively.
+We can always use help in answering questions from newer users.
+
+
 Reporting a Bug
 ---------------
 
-The [issue tracker][5] is the preferred channel for reporting bugs or
+The [issue tracker][7] is the preferred channel for reporting bugs or
 submitting code changes (pull requests). A good bug report is extremely
 helpful and benefits the entire community, so if you find a bug, including
 a mistake in the documentation, please report it.
 
 1. **Confirm it is a bug.** You should be able to demonstrate that it
 is an error caused by the code in this repository. If you do not understand
-a result you are getting, ask a question on the [discussion mailing list][6],
-after searching [the archives][7] to be sure your question has not already
+a result you are getting, ask a question on the [discussion mailing list][5],
+after searching [the archives][8] to be sure your question has not already
 been answered.
 
 2. **Check if it has already been reported or fixed.** Make sure the bug
@@ -80,7 +80,7 @@ Submitting Additions or Modifications to the Code
 
 Code contributions are a great help and are always welcome. For larger or
 more complex contributions, it is always a good idea to discuss your ideas
-first on the [developer mailing list][8].
+first on the [developer mailing list][6].
 
 Contributions should be submitted as pull requests, as described below.
 Before submitting your pull request, please make sure you have tested
@@ -248,7 +248,7 @@ discouraged.
 To make changes to an existing pull request, make the changes to your branch.
 When you push that branch to your fork, GitHub will automatically update the
 pull request. Each time the pull request is updated it triggers a [CI
-(continuous integration) test run][18] which results in a check mark or an
+(continuous integration) test run][17] which results in a check mark or an
 X next to the commit on the pull request page and next to the pull request
 name in the issue tracker, indicating whether or not all tests passed.
 
@@ -261,7 +261,7 @@ thanks!
 
 ### Git Workflow and Branching Model
 
-We use [GitHub Flow][17], meaning that the `master` branch should always
+We use [GitHub Flow][18], meaning that the `master` branch should always
 be ready for release and all new work is done in descriptively named
 branches off of `master`, which are then reviewed via pull requests. The
 only addition is that we do still have a `release` branch that always
@@ -296,10 +296,10 @@ the power systems community. **Thank you!**
 [2]: https://github.com/MATPOWER/most
 [3]: https://github.com/MATPOWER/mptest
 [4]: https://github.com/ingydotnet/git-subrepo
-[5]: https://github.com/MATPOWER/matpower/issues
-[6]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
-[7]: http://www.mail-archive.com/matpower-l@cornell.edu/
-[8]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
+[5]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
+[6]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
+[7]: https://github.com/MATPOWER/matpower/issues
+[8]: http://www.mail-archive.com/matpower-l@cornell.edu/
 [9]: MATPOWER-dev-guide.md
 [10]: https://help.github.com/articles/set-up-git/
 [11]: https://help.github.com/articles/fork-a-repo/
@@ -308,5 +308,5 @@ the power systems community. **Thank you!**
 [14]: https://medium.com/@porteneuve/getting-solid-at-git-rebase-vs-merge-4fa1a48c53aa#.7gmldhj6m
 [15]: https://help.github.com/articles/about-pull-requests/
 [16]: LICENSE
-[17]: http://scottchacon.com/2011/08/31/github-flow.html
-[18]: https://travis-ci.org/MATPOWER/matpower
+[17]: https://travis-ci.org/MATPOWER/matpower
+[18]: http://scottchacon.com/2011/08/31/github-flow.html
