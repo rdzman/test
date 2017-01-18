@@ -114,8 +114,8 @@ your changes and that they follow the [MATPOWER developer guidelines][9].
 Make sure git knows your name and email address:
 
   ```bash
-  git config --global user.name "J. Random User"
-  git config --global user.email "j.random.user@example.com"
+  git config --global user.name "Random Citizen"
+  git config --global user.email "random.citizen@example.com"
   ```
 
 #### Step 2 : [Fork][11] the repository.
