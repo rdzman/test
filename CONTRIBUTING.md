@@ -300,11 +300,6 @@ license your contribution to PSERC and the community, and agree by
 submitting the patch that your contributions are licensed under the
 [3-clause BSD license][16].
 
-Documentation
--------------
-
-We can always use help to improve the User's Manual and other documentation.
-
 
 Thanks
 ------
