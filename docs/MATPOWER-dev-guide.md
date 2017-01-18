@@ -15,7 +15,7 @@ The following are some guidelines, in no particular order.
 
 - All functions should include a help section that fully describes
   the inputs, outputs and what the function does. You can use the
-  help section for [`runpf`](lib/runpf) as a template.
+  help section from [`runpf`](../lib/runpf) as a template.
 
 - Following the help section, should be a blank line, followed by the
   copyright and license lines, like:
