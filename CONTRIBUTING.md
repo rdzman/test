@@ -22,15 +22,17 @@ Repository Organization
 This repository is for the MATPOWER core distribution organized in the
 following directories:
 - `data` - MATPOWER case files
-- `docs` - PDF versions of the User's Manual and other documentation
-- `lib` - the software that implements MATPOWER's core functions
+- `docs` - PDF version of User's Manuals and other documentation
+- `lib` - software that implements MATPOWER's core functions
 - `mips` - [MIPS][1] subrepository, with code in it's own `lib` subdirectory
 - `most` - [MOST][2] subrepository, with code in it's own `lib` subdirectory
 - `mptest` - [MP-Test][3] subrepository, with code in it's own `lib` subdirectory
 
-Each of the subrepositories has its own master repository for tracking its
-development and issues. These subrepositories are included in the core
-MATPOWER repository using [`git subrepo`][4].
+The subrepositories are included in the core MATPOWER repository using
+[`git subrepo`][4]. This means these sub-projects have their own
+repositories to host their respective code development and issue tracking,
+but they do not need any special treatment when working with the MATPOWER
+repository. In this context they are just like any other files.
 
 
 Mailing Lists
@@ -48,6 +50,10 @@ The [issue tracker][7] is the preferred channel for reporting bugs or
 submitting code changes (pull requests). A good bug report is extremely
 helpful and benefits the entire community, so if you find a bug, including
 a mistake in the documentation, please report it.
+
+**Note:** *Bugs related to one of the sub-projects, [MIPS][1], [MOST][2]
+or [MP-Test][3] should be submitted to the issue tracker for the respective
+project.*
 
 1. **Confirm it is a bug.** You should be able to demonstrate that it
 is an error caused by the code in this repository. If you do not understand
@@ -73,6 +79,17 @@ will avoid the need for the developers to track you down for more information.
       the bug.
     - Describe the result you got and what you expected.
     - Select 'bug' under Labels .
+
+
+Reviewing Issues
+----------------
+
+If you see an issue or bug report submitted by someone else, please consider
+helping out by seeing if you can reproduce the issue on your system. If so,
+please leave a comment to that effect. Even if you are not comfortable
+submitting a patch to fix it, any information you can add to help the
+developers locate a solution is greatly appreciated. Simply leave your
+comments on the issue.
 
 
 Submitting Additions or Modifications to the Code
