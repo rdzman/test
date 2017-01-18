@@ -76,9 +76,9 @@ will avoid the need for the developers to track you down for more information.
     - Describe the result you got and what you expected.
     - Select 'bug' under Labels .
 
-**Note:** *Bugs related to one of the sub-projects, [MIPS][1], [MOST][2]
-or [MP-Test][3] should be submitted to the issue tracker for the respective
-project.*
+_**Note:** Bugs or issues related to one of the sub-projects, [MIPS][1],
+[MOST][2] or [MP-Test][3] should be submitted to the issue tracker for
+the respective sub-project, not to the main MATPOWER issue tracker._
 
 
 Reviewing Issues
