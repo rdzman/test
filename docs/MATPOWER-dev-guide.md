@@ -41,8 +41,8 @@ The following are some guidelines, in no particular order.
 - All input and output arguments **must** be well defined and documented.
   **No** using structs (or any other data structure) to allow passing of
   arbitrary, undocumented data.
-
-- Every piece of data must be well-defined somewhere.
+  
+- Every piece of data **must** be well-defined somewhere.
 
 - Use consistent variable names. That is, use the same name to refer to
   the same piece of data in all contexts, unless there is a good reason
@@ -55,7 +55,8 @@ The following are some guidelines, in no particular order.
     - no `end` or `return` at the end of functions
     - spaces after commas in argument lists and index lists for non-trivial
       array indexing
-        - e.g `matrix(r,c)` is ok, but `matrix(row+3, col-7)`
+        - e.g `matrix(r,c)` is ok
+        - but use a space for `matrix(row+3, col-7)`
     - lower case function names, with `_` to separate words
     - lower case variable names
     - upper case constant names
