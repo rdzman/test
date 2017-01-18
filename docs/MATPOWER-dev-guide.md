@@ -1,15 +1,38 @@
 MATPOWER Developer's Guide
 --------------------------
 
-Consider this to be a rough draft of an evolving document.
+Consider this to be a bare-bones, rough draft of an evolving
+document. I'm sure there are many helpful things that are missing.
 Please feel free to discuss additions, modifications, etc. on the
 [MATPOWER-DEV-L email list][1].
 
-One of the primary goals for the MATPOWER code is to **keep things as
-simple as possible**. That is, we want to keep the code as simple to
-understand and maintain as possible without sacrificing performance.
+One of the primary goals for the MATPOWER code is to **keep things
+as simple as possible**. That is, we want to keep the code as simple
+to understand and maintain as possible without sacrificing
+performance.
 
 The following are some guidelines, in no particular order.
+
+- All functions should include a help section that fully describes
+  the inputs, outputs and what the function does. You can use the
+  help section for [`runpf`](lib/runpf) as a template.
+
+- Following the help section, should be a blank line, followed by the
+  copyright and license lines, like:
+     ```matlab
+     %   MATPOWER
+     %   Copyright (c) 2016-2017, Power Systems Engineering Research Center (PSERC)
+     %   by <Your Name>, <Your Affiliation>
+     %
+     %   This file is part of MATPOWER.
+     %   Covered by the 3-clause BSD License (see LICENSE file for details).
+     %   See http://www.pserc.cornell.edu/matpower/ for more info.
+     ```
+
+- Write tests to cover all functionality.
+
+- Use the named constants defined by `idx_bus`, `idx_gen`, etc. rather
+  than the numerical values.
 
 - As much as possible, for each function the input arguments should be
   limited to what is needed to do the job. The output arguments should
@@ -24,11 +47,6 @@ The following are some guidelines, in no particular order.
 - Use consistent variable names. That is, use the same name to refer to
   the same piece of data in all contexts, unless there is a good reason
   to use a different name.
-
-- Write tests to cover all functionality.
-
-- Use the named constants defined by `idx_bus`, `idx_gen`, etc. rather
-  than the numerical values.
 
 - Use ...
     - 4 spaces to indent (no tabs)
