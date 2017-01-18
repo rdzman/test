@@ -52,10 +52,11 @@ helpful and benefits the entire community, so if you find a bug, including
 a mistake in the documentation, please report it.
 
 1. **Confirm it is a bug.** You should be able to demonstrate that it
-is an error caused by the code in this repository. If you do not understand
-a result you are getting, ask a question on the [discussion mailing list][5],
-after searching [the archives][8] to be sure your question has not already
-been answered.
+is an error caused by the code in this repository. If it is simply that
+you do not understand a result you are getting, ask a question on the
+[discussion mailing list][5] instead of submitting an issue *(after
+searching [the archives][8] to see if your question has already been
+answered, of course)*.
 
 2. **Check if it has already been reported or fixed.** Make sure the bug
 still exists by attempting to reproduce it with using the latest `master`
