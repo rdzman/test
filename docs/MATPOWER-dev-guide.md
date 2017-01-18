@@ -38,8 +38,8 @@ The following are some guidelines, in no particular order.
   limited to what is needed to do the job. The output arguments should
   only include things the function creates or modifies.
 
-- All input and output arguments MUST be well defined and documented.
-  NO using structs (or any other data structure) to allow passing of
+- All input and output arguments **must** be well defined and documented.
+  **No** using structs (or any other data structure) to allow passing of
   arbitrary, undocumented data.
 
 - Every piece of data must be well-defined somewhere.
