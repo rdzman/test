@@ -1358,7 +1358,7 @@ Version 4.0b1 - *Dec 24, 2009*
     - more
 
 #### 12/4/09
-  - Fixed bug in savecase for cases where A or N matrix is a single
+  - Fixed bug in `savecase[]` for cases where `A` or `N` matrix is a single
     row.
 
 #### 11/4/09
@@ -1407,9 +1407,9 @@ Version 4.0b1 - *Dec 24, 2009*
     case files, which required it.
   - **INCOMPATIBLE CHANGE:** Calling `loadcase()` with 5 output arguments
     is now interpreted as ...
-        `[baseMVA, bus, gen, branch, gencost] = loadcase(casefile)`
+    - `[baseMVA, bus, gen, branch, gencost] = loadcase(casefile)`
     ... instead of ...
-        `[baseMVA, bus, gen, branch, info] = loadcase(casefile)`
+    - `[baseMVA, bus, gen, branch, info] = loadcase(casefile)`
 
 #### 3/25/09
   - Added `add_userfcn.m` as to make it easy to add a new
