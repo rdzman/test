@@ -1487,13 +1487,13 @@ Version 4.0b1 - *Dec 24, 2009*
     shared by `opf.m`, `dcopf.m`, `fmincopf.m`, `mopf.m` and `tspopf.m`.
   - Rewrote the DC OPF to include generalized user constraints,
     costs and extra vars (like AC formulation). Note, that if
-    A or N have enough columns for the AC formulation, `opf.m`
+    `A` or `N` have enough columns for the AC formulation, `opf.m`
     assumes they are for the AC OPF and strips out the extra
     columns before passing to `dcopf.m`.
   - Added the ability to read and save generalized OPF user
     constraints, costs and var limits in case struct.
   - Modified `savecase.m` to include saving of `MU_ANGMIN`, `MU_ANGMAX`
-    columns of branch matrix.
+    columns of `branch` matrix.
 
 #### 3/13/08
   - Added a function `makeLODF.m` to compute line outage distribution
@@ -1501,7 +1501,7 @@ Version 4.0b1 - *Dec 24, 2009*
   - Added a function `scale_load.m` to scale load by zones.
 
 #### 3/7/08
-  - Updated fmincopf and mpoption to work with version 4 of
+  - Updated `fmincopf` and `mpoption` to work with version 4 of
     Optimization Toolbox. Added option `FMC_ALG` for select between
     fmincon's active set method and variations of the new
     interior-point algorithm.
@@ -1511,17 +1511,17 @@ Version 4.0b1 - *Dec 24, 2009*
   - **INCOMPATIBLE CHANGE:** `dAbr_dV()` now gives partial derivatives
     of the *squared* magnitudes of flows w.r.t. V, as opposed
     to the magnitudes.
-  - Modified the implementation of all flow constraints for fmincon
-    (and constr) to use squared flow limits instead of absolute
+  - Modified the implementation of all flow constraints for `fmincon`
+    (and `constr`) to use squared flow limits instead of absolute
     value to correctly avoid div-by-zero errors in computing
     gradients, and to prepare for implementing Hessian code.
     Shadow prices still correspond to absolute value limits.
-  - Fixed bug in fmincon (and constr and LP) based OPF which
+  - Fixed bug in `fmincon` (and `constr` and LP) based OPF which
     allowed an active power flow limit to be violated when using
     `OPF_FLOW_LIM = 1` (missing absolute value).
 
 #### 3/3/08
-  - **INCOMPATIBLE CHANGE:** Changed input argument order for uopf
+  - **INCOMPATIBLE CHANGE:** Changed input argument order for `uopf`
     and added general linear constraints and generalized costs.
 
 #### 1/10/08
@@ -1538,8 +1538,8 @@ Version 3.2 - *Sep 21, 2007*
   - Added option to `cdf2matp.m` to specify output case file version.
 
 #### 9/7/07
-  - Fixed bug in `pfsoln.m` which caused incorrect value for Qg when
-    Qmin == Qmax for all generators at a bus in power flow solution.
+  - Fixed bug in `pfsoln.m` which caused incorrect value for `Qg` when
+    `Qmin == Qmax` for all generators at a bus in power flow solution.
   - Added 5 larger scale (> 2000 bus) cases for Polish system.
     *Thanks to Roman Korab <roman.korab@polsl.pl>.*
   - Modified default OPF algorithm selection to use PDIPMOPF
@@ -1548,7 +1548,7 @@ Version 3.2 - *Sep 21, 2007*
 
 #### 7/6/07
   - Added ability in `opf.m` and `fmincopf.m` to specify initial value
-    and bounds on user variables via new input arguments z0, zl, zh.
+    and bounds on user variables via new input arguments `z0`, `zl`, `zh`.
 
 #### 6/22/07
   - **INCOMPATIBLE CHANGE:** Name of option 24 in mpoption change from
@@ -1595,16 +1595,16 @@ Version 3.1b2 - *Sep 15, 2006*
     slack distribution.
 
 #### 8/16/06
-  - Added optional outputs xr, pimul to fmincopf and `opf.m` to make them
+  - Added optional outputs `xr`, `pimul` to `fmincopf` and `opf.m` to make them
     fully interchangeable with `mopf.m`.
 
 #### 8/15/06
   - Added branch angle difference constraints to general OPF formulation
     in `fmincopf.m` (and `mopf.m`). These limits are specified by non-zero
-    values in the `ANGMIN` and/or `ANGMAX` columns of the branch matrix.
+    values in the `ANGMIN` and/or `ANGMAX` columns of the `branch` matrix.
     If limits are provided in the data, they are enforced by default.
     This can be overridden by setting the `OPF_IGNORE_ANG_LIM` option
-    to 1 using mpoption.
+    to 1 using `mpoption`.
   - Fixed (invisible) bug with multipliers of lower bounded linear
     constraints in `fmincopf.m`.
 
@@ -1622,9 +1622,9 @@ Version 3.1b1 - *Aug 1, 2006*
 #### 3/15/06
   - **INCOMPATIBLE CHANGE:** Updated `opf.m`, `fmincopf.m`, `costfmin.m`, `consfmin.m` to
     be able to be compatible with latest MINOPF. User supplied A matrix for
-    general linear constraints no longer includes columns for y variables
+    general linear constraints no longer includes columns for `y` variables
     (helper vars for piecewise linear gen costs), and now requires columns
-    for all x (OPF) variables. Added generalized cost model and generator PQ
+    for all `x` (OPF) variables. Added generalized cost model and generator PQ
     capability curves.
   - Modified `savecase.m` to always save MAT files with -V6 under newer MATLAB
     versions.
@@ -1637,7 +1637,7 @@ Version 3.1b1 - *Aug 1, 2006*
     <http://www.ee.washington.edu/research/pstca/pf118/ieee118psp.txt>.
 
 #### 3/8/06
- - Renamed col 5 of gencost from `N` to `NCOST` everywhere.
+ - Renamed col 5 of `gencost` from `N` to `NCOST` everywhere.
 
 #### 10/14/05
   - Updated version 2 case file format to modify generator PQ capability
