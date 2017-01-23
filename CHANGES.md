@@ -1295,8 +1295,8 @@ Version 4.0b2 - *Mar 19, 2010*
     called `qps_matpower()`, with calling syntax similar to
     `quadprog()` from the Optimization Toolbox, to replace `mp_qp()` and
     `mp_lp()`. The main difference from the `quadprog()` API is that the
-    constraints are specified as l <= A*x <= u, instead of
-    A*x <= b and Aeq*x == beq. This new function allows for
+    constraints are specified as `l <= A*x <= u`, instead of
+    `A*x <= b` and `Aeq*x == beq`. This new function allows for
     algorithm specific input options, return of the final objective
     function value and more detailed output reporting, such as the
     history for the trajectory returned by MIPS. The old functions,
@@ -1315,14 +1315,14 @@ Version 4.0b2 - *Mar 19, 2010*
 
 #### 1/18/10
   - Changed order of input args to `pdipm()`, added option for single
-    input struct (like fmincon), more documentation, all constraints
-    are now optional, returns exitflag = -1 for 'numerically failed',
+    input struct (like `fmincon`), more documentation, all constraints
+    are now optional, returns `exitflag = -1` for 'numerically failed',
     output includes `message` field, lambda only includes relevant
-    fields. Added tests for pdipm as standalone solver.
+    fields. Added tests for `pdipm` as standalone solver.
 
 #### 1/12/10
-  - Added saving history of trajectory of obj, feascond, gradcond,
-    compcond, costcond, etc. for pdipm solver.
+  - Added saving history of trajectory of `obj`, `feascond`, `gradcond`,
+    `compcond`, `costcond`, etc. for `pdipm` solver.
     See `results.raw.output.hist`.
 
 
@@ -1349,13 +1349,13 @@ Version 4.0b1 - *Dec 24, 2009*
 
 #### 12/8/09
   - Misc cleanup based on mlint suggestions, including:
-      - Replaced | with || and & with && where appropriate.
-      - Removed unnecessary sprintf (and fprintf!?) calls from args
-        to `error()`.
-      - Replaced j (=sqrt(-1)) with 1j for speed and robustness.
-      - Replaced unecessary brackets [] with parentheses.
-      - Made sure all calls to `exist()` have 2 args.
-      - more
+    - Replaced `|` with `||` and `&` with `&&` where appropriate.
+    - Removed unnecessary `sprintf` (and `fprintf`!?) calls from args
+      to `error()`.
+    - Replaced `j` (=`sqrt(-1)`) with `1j` for speed and robustness.
+    - Replaced unecessary brackets `[]` with parentheses.
+    - Made sure all calls to `exist()` have 2 args.
+    - more
 
 #### 12/4/09
   - Fixed bug in savecase for cases where A or N matrix is a single
