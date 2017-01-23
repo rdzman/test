@@ -690,14 +690,14 @@ Version 5.0b1 - *Jul 1, 2014*
   - Major revision of PSS/E import code to further improve
     robustness and include Octave support. Updated `psse2mpc()` to
     include direct saving of result to MATPOWER case file.
-    Added functions:
-          `psse_parse()`
-          `psse_parse_line()`
-          `psse_parse_section()`
-    Removed functions:
-          `psse_count_lines()`
-          `psse_extract_data()`
-          `psse_read_section()`
+    - Added functions:
+        - `psse_parse()`
+        - `psse_parse_line()`
+        - `psse_parse_section()`
+    - Removed functions:
+        - `psse_count_lines()`
+        - `psse_extract_data()`
+        - `psse_read_section()`
 
 #### 4/11/14
   - Significant updates to PSS/E import code to improve robustness
