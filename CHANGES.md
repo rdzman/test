@@ -23,8 +23,8 @@ Since last release
 
 - 1/5/17
     - Fix bug #4 where some Q limits were not being respected by CPF
-      when buses were converted to PQ by initial power flow run.
-      *(thanks to Shruti Rao)*
+      when buses were converted to PQ by initial power flow run
+      *(thanks to Shruti Rao)*.
 
 - 1/4/17
     - When `genfuel` field is present in `mpc`, `load2disp()` now augments
@@ -34,7 +34,7 @@ Since last release
     - Change default implementation of active power line flow
       constraints (`opf.flow_lim = 'P'`) to use flow directly, rather
       than square of flow, which is now a separate option, namely
-      `opf.flow_lim = '2'`. *(thanks to Nico Meyer-Huebner)*
+      `opf.flow_lim = '2'` *(thanks to Nico Meyer-Huebner)*.
 
 - 12/29/16
     - Fix bug in converting older versions of MATPOWER options struct.
@@ -51,14 +51,14 @@ Version 6.0 - *Dec 16, 2016*
     - Moved development to GitHub <https://github.com/MATPOWER/matpower>.
 
 - 12/9/16
-    - Bumped version to 1.2.2.
+    - Bumped MIPS version to 1.2.2.
     - Renamed MIPS from MATLAB Interior Point Solver to MATPOWER Interior
       Point Solver.
 
 - 12/6/16
-    - Remove dependence of t_mpsolve() on presence of have_fcn() to
+    - Remove dependence of `t_mpsolve()` on presence of `have_fcn()` to
       detect PARDISO installation.
-    - Remove dependence of mpver() on presence of mostver().
+    - Remove dependence of `mpver()` on presence of `mostver()`.
 
 
 Version 6.0b2 - *Nov 1, 2016*
@@ -69,66 +69,66 @@ Version 6.0b2 - *Nov 1, 2016*
 
 - 10/26/16
     - Include support for MOSEK 8, some algorithms eliminated, others changed
-      algorithm code set via 'mosek.lp_alg' option.
+      algorithm code set via `mosek.lp_alg` option.
 
 - 10/19/16
-    - Improved robustness of infeasibility detection when 'pf.enforce_q_lims'
+    - Improved robustness of infeasibility detection when `pf.enforce_q_lims`
       option is used.
-    - Add tests for power flow with 'pf.enforce_q_lims' option.
+    - Add tests for power flow with `pf.enforce_q_lims` option.
 
 - 10/14/16
     - Fixed bugs in AC OPF solver code for fmincon, IPOPT, and Knitro
       involving shadow prices on variable bounds, when upper and lower bounds
-      are equal (such as a voltage magnitude setpoint when 'opf.use_vg' is 1).
+      are equal (such as a voltage magnitude setpoint when `opf.use_vg` is 1).
       In IPOPT the prices are missing, and Knitro and fmincon can both return
       negative prices on the wrong constraint.
 
 - 10/13/16
-    - Added 'opf.use_vg' option to provide a convenient way to have the
+    - Added `opf.use_vg` option to provide a convenient way to have the
       OPF respect the generator voltage setpoints specified in the gen
       matrix.
 
 - 10/4/16
-    - Improve backward compatibility of mpoption(), allow it to handle
+    - Improve backward compatibility of `mpoption()`, allow it to handle
       old-style option vectors from earlier versions of MATPOWER, namely
       3.2 and 4.0, and to accept on old style options vector with new-style
       name/value pair option overrides.
-    - INCOMPATIBLE CHANGE: Remove 'cpf.user_callback_args' option and
-      modify 'cpf.user_callback' to allow for structs defining callback
+    - **INCOMPATIBLE CHANGE:** Remove `cpf.user_callback_args` option and
+      modify `cpf.user_callback` to allow for structs defining callback
       priority and args, in addition to just callback function name.
     - Add user options for setting tolerances for target lambda detection
-      and nose point detection, 'cpf.target_lam_tol' and 'cpf.nose_tol',
+      and nose point detection, `cpf.target_lam_tol` and `cpf.nose_tol`,
       respectively.
 
 - 9/27/16
-    - INCOMPATIBLE CHANGE: Changed name of 'cpf.error_tol' option to
-      'cpf.adapt_step_tol'.
+    - **INCOMPATIBLE CHANGE:** Changed name of `cpf.error_tol` option to
+      `cpf.adapt_step_tol`.
 
 - 9/22/16
     - Update tests for compatibility with Optimization Toolbox 7.5 (R2016b),
-      which removes 'active-set' algorithm for quadprog() and 'active-set'
-      and 'simplex' for linprog().
+      which removes `active-set` algorithm for `quadprog()` and `active-set`
+      and `simplex` for `linprog()`.
     - Fix fatal error when using some SDP_PF functions when CPLEX is not
       installed.
 
 - 9/19/16
-    - Fix dimension bug in makeBdc() when last bus is not connected (should
-      never happen if bus is properly marked as type NONE). Thanks to
-      Samuel Perkin.
+    - Fix dimension bug in `makeBdc()` when last bus is not connected (should
+      never happen if bus is properly marked as type `NONE`) *(thanks to
+      Samuel Perkin)*.
 
 - 8/15/16
-    - Fix a harmless bug in @opt_model where variable, constraint and
+    - Fix a harmless bug in `@opt_model` where variable, constraint and
       cost sets indexed by a single variable would allocate a square
       matrix of starting and ending indices, rather than a simple vector.
-      Thanks to Alberto Lamadrid for catching this.
+      *Thanks to Alberto Lamadrid for catching this.*
 
 - 7/18/16
-    - Extract computation of tangent vector from cpf_predictor() into
-      cpf_tangent(), and call sequentially as needed.
+    - Extract computation of tangent vector from `cpf_predictor()` into
+      `cpf_tangent()`, and call sequentially as needed.
 
 - 7/11/16
     - Add step size to CPF callback args and results logging.
-    - Add option 'cpf.adapt_step_damping' to control oscillations in
+    - Add option `cpf.adapt_step_damping` to control oscillations in
       adaptive step size control for continuation power flow.
 
 - 7/8/16
@@ -136,18 +136,18 @@ Version 6.0b2 - *Nov 1, 2016*
       external buses.
 
 - 7/1/16
-    - Fix bug in cpf_default_callback() that sometimes resulted in plotting
+    - Fix bug in `cpf_default_callback()` that sometimes resulted in plotting
       voltage at different buses for different parts of the curve when the
-      bus was not explicitly specified with the 'cpf.plot.bus' option.
+      bus was not explicitly specified with the `cpf.plot.bus` option.
 
 - 6/23/16
     - Bad bus numbers no longer cause a fatal error (after reporting the
-      bad bus numbers) in case_info().
-    - Updated versions of qcqp_opf() and qcqp_opf() in extras/misc, from
+      bad bus numbers) in `case_info()`.
+    - Updated versions of `qcqp_opf()` and `qcqp_opf()` in `extras/misc`, from
       Cedric Josz.
 
 - 6/10/16
-    - Fix bug in savecase() where single quotes were not escaped properly
+    - Fix bug in `savecase()` where single quotes were not escaped properly
       in bus names.
     - Generator capability curve parameters that define a zero-reactive
       power line no longer cause a fatal error.
@@ -160,24 +160,24 @@ Version 6.0b1 - *Jun 1, 2016*
     - Released 6.0b1.
 
 - 5/27/16
-    - INCOMPATIBLE CHANGE: Removed fairmax() from the public interface
-      by moving it inside uopf(), the only place it was used.
+    - **INCOMPATIBLE CHANGE:** Removed `fairmax()` from the public interface
+      by moving it inside `uopf()`, the only place it was used.
 
 - 5/25/16
-    - Add contributed code from Camille Hamon to extras/maxloadlim for
+    - Add contributed code from Camille Hamon to `extras/maxloadlim` for
       finding the loadability limits in power systems based on an optimal
       power flow using dispatchable loads.
 
 - 5/24/16
-    - Fix bug in toggle_dclines() that resulted in fatal error when
-      used with OPF with reactive power costs. Thanks to Irina Boiarchuk.
-    - Add option to call total_load() with full case struct, instead
+    - Fix bug in `toggle_dclines()` that resulted in fatal error when
+      used with OPF with reactive power costs *(thanks to Irina Boiarchuk*).
+    - Add option to call `total_load()` with full case struct, instead
       of separate bus and gen matrices.
 
 - 5/18/16
-    - Add plot_mpc(), contributed by Paul Cuffe, to extras/misc. Plots
+    - Add `plot_mpc()`, contributed by Paul Cuffe, to `extras/misc`. Plots
       an electrically meaningful drawing of a MATPOWER case.
-    - Add case145.m, IEEE 145 bus, 50 generator dynamic test case from
+    - Add `case145.m`, IEEE 145 bus, 50 generator dynamic test case from
       http://www.ee.washington.edu/research/pstca/dyn50/pg_tcadd50.htm.
 
 - 5/17/16
@@ -185,31 +185,31 @@ Version 6.0b1 - *Jun 1, 2016*
       representing the French system, and a 13,659-bus case representing
       parts of the of the European high voltage transmission network,
       stemming from the Pan European Grid Advanced Simulation and State
-      Estimation (PEGASE) project. Thanks again to Cedric Josz and
-      colleagues from the French Transmission System Operator.
-    - Add extras/misc/qcqp_opf.m, by Cedric Josz, et. al.
+      Estimation (PEGASE) project. *Thanks again to Cedric Josz and
+      colleagues from the French Transmission System Operator.*
+    - Add `extras/misc/qcqp_opf.m`, by Cedric Josz, et. al.
 
 - 5/3/16
-    - Fix fatal bug in update_mupq() affecting cases where QMIN is
-      greater than or equal to QC1MIN and QC2MIN (or QMAX is less than
-      or equal to QC1MAX and QC2MAX) for all generators.
-      Thanks Jose Miguel.
+    - Fix fatal bug in `update_mupq()` affecting cases where `QMIN` is
+      greater than or equal to` QC1MIN` and `QC2MIN` (or `QMAX` is less than
+      or equal to `QC1MAX` and `QC2MAX`) for all generators.
+      *Thanks Jose Miguel.*
 
 - 3/29/16
-    - Add support for quadprog() under GNU Octave.
+    - Add support for `quadprog()` under GNU Octave.
 
 - 3/3/16
     - Copying a field containing a struct to a non-struct field with 
-      nested_struct_copy() now overwrites rather than causing a fatal
+      `nested_struct_copy()` now overwrites rather than causing a fatal
       error.
 
 - 2/29/16
-    - Added option to call scale_load() with full case struct, with
-      'cost' field in opt to indicate when to include cost scaling.
+    - Added option to call `scale_load()` with full case struct, with
+      `cost` field in `opt` to indicate when to include cost scaling.
 
 - 2/22/16
-    - Add major new feature: MATPOWER Optimal Scheduling Tool (MOST).
-      See docs/MOST-manual.pdf for details.
+    - Add major new feature: *MATPOWER Optimal Scheduling Tool* (MOST).
+      See `docs/MOST-manual.pdf` for details.
 
 - 2/18/16
     - Updated code from 9/23/16 to turn off pesky CPLEX warnings to
@@ -219,25 +219,25 @@ Version 6.0b1 - *Jun 1, 2016*
     - Added Release History section to Appendix of manual.
 
 - 1/29/16
-    - Added option to call makePTDF(), makeB(), and makeBdc() with
-      mpc struct instead of individual baseMVA, bus, branch args.
-      Suggested by Alberto Lamadrid.
+    - Added option to call `makePTDF()`, `makeB()`, and `makeBdc()` with
+      `mpc` struct instead of individual `baseMVA`, `bus`, `branch` args.
+      *Suggested by Alberto Lamadrid.*
 
 - 1/26/16
     - Introduced work-around and warning for crashes caused by strange
-      behavior from Matlab's ver() function when MATPOWER (or any other
-      3rd party toolbox with a Contents.m) is installed in a directory on
-      the Matlab path named 'matlab' or 'optim' (both case insensitive).
+      behavior from Matlab's `ver()` function when MATPOWER (or any other
+      3rd party toolbox with a `Contents.m`) is installed in a directory on
+      the Matlab path named `matlab` or `optim` (both case insensitive).
 
 - 1/15/16
-    - Added feval_w_path() function for evaluating functions located at
+    - Added `feval_w_path()` function for evaluating functions located at
       a specified path, outside of the Matlab path.
 
 - 1/14/16
-    - Added tests for loadcase() for m-file cases outside the Matlab path.
+    - Added tests for `loadcase()` for m-file cases outside the Matlab path.
 
 - 1/6/16
-    - Added apply_changes() and idx_ct() to implement general method for
+    - Added `apply_changes()` and `idx_ct()` to implement general method for
       applying modifications to an existing MATPOWER case.
 
 - 11/5/15
@@ -246,56 +246,56 @@ Version 6.0b1 - *Jun 1, 2016*
       calculation of final loads.
 
 - 11/4/15
-    - Fixed a bug in psse_convert_xfmr() where conversion of data for
-      transformers with CZ=3 was done incorrectly. Thanks to Jose Marin
-      and Yujia Zhu.
+    - Fixed a bug in `psse_convert_xfmr()` where conversion of data for
+      transformers with CZ=3 was done incorrectly. *Thanks to Jose Marin
+      and Yujia Zhu.*
 
 - 10/30/15
-    - Fixed a bug in cpf_default_callback() introduced with the
+    - Fixed a bug in `cpf_default_callback()` introduced with the
       experimental updates regarding ZIP loads on 4/14/15.
 
 - 10/15/15
-    - Modified t_is() to handle matrix inputs of dimension greater
+    - Modified `t_is()` to handle matrix inputs of dimension greater
       than two.
-    - Added t_test_fcns() to test t_ok() and t_is() and manually
+    - Added `t_test_fcns()` to test `t_ok()` and `t_is()` and manually
       check output of failed tests.
-    - Added tests to t_dcline() for an isolated generator bus connected
+    - Added tests to `t_dcline()` for an isolated generator bus connected
       to the rest of the system via a DC line. This works for AC and DC
       power flow and OPF, though you must set the isolated bus to
-      be of type REF.
+      be of type `REF`.
 
 - 9/23/15
-    - Added code in cplex_options(), insolvablepfsos(),
-      insolvablepfsos_limitQ() and yalmip_options() to turn off
-      'MATLAB:lang:badlyScopedReturnValue' warning triggered by
+    - Added code in `cplex_options()`, `insolvablepfsos()`,
+      `insolvablepfsos_limitQ()` and `yalmip_options()` to turn off
+      `MATLAB:lang:badlyScopedReturnValue` warning triggered by
       CPLEX when using Matlab R2015b (8.6) and later.
 
 - 7/16/15
-    - Added mpopt2qpopt() to provide common interface for creating
-      options struct for mi/qps_matpower() from a MATPOWER options
+    - Added `mpopt2qpopt()` to provide common interface for creating
+      options struct for `mi/qps_matpower()` from a MATPOWER options
       struct.
     - Changed default solver order for LP, QP, MILP, MIQP problems
       to move Gurobi before CPLEX and BPMPD after OT and GLPK.
 
 - 7/9/15
-    - Modified have_fcn() to return 0 and warn for unrecognized
+    - Modified `have_fcn()` to return 0 and warn for unrecognized
       functionality, instead of producing fatal error.
 
 - 6/19/15
-    - Fixed a fatal bug in psse_convert_xfmr() affecting transformers
-      with CW and/or CZ equal to 1. Thanks to Matthias Resch.
+    - Fixed a fatal bug in `psse_convert_xfmr()` affecting transformers
+      with CW and/or CZ equal to 1. *Thanks to Matthias Resch.*
 
 - 5/18/15
-    - Fixed a crash in have_fcn() caused by changes in OPTI Toolbox
+    - Fixed a crash in `have_fcn()` caused by changes in OPTI Toolbox
       v2.15 (or possibly v2.12).
 
 - 4/24/15
-    - Commented out isolated bus 10287 in case3375wp.m.
+    - Commented out isolated bus 10287 in `case3375wp.m`.
 
 - 4/16/15
-    - Added some caching to mpoption() and made minor changes to
-      nested_struct_copy() to greatly decrease the overhead added by
-      mpoption() when running many small problems.
+    - Added some caching to `mpoption()` and made minor changes to
+      `nested_struct_copy()` to greatly decrease the overhead added by
+      `mpoption()` when running many small problems.
 
 - 4/14/15
     - Added experimental code to lay foundation for handling ZIP load
@@ -303,27 +303,27 @@ Version 6.0b1 - *Jun 1, 2016*
       power flow, and optimal power flow (MIPS, fmincon, Knitro, IPOPT
       solvers only). Currently, ZIP loads can only be specified on a
       system-wide basis using the experimental options
-      'exp.sys_wide_zip_loads.pw' and 'exp.sys_wide_zip_loads.qw'.
-      Tests in t/t_vdep_load().
-    - Added 'bus' and 'area' as possible values for 'load_zone' argument
-      to total_load(), which is now used to compute voltage dependent
+      `exp.sys_wide_zip_loads.pw` and `exp.sys_wide_zip_loads.qw`.
+      Tests in `t/t_vdep_load()`.
+    - Added `bus` and `area` as possible values for `load_zone` argument
+      to `total_load()`, which is now used to compute voltage dependent
       load values.
 
 - 3/27/15
-    - Fixed issue where default value of 'feastol' option was not being
-      set correctly in mips() when called directly (or via qps_mips())
-      with 'feastol' = 0. By default, MATPOWER option 'mips.feastol' is
-      set to zero but is normally replaced in mipsopf_solver() or
-      dcopf_solver() with value of 'opf.violation' option before
-      calling mips(), thereby masking the problem.
-    - In miqps_glpk() variables of type 'B' (binary) are converted to
-      'I' (integer) with appropriate bounds, since some versions of
-      GLPK do not natively handle type 'B'.
+    - Fixed issue where default value of `feastol` option was not being
+      set correctly in `mips()` when called directly (or via `qps_mips()`)
+      with `feastol = 0`. By default, MATPOWER option `mips.feastol` is
+      set to zero but is normally replaced in `mipsopf_solver()` or
+      `dcopf_solver()` with value of `opf.violation` option before
+      calling `mips()`, thereby masking the problem.
+    - In `miqps_glpk()` variables of type `B` (binary) are converted to
+      `I` (integer) with appropriate bounds, since some versions of
+      GLPK do not natively handle type `B`.
 
 - 3/24/15
-    - Added code to DC OPF to return success = 0 for cases where the
+    - Added code to DC OPF to return `success` = 0 for cases where the
       matrix is singular (e.g. islanded system without slack).
-    - Fixed problem in have_fcn() where SeDuMi was turning off and
+    - Fixed problem in `have_fcn()` where SeDuMi was turning off and
       leaving off all warnings.
 
 
