@@ -1087,12 +1087,12 @@ Version 4.1 - *Dec 14, 2011*
     PQ bus and automatically finding a new suitable slack bus.)
 
 #### 5/16/11
-  - Pretty printed output from `printpf()` now includes a '*' after
+  - Pretty printed output from `printpf()` now includes a `*` after
     the voltage angle in the bus section for reference buses.
 
 #### 3/31/11
   - Default value for ramp rates for dispatchable loads now
-    set to Inf in `load2disp.m`.
+    set to `Inf` in `load2disp.m`.
 
 #### 3/18/11
   - Fixed bug in `toggle_reserves.m` that computed the prices in
@@ -1140,7 +1140,7 @@ Version 4.0b5 - *Dec 13, 2010*
 #### 11/30/10
   - Fixed bug in `opf_execute()` related to automatic conversion of
     single-block piecewise linear costs to linear polynomial costs.
-    Affected indexing of the Va, Vm, Pg and Qg portions of
+    Affected indexing of the `Va`, `Vm`, `Pg` and `Qg` portions of
     `results.x` and `raw.xr`.
 
 #### 11/24/10
@@ -1174,12 +1174,12 @@ Version 4.0b5 - *Dec 13, 2010*
 #### 10/12/10
   - Performance optimization in `opf_consfcn()`. Assign sparse cols
     then transpose instead of assigning sparse rows. Results in >2x
-    speed up for this function on case2935, ~10x on case42k.
+    speed up for this function on `case2935`, ~10x on `case42k`.
 
 #### 7/20/10
   - Made some updates to `extras/psse2matpower`. Added/fixed some comments,
-    text output, switched to Parse::Text::parse_line for bus data to fix
-    problem caused by certain characters (e.g. / ,) in bus names. Fixed
+    text output, switched to `Parse::Text::parse_line` for bus data to fix
+    problem caused by certain characters (e.g. `/` `,`) in bus names. Fixed
     error in switched shunt data (using data from wrong column). Modified
     to no longer comment out isolated buses, since it doesn't remove
     corresponding gens/branches.
@@ -1229,9 +1229,9 @@ Version 4.0b3 - *Apr 19, 2010*
 
 #### 4/19/10
   - Released version 4.0b3.
-  - Changed licensing to GNU General Public license. See LICENSE and
-    COPYING files for details.
-  - Added in extras sub-directory psse2matpower Perl script for
+  - Changed licensing to GNU General Public license. See `LICENSE` and
+    `COPYING` files for details.
+  - Added in `extras` sub-directory `psse2matpower` Perl script for
     converting PSS/E data files to MATPOWER case files.
 
 #### 4/6/10
@@ -1255,12 +1255,12 @@ Version 4.0b2 - *Mar 19, 2010*
   - Released version 4.0b2.
 
 #### 3/12/10
-  - Incorporated significant updates to User's Manual (docs/manual.pdf).
+  - Incorporated significant updates to User's Manual (`docs/manual.pdf`).
 
 #### 3/10/10
   - Added optional input arg to `mpver()` and other `*ver()` functions to
-    trigger return of entire version struct with Name, Version,
-    Release and Date (similar to MATLAB's `ver()` function).
+    trigger return of entire version struct with `Name`, `Version`,
+    `Release` and `Date` (similar to MATLAB's `ver()` function).
   - Massive help text update to more closely match MathWorks conventions;
     function names in ALL CAPS, See also ..., Examples, etc.
   - Added printing of MATPOWER and MIPS version lines to verbose output.
@@ -1269,7 +1269,7 @@ Version 4.0b2 - *Mar 19, 2010*
   - For `@opf_model`, deprecated `get_var_N()`, `get_lin_N()` and `get_nln_N()`
     methods, replaced with single `getN()` method. Added `compute_cost()`.
   - Fixed per unit bug with reserve costs and prices in `toggle_reserves()`.
-  - Added cost field to OPF results struct with final values of user-defined
+  - Added `cost` field to OPF `results` struct with final values of user-defined
     costs, by named set.
   - Added `totalcost` field to `results.reserves` for OPF with reserves case,
     see `toggle_reserves()` and `runopf_w_res()`.
@@ -1280,9 +1280,9 @@ Version 4.0b2 - *Mar 19, 2010*
 #### 1/27/10
   - Renamed functions used to compute AC OPF cost, constraints and
     hessian, since they are used by more than fmincon:
-      `costfmin` --> `opf_costfcn`
-      `consfmin` --> `opf_consfcn`
-      `hessfmin` --> `opf_hessfcn`
+     - `costfmin` --> `opf_costfcn`
+     - `consfmin` --> `opf_consfcn`
+     - `hessfmin` --> `opf_hessfcn`
 
 #### 1/26/10
   - Added OPF algorithm code to output of OPF in
