@@ -48,20 +48,20 @@ Version 6.0 - *Dec 16, 2016*
 
 ### 12/16/16
 
-    - Released 6.0.
-    - Moved development to GitHub <https://github.com/MATPOWER/matpower>.
+  - Released 6.0.
+  - Moved development to GitHub <https://github.com/MATPOWER/matpower>.
 
 ### 12/9/16
 
-    - Bumped MIPS version to 1.2.2.
-    - Renamed MIPS from MATLAB Interior Point Solver to MATPOWER Interior
-      Point Solver.
+  - Bumped MIPS version to 1.2.2.
+  - Renamed MIPS from MATLAB Interior Point Solver to MATPOWER Interior
+    Point Solver.
 
 ### 12/6/16
 
-    - Remove dependence of `t_mpsolve()` on presence of `have_fcn()` to
-      detect PARDISO installation.
-    - Remove dependence of `mpver()` on presence of `mostver()`.
+  - Remove dependence of `t_mpsolve()` on presence of `have_fcn()` to
+    detect PARDISO installation.
+  - Remove dependence of `mpver()` on presence of `mostver()`.
 
 
 Version 6.0b2 - *Nov 1, 2016*
