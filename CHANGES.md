@@ -707,14 +707,14 @@ Version 5.0b1 - *Jul 1, 2014*
 #### 4/7/14
   - Added experimental feature, via function `psse2mpc()`, to
     import PSS/E RAW data (version 33) into a MATPOWER case file.
-    - Supporting functions include:
-      - `psse_convert_33()`
-      - `psse_convert_hvdc_33()`
-      - `psse_convert_xfmr_33()`
-      - `psse_count_lines()`
-      - `psse_extract_data()`
-      - `psse_read_33()`
-      - `psse_read_section()`
+    Supporting functions include:
+    - `psse_convert_33()`
+    - `psse_convert_hvdc_33()`
+    - `psse_convert_xfmr_33()`
+    - `psse_count_lines()`
+    - `psse_extract_data()`
+    - `psse_read_33()`
+    - `psse_read_section()`
 
 #### 3/28/14
   - Enhanced `extract_islands()` to handle DC lines, custom fields
@@ -760,19 +760,19 @@ Version 5.0b1 - *Jul 1, 2014*
 #### 1/16/14
   - Added `status` option for 2nd argument to `toggle_reserves()`
     `toggle_dcline()` and `toggle_iflims()` as a convenient way to
-    check the enabled/ disabled status of these sets of callback
+    check the enabled/disabled status of these sets of callback
     functions.
   - Removed `extras/cpf` since CPF is now part of the core.
   - Added support for Dan Molzahn's SDP_PF package (coming soon).
 
 #### 1/15/14
   - Modified handling of options for optional packages, added:
-      `mpoption_info_cplex()`
-      `mpoption_info_fmincon()`
-      `mpoption_info_gurobi()`
-      `mpoption_info_ipopt()`
-      `mpoption_info_knitro()`
-      `mpoption_info_mosek()`
+    - `mpoption_info_cplex()`
+    - `mpoption_info_fmincon()`
+    - `mpoption_info_gurobi()`
+    - `mpoption_info_ipopt()`
+    - `mpoption_info_knitro()`
+    - `mpoption_info_mosek()`
 
 #### 1/8/14
   - Updates to `qps_cplex()` and `cplex_options()` to fix verbose
