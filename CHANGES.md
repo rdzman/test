@@ -41,9 +41,8 @@ Since last release
 12/21/16
     - Add Travis-CI integration (thanks to Richard Lincoln).
 
-
-Changes since 6.0b2
--------------------
+Version 6.0 -- *Dec 16, 2016*
+-----------------------------
 
 12/16/16
     - Released 6.0.
@@ -60,8 +59,8 @@ Changes since 6.0b2
     - Remove dependence of mpver() on presence of mostver().
 
 
-Changes since 6.0b1
--------------------
+Version 6.0b2 -- *released Dec 16, 2016*
+----------------------------------------
 
 11/1/16
     - Released 6.0b2.
@@ -152,8 +151,8 @@ Changes since 6.0b1
       power line no longer cause a fatal error.
 
 
-Changes since 5.1
------------------
+Version 6.0b1 *(Jun 1, 2016)*
+-----------------------------
 
 6/1/16
     - Released 6.0b1.
