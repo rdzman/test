@@ -1735,7 +1735,7 @@ Version 3.0b4 - *Jan 28, 2005*
     large values used to indicate free variables.
 
 #### 1/4/05
-  - Fixed potential bug in dimensions of Yf and Yt created in `makeYbus.m`.
+  - Fixed potential bug in dimensions of `Yf` and `Yt` created in `makeYbus.m`.
 
 #### 12/17/04
   - Added feasibility check to `mp_lp.m` and `mp_qp.m` to work around a
@@ -1760,17 +1760,17 @@ Version 3.0b3 - *Sep 20, 2004*
 #### 9/20/04
   - Released version 3.0b3.
   - Generated clean versions of all included case files using latest
-    cdf2matp and savecase. Added documentation for source of data
+    `cdf2matp` and `savecase`. Added documentation for source of data
     for case files.
   - More enhancements to `cdf2matp.m`. Adds comments at beginning, appends
     conversion warnings as comments at end of file. Uses `savecase.m` to
     save the data.
-  - Updated `savecase.m` to use %g instead of %f many places, correctly
+  - Updated `savecase.m` to use `%g` instead of `%f` many places, correctly
     handle multi-line comments, include headers for extra columns for
     solved cases. Optionally returns filename with extension.
 
 #### 9/17/04
-  - Fixed bug in `grad_std.m`, introduced in 3.0b2, which prevented constr
+  - Fixed bug in `grad_std.m`, introduced in 3.0b2, which prevented `constr`
     and LP-based OPF solvers from working for polynomial cost functions.
 
 #### 9/15/04
