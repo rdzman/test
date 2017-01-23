@@ -1,9 +1,11 @@
 Change history for MATPOWER
 ===========================
 
-For change history for MP-Test [1], see (mptest/docs/CHANGES.md).
-For change history for MIPS [2], see (mips/docs/CHANGES.md).
-For change history for MOST [3], see (most/docs/CHANGES.md).
+For change history for [MP-Test][1], see [mptest/CHANGES.md](mptest/CHANGES.md).
+
+For change history for [MIPS][2], see [mips/CHANGES.md](mips/CHANGES.md).
+
+For change history for [MOST][3], see [most/CHANGES.md](most/CHANGES.md).
 
 Changes since last release
 --------------------------
@@ -2259,8 +2261,8 @@ Changes since 6/25/97 Version
       (generator costs moved to gencost variable)
 
 
-Changes since I started keeping track
--------------------------------------
+First Public Release - *(1997-06/25)* (not widely publicized)
+-------------------------------------------------------------
 
 6/25/97
     - made first public release (not widely publicized)
