@@ -632,7 +632,7 @@ Version 5.0 - *Dec 17, 2014*
 
 #### 7/24/14
   - Added line to `cplex_options()` to prevent default creation
-    of clone1.log files when using parallel CPLEX routines
+    of `clone1.log` files when using parallel CPLEX routines
     (only effective for CPLEX 12.6.0.1 or later).
   - Fixed fatal error when `uopf()` shuts down all gens
     attempting to satisfy Pmin limits.
@@ -788,7 +788,7 @@ Version 5.0b1 - *Jul 1, 2014*
   - New MATPOWER options implementation based on options struct
     instead of options vector.
     **INCOMPATIBLE CHANGE:** In results struct returned by an OPF, the
-    value of results.raw.output.alg is now a string, not an old-style
+    value of `results.raw.output.alg` is now a string, not an old-style
     numeric alg code.
   - Gurobi now takes precendence over MOSEK when default solver
     is selected for DC OPFs or `qps_matpower()`.
@@ -814,36 +814,36 @@ Version 5.0b1 - *Jul 1, 2014*
 #### 10/11/13
   - Removed support for Matlab 6.x. Removed `anon_fcns` option from
     `have_fcn()`. Files removed:
-      `fmincopf6_solver.m`
-      `mips6.m`
-      `mips6opf_solver.m`
-      `qps_mips6.m`
-      `t_mips6.m`
-  - Removed support for constr and successive LP-based OPF solvers.
+     - `fmincopf6_solver.m`
+     - `mips6.m`
+     - `mips6opf_solver.m`
+     - `qps_mips6.m`
+     - `t_mips6.m`
+  - Removed support for `constr` and successive LP-based OPF solvers.
     Removed `constr`, `lp`, `qp` options from `have_fcn()`. Files removed:
-      `copf_solver.m`
-      `fun_copf.m`
-      `grad_copf.m`
-      `LPconstr.m`
-      `LPeqslvr.m`
-      `lpopf_solver.m`
-      `LPrelax.m`
-      `LPsetup.m`
-      `mp_lp.m`
-      `mp_qp.m`
-      `t/t_opf_constr.m`
-      `t/t_opf_lp_den.m`
-      `t/t_opf_lp_spf.m`
-      `t/t_opf_lp_spr.m`
+     - `copf_solver.m`
+     - `fun_copf.m`
+     - `grad_copf.m`
+     - `LPconstr.m`
+     - `LPeqslvr.m`
+     - `lpopf_solver.m`
+     - `LPrelax.m`
+     - `LPsetup.m`
+     - `mp_lp.m`
+     - `mp_qp.m`
+     - `t/t_opf_constr.m`
+     - `t/t_opf_lp_den.m`
+     - `t/t_opf_lp_spf.m`
+     - `t/t_opf_lp_spr.m`
 
 #### 9/20/13
   - Added continuation power flow, `runcpf()`, with tangent
-    predictor and Newton method corrector, based on code
-    contributed by Shrirang Abhyankar and Alex Flueck.
+    predictor and Newton method corrector, *based on code
+    contributed by Shrirang Abhyankar and Alex Flueck.*
 
 #### 9/5/13
   - Fix in `smartmkt()` to avoid crash following non-convergent
-    uopf when mkt.lim.P.max_offer is not defined.
+    `uopf` when `mkt.lim.P.max_offer` is not defined.
 
 #### 9/3/13
   - Fixed bug (typo) in `auction()` that could affect cases with
@@ -884,7 +884,7 @@ Version 5.0b1 - *Jul 1, 2014*
     the dimensions match.
 
 #### 2/12/13
-  - Fixed bug causing value of opt.verbose to be ignored in
+  - Fixed bug causing value of `opt.verbose` to be ignored in
     `qps_gurobi()`.
 
 #### 12/14/12
@@ -899,8 +899,8 @@ Version 5.0b1 - *Jul 1, 2014*
 
 #### 8/30/12
   - Major speed-up in `@opt_model/linear_constraints()` by building
-    transpose of A (assigning to full columns) then transposing
-    back as opposed to building A directly (assigning full rows).
+    transpose of `A` (assigning to full columns) then transposing
+    back as opposed to building `A` directly (assigning full rows).
 
 #### 8/1/12
   - Added function `margcost()` for computing the marginal cost of
@@ -911,7 +911,7 @@ Version 5.0b1 - *Jul 1, 2014*
     variable, constraint or cost row indices to aid in debugging.
 
 #### 7/18/12
-  - Made N optional field (default is identity matrix) in
+  - Made `N` optional field (default is identity matrix) in
     `@opt_model/add_costs()`.
   - Added missing optional 2nd arg to `@opt_model/build_cost_params()`.
 
@@ -932,7 +932,7 @@ Version 5.0b1 - *Jul 1, 2014*
 
 #### 5/2/12
   - In `opf_setup()`, take magnitude of initial voltages at generator
-    buses from bus matrix (`VM`), not gen matrix (`VG`).
+    buses from `bus` matrix (`VM`), not `gen` matrix (`VG`).
 
 #### 4/30/12
   - Fixed a bug in `int2ext()` where converting a case to internal
@@ -951,7 +951,7 @@ Version 5.0b1 - *Jul 1, 2014*
 
 #### 2/29/12
   - Added a tolerance for detecting violated Q limits in `runpf()`
-    when `ENFORCE_Q_LIMS` is true. Suggested by Hongxing Ye.
+    when `ENFORCE_Q_LIMS` is true. *Suggested by Hongxing Ye.*
 
 #### 1/31/12
   - Added utilities to help in working with networks with islands,
@@ -969,7 +969,7 @@ Version 5.0b1 - *Jul 1, 2014*
 
 #### 1/10/12
   - Moved the building of Ybus outside the reactive limit
-    enforcement loop in `runpf()`. Suggested by Shiyang Li.
+    enforcement loop in `runpf()`. *Suggested by Shiyang Li.*
 
 #### 1/4/12
   - Running a power flow for a case with DC lines but no gencost
@@ -977,7 +977,7 @@ Version 5.0b1 - *Jul 1, 2014*
 
 #### 12/14/11
   - Modified `t/t_opf_fmincon.m` to use active-set method for testing
-    fmincopf for Matlab versions 7.6-7.9, since fmincon's interior
+    `fmincopf` for Matlab versions 7.6-7.9, since fmincon's interior
     point solver (now default) was not accurate enough in these
     versions.
 
@@ -1096,7 +1096,7 @@ Version 4.1 - *Dec 14, 2011*
 
 #### 3/18/11
   - Fixed bug in `toggle_reserves.m` that computed the prices in
-    results.reserves.prc incorrectly.
+    `results.reserves.prc` incorrectly.
 
 
 Version 4.0 - *Feb 7, 2011*
@@ -1104,8 +1104,8 @@ Version 4.0 - *Feb 7, 2011*
 
 #### 2/16/11
   - Oops! Neglected to include Carlos as co-author on User's Manual.
-    Updated 4.0 distribution and web-site with corrected manual.pdf.
-    Sorry about that Carlos!
+    Updated 4.0 distribution and web-site with corrected `manual.pdf.`
+    *Sorry about that Carlos!*
 
 #### 2/7/11
   - Released version 4.0.
@@ -1141,7 +1141,7 @@ Version 4.0b5 - *Dec 13, 2010*
   - Fixed bug in `opf_execute()` related to automatic conversion of
     single-block piecewise linear costs to linear polynomial costs.
     Affected indexing of the Va, Vm, Pg and Qg portions of
-    results.x and raw.xr.
+    `results.x` and `raw.xr`.
 
 #### 11/24/10
   - Added support for the MOSEK optimizer for large-scale linear and
@@ -1271,7 +1271,7 @@ Version 4.0b2 - *Mar 19, 2010*
   - Fixed per unit bug with reserve costs and prices in `toggle_reserves()`.
   - Added cost field to OPF results struct with final values of user-defined
     costs, by named set.
-  - Added totalcost field to results.reserves for OPF with reserves case,
+  - Added `totalcost` field to `results.reserves` for OPF with reserves case,
     see `toggle_reserves()` and `runopf_w_res()`.
 
 #### 2/2/10
@@ -1323,7 +1323,7 @@ Version 4.0b2 - *Mar 19, 2010*
 #### 1/12/10
   - Added saving history of trajectory of obj, feascond, gradcond,
     compcond, costcond, etc. for pdipm solver.
-    See results.raw.output.hist.
+    See `results.raw.output.hist`.
 
 
 Version 4.0b1 - *Dec 24, 2009*
@@ -1975,7 +1975,7 @@ Version 3.0b1 - *Aug 25, 2004*
 #### 4/29/99
   - Included a Gauss-Seidel power flow solver `gausspf.m`, and
     made corresponding changes to `runpf.m` and `mpoption.m`.
-    Code contributed by Alberto Borghetti.
+    *Code contributed by Alberto Borghetti.*
 
 #### 4/28/99
   - Modified `newtonpf.m` to handle cases with no PQ buses or no
@@ -2067,7 +2067,7 @@ Version 3.0b1 - *Aug 25, 2004*
   - Fixed bug which included line flow limits for out-of-service
     lines in OPF.
   - Modified `pfsoln.m`, `opfsoln.m`, `printpf.m` to zero out flow on
-    lines which are out-of-service (found by Ramazan Caglar).
+    lines which are out-of-service. *Found by Ramazan Caglar.*
 
 #### 7/28/98
   - Changed VAR and MVAR to VAr and MVAr everywhere in output.
