@@ -691,13 +691,13 @@ Version 5.0b1 - *Jul 1, 2014*
     robustness and include Octave support. Updated `psse2mpc()` to
     include direct saving of result to MATPOWER case file.
     - Added functions:
-        - `psse_parse()`
-        - `psse_parse_line()`
-        - `psse_parse_section()`
+      - `psse_parse()`
+      - `psse_parse_line()`
+      - `psse_parse_section()`
     - Removed functions:
-        - `psse_count_lines()`
-        - `psse_extract_data()`
-        - `psse_read_section()`
+      - `psse_count_lines()`
+      - `psse_extract_data()`
+      - `psse_read_section()`
 
 #### 4/11/14
   - Significant updates to PSS/E import code to improve robustness
@@ -707,14 +707,14 @@ Version 5.0b1 - *Jul 1, 2014*
 #### 4/7/14
   - Added experimental feature, via function `psse2mpc()`, to
     import PSS/E RAW data (version 33) into a MATPOWER case file.
-    Supporting functions include:
-          `psse_convert_33()`
-          `psse_convert_hvdc_33()`
-          `psse_convert_xfmr_33()`
-          `psse_count_lines()`
-          `psse_extract_data()`
-          `psse_read_33()`
-          `psse_read_section()`
+    - Supporting functions include:
+      - `psse_convert_33()`
+      - `psse_convert_hvdc_33()`
+      - `psse_convert_xfmr_33()`
+      - `psse_count_lines()`
+      - `psse_extract_data()`
+      - `psse_read_33()`
+      - `psse_read_section()`
 
 #### 3/28/14
   - Enhanced `extract_islands()` to handle DC lines, custom fields
