@@ -5,35 +5,35 @@ For change history for [MP-Test][1], see [mptest/CHANGES.md](mptest/CHANGES.md).
 For change history for [MIPS][2], see [mips/CHANGES.md](mips/CHANGES.md).  
 For change history for [MOST][3], see [most/CHANGES.md](most/CHANGES.md).
 
-Changes since last release
---------------------------
+Since last release
+------------------
 
 1/23/17
-    - Add install_matpower() to assist with installation by
+    - Add `install_matpower()` to assist with installation by
       updating Matlab or Octave paths or providing the commands
       required to so.
 
 1/16/17
     - Support plotting of multiple nose curves in CPF by allowing
-      option 'cpf.plot.bus' to take on vector values.
+      option `'cpf.plot.bus'` to take on vector values.
 
 1/14/17
-    - Add line for curtailed load to case_info() output.
+    - Add line for curtailed load to `case_info()` output.
 
 1/5/17
     - Fix bug #4 where some Q limits were not being respected by CPF
       when buses were converted to PQ by initial power flow run.
-      (thanks to Shruti Rao)
+      *(thanks to Shruti Rao)*
 
 1/4/17
-    - When genfuel field is present in mpc, load2disp() now augments
-      it with 'dl' entries for the dispatchable loads it adds.
+    - When `genfuel` field is present in `mpc`, `load2disp()` now augments
+      it with `'dl'` entries for the dispatchable loads it adds.
 
 1/3/17
     - Change default implementation of active power line flow
-      constraints (opf.flow_lim = 'P') to use flow directly, rather
+      constraints (`opf.flow_lim = 'P'`) to use flow directly, rather
       than square of flow, which is now a separate option, namely
-      opf.flow_lim = '2'. (thanks to Nico Meyer-Huebner)
+      `opf.flow_lim = '2'`. *(thanks to Nico Meyer-Huebner)*
 
 12/29/16
     - Fix bug in converting older versions of MATPOWER options struct.
