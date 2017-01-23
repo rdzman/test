@@ -1,10 +1,8 @@
 Change history for MATPOWER
 ===========================
 
-For change history for [MP-Test][1], see [mptest/CHANGES.md](mptest/CHANGES.md).
-
-For change history for [MIPS][2], see [mips/CHANGES.md](mips/CHANGES.md).
-
+For change history for [MP-Test][1], see [mptest/CHANGES.md](mptest/CHANGES.md).  
+For change history for [MIPS][2], see [mips/CHANGES.md](mips/CHANGES.md).  
 For change history for [MOST][3], see [most/CHANGES.md](most/CHANGES.md).
 
 Changes since last release
