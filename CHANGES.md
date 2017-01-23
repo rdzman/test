@@ -2259,8 +2259,8 @@ Changes since 6/25/97 Version
       (generator costs moved to gencost variable)
 
 
-First Public Release - *(1997-06/25)* (not widely publicized)
--------------------------------------------------------------
+First Public Release — _1997-06-25_ (not widely publicized)
+-----------------------------------------------------------
 
 6/25/97
     - made first public release (not widely publicized)
