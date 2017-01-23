@@ -1463,14 +1463,14 @@ Version 4.0b1 - *Dec 24, 2009*
     limit violations.
   - Fixed a (new) bug which caused the DC OPF solver to crash on
     problems with only polynomial costs.
-  - Added userdata to opf_model object.
+  - Added `userdata` to `@opf_model` object.
 
 #### 6/10/08
   - Added new way to specify user vars, constraints, costs via
     userfcn for OPF.
   - Added option to return OPF results in a struct.
-  - Added defaults for user cost params in fparm and H, making them
-    optional even when N and Cw are given.
+  - Added defaults for user cost params in `fparm` and `H`, making them
+    optional even when `N` and `Cw` are given.
 
 #### 5/22/08
   - Major refactorization of OPF implementation with shared code
