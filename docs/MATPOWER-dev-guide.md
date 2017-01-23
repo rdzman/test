@@ -68,6 +68,8 @@ The following are some guidelines, in no particular order.
         - *Why? For consistency ... once upon a time I began doing it
            that way for some reason which no longer matters.*
 
+- Wrap lines to 80 characters or less where possible.
+
 - Fatal errors should generally be reserved for invalid inputs or other
   misuse of a function.
 
