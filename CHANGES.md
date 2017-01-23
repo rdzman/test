@@ -2203,8 +2203,8 @@ Changes since 1.0.1
       Costs for Qg are specified in extra rows int gencost.
 
 
-Changes since 1.0
------------------
+1.0.1 – *1997-09-20*
+--------------------
 
 9/20/97
     - Released version 1.0.1.
@@ -2228,8 +2228,8 @@ Changes since 1.0
       multipliers to print out in the wrong place for LP-based OPF.
 
 
-Changes since 6/25/97 Version
------------------------------
+1.0 – *1997-09-17*
+------------------
 
 9/17/97
     - Released version 1.0 (first widely publicized release).
@@ -2259,8 +2259,8 @@ Changes since 6/25/97 Version
       (generator costs moved to gencost variable)
 
 
-First Public Release — _1997-06-25_ (not widely publicized)
------------------------------------------------------------
+First Public Release – _1997-06-25_
+-----------------------------------
 
 6/25/97
     - made first public release (not widely publicized)
