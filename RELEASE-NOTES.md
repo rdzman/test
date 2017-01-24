@@ -1,4 +1,5 @@
- MATPOWER Release Notes 
+MATPOWER Release Notes
+======================
 
 ---------------------------
  What's New in Version 6.0
