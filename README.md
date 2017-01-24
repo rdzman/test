@@ -5,8 +5,7 @@ A Power System Simulation Package for Matlab and Octave
 -------------------------------------------------------
 
 **MATPOWER Website:**           http://www.pserc.cornell.edu/matpower/  
-**MATPOWER GitHub Project:**    https://github.com/MATPOWER/matpower  
-**MATPOWER Project Leader:**    Ray Zimmerman <rz10@cornell.edu>
+**MATPOWER GitHub Project:**    https://github.com/MATPOWER/matpower
 
 Introduction
 ------------
