@@ -130,11 +130,11 @@ There are four primary sources of documentation for MATPOWER.
 
 The MATPOWER and MOST User's Manuals are included in the distribution
 ([`docs/MATPOWER-manual.pdf`][5] and [`docs/MOST-manual.pdf`][17]) and
-the latest released versions are always available, respectively, at:
+the latest released versions are always available online, respectively, at:
   - http://www.pserc.cornell.edu/matpower/MATPOWER-manual.pdf
   - http://www.pserc.cornell.edu/matpower/MOST-manual.pdf.
 
-Previous versions are available at
+Previous versions are also available at
   - http://www.pserc.cornell.edu/matpower/docs/.
 
 Each M-file has its own documentation which can be accessed by typing at
@@ -149,6 +149,11 @@ Documentation for the case data file format can be found by typing:
 If something is still unclear after checking the manual and the help,
 the source code *is* the documentation. :wink:
 
+Changes to MATPOWER are summarized in the [release notes](docs/relnotes)
+for each version found in `docs/relnotes` and in Appendix H of the
+[MATPOWER User's Manual][5] and [`CHANGES.md`][10] has a complete
+detailed change log.
+- 
 
 Contributing
 ------------
@@ -157,8 +162,8 @@ Please see our [contributing guidelines][8] for details on how to
 contribute to the project or report issues.
 
 
-Publications and Technnical Notes
----------------------------------
+Publications and Tech Notes
+---------------------------
 
 1.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     ["MATPOWER: Steady-State Operations, Planning and Analysis Tools
@@ -273,9 +278,11 @@ MATPOWER is distributed under the [3-clause BSD license][30].
 [10]: CHANGES.md
 [11]: https://github.com/MATPOWER/matpower/issues
 [12]: https://github.com/MATPOWER/most
+
 [13]: https://github.com/MATPOWER/mips
 [14]: https://github.com/MATPOWER/mptest
 [15]: https://github.com/MATPOWER/
+
 [16]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
 [17]: docs/MOST-manual.pdf
 [18]: http://www.pserc.cornell.edu/matpower/MATPOWER-paper.pdf
