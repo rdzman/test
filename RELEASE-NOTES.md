@@ -1,9 +1,8 @@
 MATPOWER Release Notes
 ======================
 
----------------------------
- What's New in Version 6.0
----------------------------
+What's New in Version 6.0
+-------------------------
 
 Below is a summary of the changes since version 5.1 of MATPOWER. See the
 [`CHANGES.md`][1] file for all the gory details.
