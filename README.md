@@ -153,14 +153,14 @@ the source code *is* the documentation. :wink:
 
 There are also two MATPOWER Technical Notes that may be of interest:
 
- - [TN1]  R. D. Zimmerman, "Uniform Price Auctions and Optimal Power Flow,
-       *MATPOWER Technical Note 1*, February 2010.
-          http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
+  - **[TN1]**  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
+   Power Flow"][18], *MATPOWER Technical Note 1*, February 2010.  
+   http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
 
- - [TN2]  R. D. Zimmerman, "AC Power Flows, Generalized OPF Costs and
-       their Derivatives using Complex Matrix Notation", *MATPOWER
-       Technical Note 2*, February 2010.
-          http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
+  - **[TN2]**  R. D. Zimmerman, ["AC Power Flows, Generalized OPF Costs
+    and their Derivatives using Complex Matrix Notation"][19],
+    *MATPOWER Technical Note 2*, February 2010.  
+    http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
 
 #### Publications & Presentations
 
@@ -210,10 +210,10 @@ E-mail Lists
 There are three MATPOWER e-mail lists available to serve the MATPOWER
 community:
 
-- [MATPOWER-ANNOUNCE-L][18] is a simple announcement list for those who
+- [MATPOWER-ANNOUNCE-L][24] is a simple announcement list for those who
   wish to be notified of the release of new versions of MATPOWER.
 
-- [MATPOWER-L][19] is for MATPOWER users, to facilitate discussion and
+- [MATPOWER-L][25] is for MATPOWER users, to facilitate discussion and
   provide a forum for help with MATPOWER related questions.
 
 - [MATPOWER-DEV-L][16] is for MATPOWER developers, to provide a forum for
@@ -279,5 +279,11 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [15]: https://github.com/MATPOWER/
 [16]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
 [17]: docs/MOST-manual.pdf
-[18]: http://www.pserc.cornell.edu/matpower/mailinglists.html#announcelist
-[19]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
+[18]: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
+[19]: http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
+[20]: 
+[21]: 
+[22]: 
+[23]: 
+[24]: http://www.pserc.cornell.edu/matpower/mailinglists.html#announcelist
+[25]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
