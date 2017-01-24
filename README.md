@@ -21,16 +21,13 @@ MATPOWER can be downloaded from the [MATPOWER website][1], or cloned
 from the [MATPOWER GitHub project][2], both listed above.
 
 
------------------
- GETTING STARTED
------------------
+GETTING STARTED
+---------------
 
 System Requirements
 -------------------
-    - MATLAB(R) version 7 (R14) or later
-      (available from The MathWorks, Inc. http://www.mathworks.com/), or
-    - GNU Octave version 3.4 or later (free software available from
-      http://www.gnu.org/software/octave/).
+*   [Matlab][3] version 7 (R14) or later, or
+*   [GNU Octave][4] version 3.4 or later
 
 Installation
 ------------
@@ -438,3 +435,5 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 
 [1]: http://www.pserc.cornell.edu/matpower/
 [2]: https://github.com/MATPOWER/matpower
+[3]: https://github.com/MATPOWER/matpower
+[4]: http://www.mathworks.com/
