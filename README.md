@@ -235,21 +235,22 @@ MATPOWER is distributed under the [3-clause BSD license][30].
 
 - While not required by the terms of the license, we do request that
   publications derived from the use of MATPOWER explicitly acknowledge
-  that fact by citing [reference 2][24] above, namely:
+  that fact by citing [reference \[2\]][24] above, namely:
 
-    >  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
-     "MATPOWER: Steady-State Operations, Planning and Analysis Tools
-     for Power Systems Research and Education," Power Systems, IEEE
-     Transactions on, vol. 26, no. 1, pp. 12–19, Feb. 2011.
+    >   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
+        "MATPOWER: Steady-State Operations, Planning and Analysis Tools
+        for Power Systems Research and Education," Power Systems, IEEE
+        Transactions on, vol. 26, no. 1, pp. 12–19, Feb. 2011.
 
 - Additionally, we request that publications derived from the use of
   the [MATPOWER Optimal Scheduling Tool (MOST)][12], explicitly
-  acknowledge that fact by citing [reference 4][26] as well as \[2\].
+  acknowledge that fact by citing [reference \[4\]][26] as well as
+  [\[2\]][24].
 
-    > C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
-     R. J. Thomas, "Secure Planning and Operations of Systems with
-     Stochastic Sources, Energy Storage and Active Demand," Smart Grid,
-     IEEE Transactions on, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
+    >   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
+        R. J. Thomas, "Secure Planning and Operations of Systems with
+        Stochastic Sources, Energy Storage and Active Demand," Smart Grid,
+        IEEE Transactions on, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
 
 
 [1]: http://www.pserc.cornell.edu/matpower/
