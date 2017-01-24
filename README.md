@@ -71,9 +71,11 @@ move to GitHub after version 6.0.
       required directories to your MATLAB or Octave path.
 
 3.  **That's it.** There is no step 3.
-    - Unless, you chose not to run the test suite in step 2, in which
-      case, you can type `test_matpower` to run it now and verify that
-      MATPOWER is installed and functioning properly.
+    - If you chose not to run the test suite in step 2, you can run
+      it now to verify that MATPOWER is installed and functioning
+      properly, by typing:
+
+        test_matpower
 
 
 Running MATPOWER
