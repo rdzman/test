@@ -291,22 +291,22 @@ Documentation for the case data file format can be found by typing:
     help caseformat
 
 If something is still unclear after checking the manual and the help,
-the source code *is* the documentation. ::wink::
+the source code *is* the documentation. :wink:
 
-TECH NOTES
+#### TECH NOTES
 
 There are also two MATPOWER Technical Notes that may be of interest:
 
-[TN1]  R. D. Zimmerman, "Uniform Price Auctions and Optimal Power Flow,
-       MATPOWER Technical Note 1, February 2010.
+ - [TN1]  R. D. Zimmerman, "Uniform Price Auctions and Optimal Power Flow,
+       *MATPOWER Technical Note 1*, February 2010.
           http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
 
-[TN2]  R. D. Zimmerman, "AC Power Flows, Generalized OPF Costs and
-       their Derivatives using Complex Matrix Notation", MATPOWER
-       Technical Note 2, February 2010.
+ - [TN2]  R. D. Zimmerman, "AC Power Flows, Generalized OPF Costs and
+       their Derivatives using Complex Matrix Notation", *MATPOWER
+       Technical Note 2*, February 2010.
           http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
 
-PUBLICATIONS & PRESENTATIONS
+#### PUBLICATIONS & PRESENTATIONS
 
 [1]  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
      "MATPOWER's Extensible Optimal Power Flow Architecture," Power
@@ -484,3 +484,4 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [15]: https://github.com/MATPOWER/
 [16]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
 [17]: docs/MOST-manual.pdf
+[TN1]: 
