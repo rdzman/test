@@ -165,32 +165,28 @@ There are also two MATPOWER Technical Notes that may be of interest:
 #### Publications & Presentations
 
 1.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
-    "MATPOWER's Extensible Optimal Power Flow Architecture," Power
-    and Energy Society General Meeting, 2009 IEEE, pp. 1-7,
-    July 26-30 2009.
-        http://www.pserc.cornell.edu/matpower/MATPOWER-OPF.pdf  
-        http://dx.doi.org/10.1109/PES.2009.5275967  
-     slides of presentation:
-        http://www.pserc.cornell.edu/matpower/MATPOWER-OPF-slides.pdf
+    ["MATPOWER's Extensible Optimal Power Flow Architecture,"][20]
+    *Power and Energy Society General Meeting, 2009 IEEE*, pp. 1-7,
+    July 26-30 2009. DOI: [10.1109/PES.2009.5275967][21].
+     - [slides of presentation][22]
 
 2.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
-     "MATPOWER: Steady-State Operations, Planning and Analysis Tools
-     for Power Systems Research and Education," Power Systems, IEEE
-     Transactions on, vol. 26, no. 1, pp. 12–19, Feb. 2011.
-        http://www.pserc.cornell.edu/matpower/MATPOWER-paper.pdf
-        http://dx.doi.org/10.1109/TPWRS.2010.2051168
+    ["MATPOWER: Steady-State Operations, Planning and Analysis Tools
+    for Power Systems Research and Education,"][23] *Power Systems, IEEE
+    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.
+    DOI: [10.1109/TPWRS.2010.2051168][24].
+        
 
 3.  H. Wang, C. E. Murillo-Sánchez, R. D. Zimmerman, R. J. Thomas,
-     "On Computational Issues of Market-Based Optimal Power Flow,"
-     Power Systems, IEEE Transactions on, vol. 22, no. 3,
-     pp. 1185-1193, Aug. 2007.
-        http://dx.doi.org/10.1109/TPWRS.2007.901301
+     ["On Computational Issues of Market-Based Optimal Power Flow,"][25]
+     *Power Systems, IEEE Transactions on*, vol. 22, no. 3,
+     pp. 1185-1193, Aug. 2007. DOI: [10.1109/TPWRS.2007.901301][25].
 
-4.  C. E. Murillo-S ́anchez, R. D. Zimmerman, C. L. Anderson, and
-     R. J. Thomas, "Secure Planning and Operations of Systems with
-     Stochastic Sources, Energy Storage and Active Demand," Smart Grid,
-     IEEE Transactions on, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
-        http://dx.doi.org/10.1109/TSG.2013.2281001
+4.  C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
+     R. J. Thomas, ["Secure Planning and Operations of Systems with
+     Stochastic Sources, Energy Storage and Active Demand,"][26]
+     *Smart Grid, IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229,
+     Dec. 2013. DOI: [10.1109/TSG.2013.2281001][26].
 
 
 Optional Packages
@@ -210,22 +206,23 @@ E-mail Lists
 There are three MATPOWER e-mail lists available to serve the MATPOWER
 community:
 
-- [MATPOWER-ANNOUNCE-L][24] is a simple announcement list for those who
+- [MATPOWER-ANNOUNCE-L][27] is a simple announcement list for those who
   wish to be notified of the release of new versions of MATPOWER.
 
-- [MATPOWER-L][25] is for MATPOWER users, to facilitate discussion and
+- [MATPOWER-L][28] is for MATPOWER users, to facilitate discussion and
   provide a forum for help with MATPOWER related questions.
 
 - [MATPOWER-DEV-L][16] is for MATPOWER developers, to provide a forum for
   discussion related to the development of the MATPOWER software or
   proposed contributions.
 
-For details see the Mailing Lists section of the MATPOWER website.
+For details see the [Mailing Lists section][29] of the
+[MATPOWER website][1].
 
 Please select the most appropriate list for your post and do *not*
 cross-post to both MATPOWER-L and MATPOWER-DEV-L. Bug reports,
 software patches, proposed enhancements, etc. should be submitted to
-the issue tracker on GitHub.
+the [issue tracker on GitHub][11].
 
 --------------
  TERMS OF USE
@@ -281,9 +278,13 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [17]: docs/MOST-manual.pdf
 [18]: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
 [19]: http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
-[20]: 
-[21]: 
-[22]: 
-[23]: 
-[24]: http://www.pserc.cornell.edu/matpower/mailinglists.html#announcelist
-[25]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
+[20]: http://www.pserc.cornell.edu/matpower/MATPOWER-OPF.pdf
+[21]: http://dx.doi.org/10.1109/PES.2009.5275967
+[22]: http://www.pserc.cornell.edu/matpower/MATPOWER-OPF-slides.pdf
+[23]: http://www.pserc.cornell.edu/matpower/MATPOWER-paper.pdf
+[24]: http://dx.doi.org/10.1109/TPWRS.2010.2051168
+[25]: http://dx.doi.org/10.1109/TPWRS.2007.901301
+[26]: http://dx.doi.org/10.1109/TSG.2013.2281001
+[27]: http://www.pserc.cornell.edu/matpower/mailinglists.html#announcelist
+[28]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
+[29]: http://www.pserc.cornell.edu/matpower/mailinglists.html
