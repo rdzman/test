@@ -168,26 +168,28 @@ There are also two MATPOWER Technical Notes that may be of interest:
 1.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     ["MATPOWER's Extensible Optimal Power Flow Architecture,"][20]
     *Power and Energy Society General Meeting, 2009 IEEE*, pp. 1-7,
-    July 26-30 2009. DOI: [10.1109/PES.2009.5275967][21].
+    July 26-30 2009.  
+    DOI: [10.1109/PES.2009.5275967][21].
      - [slides of presentation][22]
 
 2.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     ["MATPOWER: Steady-State Operations, Planning and Analysis Tools
     for Power Systems Research and Education,"][23] *Power Systems, IEEE
-    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.
+    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.  
     DOI: [10.1109/TPWRS.2010.2051168][24].
-        
 
 3.  H. Wang, C. E. Murillo-Sánchez, R. D. Zimmerman, R. J. Thomas,
      ["On Computational Issues of Market-Based Optimal Power Flow,"][25]
      *Power Systems, IEEE Transactions on*, vol. 22, no. 3,
-     pp. 1185-1193, Aug. 2007. DOI: [10.1109/TPWRS.2007.901301][25].
+     pp. 1185-1193, Aug. 2007.  
+     DOI: [10.1109/TPWRS.2007.901301][25].
 
 4.  C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
      R. J. Thomas, ["Secure Planning and Operations of Systems with
      Stochastic Sources, Energy Storage and Active Demand,"][26]
      *Smart Grid, IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229,
-     Dec. 2013. DOI: [10.1109/TSG.2013.2281001][26].
+     Dec. 2013.  
+     DOI: [10.1109/TSG.2013.2281001][26].
 
 
 Optional Packages
