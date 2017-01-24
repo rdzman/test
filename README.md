@@ -7,18 +7,16 @@ A Power System Simulation Package for Matlab and Octave
 - **MATPOWER Website**          - http://www.pserc.cornell.edu/matpower/
 - **MATPOWER GitHub Project**   - https://github.com/MATPOWER/matpower
 
-Introduction
-------------
-
 MATPOWER is a package of M-files for solving power flow and optimal
 power flow problems using Matlab or Octave. It is intended as a
 simulation tool for researchers and educators that is easy to use
 and modify. MATPOWER is designed to give the best performance
 possible while keeping the code simple to understand and modify.
 
-MATPOWER can be downloaded from the [MATPOWER website][1], or cloned
-from the [MATPOWER GitHub project][2], both listed above.
-
+MATPOWER releases can be downloaded from the [MATPOWER website][1],
+and the latest stable and work-in-progress versions can always be
+downloaded or cloned from the [MATPOWER GitHub project][2]. The
+`master` branch should always contain a stable version.
 
 GETTING STARTED
 ---------------
@@ -30,9 +28,24 @@ System Requirements
 
 Installation
 ------------
-1.  Follow the download instructions on the MATPOWER website. You
-    should end up with a file named matpowerXXX.zip, where XXX depends
-    on the version of MATPOWER.
+
+Make sure you follow the installation instructions for the version
+of MATPOWER you are installing. There were some changes with the
+move to GitHub after version 6.0.
+
+1.  Get a copy of MATPOWER. There are 3 ways to get a copy of MATPOWER:
+  a. Download a release from the [MATPOWER website][1].
+    - Extract the contents of the ZIP file wherever you like.
+  b. Clone the MATPOWER repository.
+    - `git clone https://github.com/MATPOWER/matpower.git`
+  c. Download a ZIP of the MATPOWER repository from GitHub.
+    - Go to the [MATPOWER GitHub repository page][2] and click the
+      green "Clone or download" button, then "Download ZIP".
+    - Extract the contents of the ZIP file wherever you like.
+
+The result should be a directory, which we will refer to here as
+`<MATPOWER>`, containing the MATPOWER distribution. You should find
+the [MATPOWER User's Manual][5] in the `docs` sub-directory.
 
 2.  Unzip the downloaded file. Move the resulting matpowerXXX directory
     to the location of your choice. These files should not need to be
@@ -436,3 +449,4 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [2]: https://github.com/MATPOWER/matpower
 [3]: https://github.com/MATPOWER/matpower
 [4]: http://www.mathworks.com/
+[5]: docs/MATPOWER-manual.pdf
