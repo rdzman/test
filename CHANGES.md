@@ -172,7 +172,7 @@ Version 6.0b1 - *Jun 1, 2016*
   - Fix bug in `toggle_dclines()` that resulted in fatal error when
     used with OPF with reactive power costs. *Thanks to Irina Boiarchuk.*
   - Add option to call `total_load()` with full case struct, instead
-    of separate bus and gen matrices.
+    of separate `bus` and `gen` matrices.
 
 #### 5/18/16
   - Add `plot_mpc()`, contributed by Paul Cuffe, to `extras/misc`. Plots
@@ -542,7 +542,7 @@ Version 5.0 - *Dec 17, 2014*
     in system and area summaries in `printpf()`. Line charging
     injections set to zero for DC power flow results.
   - Added tests for `printpf()` in `t_printpf.m`.
-  - Changes to the internally indexed version of gencost now
+  - Changes to the internally indexed version of `gencost` now
     get properly copied back to externally indexed version by
     `int2ext()`.
   - Added tests in `t_ext2int2ext()` to confirm that `e2i_data/field()`
@@ -571,7 +571,7 @@ Version 5.0 - *Dec 17, 2014*
     version 2 case files that still included it.
 
 #### 10/21/14
-  - Fixed a bug in `savecase()` where a gencost matrix with extra
+  - Fixed a bug in `savecase()` where a `gencost` matrix with extra
     columns of zeros resulted in a corrupted MATPOWER case file.
   - Modified `total_load()` to return actual rather than nominal
     value for dispatchable loads by default, unless using the
@@ -787,7 +787,7 @@ Version 5.0b1 - *Jul 1, 2014*
 #### 12/10/13
   - New MATPOWER options implementation based on options struct
     instead of options vector.
-    **INCOMPATIBLE CHANGE:** In results struct returned by an OPF, the
+    **INCOMPATIBLE CHANGE:** In `results` struct returned by an OPF, the
     value of `results.raw.output.alg` is now a string, not an old-style
     numeric alg code.
   - Gurobi now takes precendence over MOSEK when default solver
@@ -875,10 +875,10 @@ Version 5.0b1 - *Jul 1, 2014*
     opposed to specific var sets).
     
 #### 3/13/13
-  - Added to `scale_load()` the option to scale the gencost
+  - Added to `scale_load()` the option to scale the `gencost`
     (specifically the quantity axis of the marginal cost function)
     corresponding to any modified dispatchable load. Simply add
-    gencost as additional input and output args.
+    `gencost` as additional input and output args.
   - Empty `got` and `expected` arguments to `t_is()` now
     count as a passing test instead of an error, as long as
     the dimensions match.
@@ -972,7 +972,7 @@ Version 5.0b1 - *Jul 1, 2014*
     enforcement loop in `runpf()`. *Suggested by Shiyang Li.*
 
 #### 1/4/12
-  - Running a power flow for a case with DC lines but no gencost
+  - Running a power flow for a case with DC lines but no `gencost`
     no longer causes an error.
 
 #### 12/14/11
@@ -1042,7 +1042,7 @@ Version 4.1 - *Dec 14, 2011*
 
 #### 7/25/11
   - Fixed bug in `compare_case()` that would cause some column
-    names for the branch matrix to be incorrectly reported.
+    names for the `branch` matrix to be incorrectly reported.
 
 #### 7/7/11
   - In `scale_load()`, when no load_zone is specified, it no longer
@@ -1213,7 +1213,7 @@ Version 4.0b4 - *May 21, 2010*
 #### 5/13/10
   - Modified input args for Hessian evaluation function for MIPS.
     Requires `cost_mult` as 3rd argument.
-  - Added check for invalid gencost `MODEL` in `opf_setup()`.
+  - Added check for invalid `gencost` `MODEL` in `opf_setup()`.
 
 #### 5/5/10
   - Added `RETURN_RAW_DER` option to control when OPF solver returns
@@ -1244,7 +1244,7 @@ Version 4.0b3 - *Apr 19, 2010*
 #### 3/23/09
   - Fixed bug in smart market code that caused it to die for cases with
     non-consecutive bus numbers.
-  - Removed consecutive-bus number requirement for `scale_load()` and
+  - Removed consecutive bus number requirement for `scale_load()` and
     `total_load()` functions.
 
 
@@ -1344,7 +1344,7 @@ Version 4.0b1 - *Dec 24, 2009*
     limits and branch angle difference limits before setting up and
     running the OPF. The fix for this subtle bug involved changing
     loadcase to not assume that an input struct without a `version`
-    field is in version 1 format. It now checks the size of the gen
+    field is in version 1 format. It now checks the size of the `gen`
     matrix to make the determination.
 
 #### 12/8/09
@@ -1392,7 +1392,7 @@ Version 4.0b1 - *Dec 24, 2009*
     include just fixed load, just dispatchable load, or both.
 
 #### 5/19/09
-  - The results struct returned by power flow or optimal power flow
+  - The `results` struct returned by power flow or optimal power flow
     is now a strict superset of a MATPOWER case struct.
   - Extended `ext2int.m` and `int2ext.m` to handle converting entire case
     struct in a single call, storing the re-indexing info in the
@@ -1455,7 +1455,7 @@ Version 4.0b1 - *Dec 24, 2009*
     fixed reserve requirements. This is a good example of how to use
     the new userfcn mechanism to add vars, costs, constraints to an
     OPF (see also `toggle_reserves.m` and `t_case30_userfcns.m`).
-  - Added option to return solution as a results struct to `runpf()`,
+  - Added option to return solution as a `results` struct to `runpf()`,
     `runopf()`, `runuopf()`, `rundcpf()`, `rundcopf()`, `runduopf()`.
   - Updated `uopf.m` so input/output args match `opf.m`.
   - Added option `ENFORCE_Q_LIMS = 2` for runpf to allow one-at-a-time
@@ -1468,13 +1468,13 @@ Version 4.0b1 - *Dec 24, 2009*
 #### 6/10/08
   - Added new way to specify user vars, constraints, costs via
     userfcn for OPF.
-  - Added option to return OPF results in a struct.
+  - Added option to return OPF `results` in a struct.
   - Added defaults for user cost params in `fparm` and `H`, making them
     optional even when `N` and `Cw` are given.
 
 #### 5/22/08
   - Major refactorization of OPF implementation with shared code
-    for a generalized formulation that includes the DC opf as
+    for a generalized formulation that includes the DC OPF as
     well as the legacy solvers based on `constr` and `LPconstr`.
   - Deprecated `OPF_ALG` values 100, 120, 140, 160, 200, 220, 240,
     and 260 in favor of the new generalized formulation
@@ -1751,7 +1751,7 @@ Version 3.0b4 - *Jan 28, 2005*
     when not specifying both input parameters and caused it to
     sometimes not add the warnings at the end of the file.
   - Fixed typo in name of lower bound input argument in `opf.m`. Only
-    affected those calling opf directly with extra linear constraints.
+    affected those calling OPF directly with extra linear constraints.
 
 
 Version 3.0b3 - *Sep 20, 2004*
@@ -1789,7 +1789,7 @@ Version 3.0b2 - *Sep 7, 2004*
     for the suggestion and some code.*
 
 #### 9/1/04
-  - Fixed bug in `savecase.m` introduced when making areas and gencost
+  - Fixed bug in `savecase.m` introduced when making `areas` and `gencost`
     optional.
   - Updated `opf_slvr.m` with options for MINOS and fmincon.
   - Removed option 15 `OPF_NEQ` from docs (not a user option). Removed option
@@ -1813,11 +1813,11 @@ Version 3.0b1 - *Aug 25, 2004*
   - Made `mpoption()` throw an error if passed an invalid option name.
 
 #### 8/23/04
-  - Added an fmincon based OPF solver for the generalized formulation
-    previously used by mopf (Carlos).
+  - Added an `fmincon` based OPF solver for the generalized formulation
+    previously used by `mopf` (Carlos).
   - Restructured `opf.m` so all OPF solvers have a similar API based
     on the one from `mopf.m` (Carlos).
-  - Added some quick tests for runpf and runopf for each algorithm.
+  - Added some quick tests for `runpf` and `runopf` for each algorithm.
 
 #### 8/13/04
   - Renamed `area` variable to `areas` to avoid masking the built-in
@@ -1826,14 +1826,14 @@ Version 3.0b1 - *Aug 25, 2004*
     simple power flow.
 
 #### 7/15/04
-  - The loadcase function (and therefore all of the run* functions
+  - The `loadcase` function (and therefore all of the `run*` functions
     now optionally accept a struct with the data matrices as fields
     in place of the case file name.
-  - Added t subdirectory with various tests and testing tools.
+  - Added `t` subdirectory with various tests and testing tools.
 
 #### 7/8/04
   - Updated `mp_lp.m` and `mp_qp.m` to try `linprog()` and `quadprog()`
-    after trying bp, since `lp()` and `qp()` are no longer included
+    after trying `bp`, since `lp()` and `qp()` are no longer included
     in the Optimization Toolbox as of version 3.
 
 #### 7/7/04
@@ -1848,10 +1848,10 @@ Version 3.0b1 - *Aug 25, 2004*
 
 #### 4/17/03
   - Changed `uopf.m` to use a dynamic programming approach. More
-    computationally expensive, but should find significanly better
+    computationally expensive, but should find significantly better
     results when there are many gens to shut down.
   - Added `mp_lp.m` and `mp_qp.m`, equivalents to `lp.m` and `qp.m`,
-    respectively that call bpmpd if available. Modified `LPrelax.m`,
+    respectively that call BPMPD if available. Modified `LPrelax.m`,
     `LPsetup.m` and `dcopf.m` to call these new functions.
 
 #### 4/14/03
@@ -1868,18 +1868,18 @@ Version 3.0b1 - *Aug 25, 2004*
     for generators that are shut down.
 
 #### 6/8/00
-  - Modified `cdf2matp.m` so that Pd also includes any generation at
+  - Modified `cdf2matp.m` so that `Pd` also includes any generation at
     buses specified as PQ buses. Also modified identification of
     generator buses to include only PV or reference buses. *Thanks
     to Venkat.*
   - Modified `cdf2matp.m` so that it always treats the input values
-    for Gs and Bs as per unit values and converts them to actual
+    for `Gs` and `Bs` as per unit values and converts them to actual
     values expected by MATPOWER. *Thanks to D. Devaraj.*
 
 #### 11/9/99 - version 2.5b3
 
 #### 9/22/99
-  - Modified grad_*.m to return sparse matrices, unless using
+  - Modified `grad_*.m` to return sparse matrices, unless using
     `constr.m` or an LP/QP solver that doesn't handle sparse
     matrices. Cleaned up sparse<->full conversions in `LPconstr.m`,
     `LPrelax.m`, and `LPsetup.m`.
@@ -1891,7 +1891,7 @@ Version 3.0b1 - *Aug 25, 2004*
     when using the model used by MATPOWER (ideal transformer in
     series with a PI model).
   - Added `loadcase.m` which loads a MATPOWER case from an M-file
-    or from a MAT-file. Changed all of the run*.m files to use this
+    or from a MAT-file. Changed all of the `run*.m` files to use this
     as the default way to load case files.
   - Renamed `print2mp.m` to `savecase.m` and added the ability to
     save a case as a MAT-file as well as an M-file.
@@ -1927,7 +1927,7 @@ Version 3.0b1 - *Aug 25, 2004*
     checking.
 
 #### 7/19/99
-  - Modified `runuopf.m` and `uopf.m` to handle DC opf. Added the
+  - Modified `runuopf.m` and `uopf.m` to handle DC OPF. Added the
     function `runduopf.m` which calls `runuopf.m` with the `PF_DC` flag
     set to 1.
   - Fixed size of 2nd order (all zero) coefficient of objective
@@ -1957,7 +1957,7 @@ Version 3.0b1 - *Aug 25, 2004*
     optimal power flow algorithms.
 
 #### 7/13/99
-  - Cleaned up variable names in makeYbus to avoid confusion.
+  - Cleaned up variable names in `makeYbus.m` to avoid confusion.
 
 #### 6/10/99
   - Changed UOFP to UOPF in print statements `uopf.m`.
@@ -2008,7 +2008,7 @@ Version 3.0b1 - *Aug 25, 2004*
   - Changed `pfsoln.m` so that there is only one slack generator.
     Instead of dividing the P between multiple gens at the
     slack bus in proportion to capacity (this caused problems
-    for the LPconstr versions of the OPF), it now treats the
+    for the `LPconstr` versions of the OPF), it now treats the
     first generator at the slack bus as the only slack generator,
     leaving the dispatch of the other gens at the bus unchanged.
   - Added generator number to generation constraint printout and
@@ -2021,30 +2021,30 @@ Version 3.0b1 - *Aug 25, 2004*
     non-binding constraints.
 
 #### 12/1/98
-  - Made modifications to ...
-      `bustypes.m`
-      `fun_ccv.m`
-      `fun_std.m`
-      `grad_ccv.m`
-      `grad_std.m`
-      `LPeqslvr.m`
-      `makeSbus.m`
-      `opf.m`
-      `opfsoln.m`
-      `pfsoln.m`
-      `printpf.m`
-      `runpf.m`
-    ... to allow for multiple generators at each bus. For simple
-    power flow, the Q dispatch is divided between multiple gens
-    at a bus in proportion to each gen's Q capacity. Likewise
-    with P for multiple gens at the slack bus.
+  - Made modifications to the following to allow for multiple
+    generators at each bus. For simple power flow, the Q dispatch
+    is divided between multiple gens at a bus in proportion to
+    each gen's Q capacity. Likewise with P for multiple gens at
+    the slack bus.
+    - `bustypes.m`
+    - `fun_ccv.m`
+    - `fun_std.m`
+    - `grad_ccv.m`
+    - `grad_std.m`
+    - `LPeqslvr.m`
+    - `makeSbus.m`
+    - `opf.m`
+    - `opfsoln.m`
+    - `pfsoln.m`
+    - `printpf.m`
+    - `runpf.m`
 
 #### 10/29/98
   - Fixed bug in `uopf.m` which caused it to crash when attempting
     to restart a generator after more than 2 had been shut down.
 
 #### 10/19/98
-  - Generalized definition of `GEN_STATUS` column of gen matrix
+  - Generalized definition of `GEN_STATUS` column of `gen` matrix
     to allow for distinctions in the status of out-of-service
     generators. The default values of 0 => out-of-service and
     1 => in-service still work, but the logic has been changed
@@ -2123,9 +2123,9 @@ Version 2.0 - *Dec 24, 1997*
   - Fixed a bug in calculation of losses. Previous versions
     included line charging injection in reactive line losses.
   - Added ability to optionally return solution data from
-    run*.m functions.
+    `run*.m` functions.
   - Added ability to optionally print results to a file.
-  - Added system and area summaries to printpf and modified to
+  - Added system and area summaries to `printpf` and modified to
     handle the new printing options.
 
 #### 12/12/97
@@ -2145,7 +2145,7 @@ Version 2.0 - *Dec 24, 1997*
 #### 12/10/97
   - Incorporated new LP-based OPF routines and updated alg codes.
   - Fixed a bug in the documentation in the case files regarding
-    the 4th column of gencost. For piece-wise linear cost functions
+    the 4th column of `gencost`. For piece-wise linear cost functions
     this value is the number of data points, not the number of
     parameters (x and y for each point).
   - Removed some m-files that are not used (`usesOT.m`, `usesLP.m`).
@@ -2155,7 +2155,7 @@ Version 2.0 - *Dec 24, 1997*
 
 #### 12/8/97
   - Rewrote `uopf.m` to use a smarter decommitment strategy (see the
-    docs for the details of the new method). Removed ref, pv, pq
+    docs for the details of the new method). Removed `ref`, `pv`, `pq`
     from the list of parameters passed in, since they were not used.
 
 #### 11/19/97
@@ -2199,7 +2199,7 @@ Version 2.0 - *Dec 24, 1997*
     not included explicitly in the optimization as variables and
     equality constraints. Generator reactive powers were computed
     directly. Now they are included explicitly in the optimization.
-    Costs for Qg are specified in extra rows int gencost.
+    Costs for Qg are specified in extra rows in `gencost`.
 
 
 Version 1.0.1 - *Sep 20, 1997*
@@ -2216,7 +2216,7 @@ Version 1.0.1 - *Sep 20, 1997*
 
 #### 9/18/97
   - Fixed a bug in 1.0 in `OTopf.m` which caused the last equality
-    constraint (Q mismatch for last pq bus) to be treated as an
+    constraint (Q mismatch for last PQ bus) to be treated as an
     inequality constraint. It appears that this constraint was
     normally binding (unless Qd was negative) in which case the
     solution was still correct.
@@ -2241,7 +2241,7 @@ Version 1.0 – *Sep 17, 1997*
     our Perl database interface code
   - included Deqiang (David) Gan's LP IEEE -> matpower data
     conversion code
-  - included Deqiang (David) Gan's LP based opf code
+  - included Deqiang (David) Gan's LP based OPF code
   - fixed `LAM_Q` bug, now computes correctly for generator buses
   - fixed some bugs in `totcost.m`
 
@@ -2255,7 +2255,7 @@ Version 1.0 – *Sep 17, 1997*
   - replaced `test*pf` with `run*pf` which are now functions
     taking the casefile name as a parameter (among other params)
   - made changes necessary to handle new format of case file
-    (generator costs moved to gencost variable)
+    (generator costs moved to `gencost` variable)
 
 
 First Public Release – *Jun 25, 1997*
@@ -2265,14 +2265,14 @@ First Public Release – *Jun 25, 1997*
   - made first public release (not widely publicized)
   - documentation updates
   - changed names of m-files to fit DOS 8.3 limitation
-      `buildsbus.m`     =>  `makeSbus.m`
-      `buildybus.m`     =>  `makeYbus.m`
-      `idx_branch.m`    =>  `idx_brch.m`
-      `dSbranch_dV.m`   =>  `dSbr_dV.m`
-      `dAbranch_dV.m`   =>  `dAbr_dV.m`
-      `ucopfsoln.m`     =>  `uopfsoln.m`
-      `testucopf.m`     =>  `testuopf.m`
-      `ucopf.m`         =>  `uopf.m`  (for naming consistency)
+    - `buildsbus.m`     =>  `makeSbus.m`
+    - `buildybus.m`     =>  `makeYbus.m`
+    - `idx_branch.m`    =>  `idx_brch.m`
+    - `dSbranch_dV.m`   =>  `dSbr_dV.m`
+    - `dAbranch_dV.m`   =>  `dAbr_dV.m`
+    - `ucopfsoln.m`     =>  `uopfsoln.m`
+    - `testucopf.m`     =>  `testuopf.m`
+    - `ucopf.m`         =>  `uopf.m`  (for naming consistency)
   - changed copyright notice
 
 #### 6/18/97
@@ -2289,7 +2289,7 @@ First Public Release – *Jun 25, 1997*
     injection when generators have been shut down
 
 #### 6/10/97
-  - fixed Vg initialization bug in `testpf.m` (not just testopf, etc)
+  - fixed Vg initialization bug in `testpf.m` (not just `testopf`, etc)
 
 #### 6/9/97
   - fixed bug in PLCCV versions which set the initial values of the
@@ -2300,37 +2300,39 @@ First Public Release – *Jun 25, 1997*
     case file
 
 #### 6/3/97
-  - included opf variations which use cost variables constrained
+  - included OPF variations which use cost variables constrained
     by a piece-wise linear cost function (PLCCV = piece-wise linearly
     constrained cost variables)
 
 #### 6/2/97
-  - included opf variations which use cost variables constrained
+  - included OPF variations which use cost variables constrained
     by a quadratic cost function (QCCV = quadratically constrained
     cost variables)
-  - included opf variation which allows generator voltage
+  - included OPF variation which allows generator voltage
     magnitudes to vary
   - fixed line in `test*pf.m` scripts which initializes `V0` (I'd missed
     the `sqrt(-1)` before
 
 #### 4/16/97
-  - changed line 59 of `ucopf.m` from "return" to "break" to ensure
+  - changed line 59 of `ucopf.m` from `return` to `break` to ensure
     return values are correct
 
 #### 4/14/97
   - added some print statements to `ucopf.m`
 
 #### 4/12/97
-  - reduced max iterations to 100 for constr in `opf.m`
+  - reduced max iterations to 100 for `constr` in `opf.m`
 
 #### 4/8/97
   - modified `opf.m`, `ucopf.m`, `testopf.m`, `testucopf.m` to include
-    "success", a variable which indicates whether opf was solved
+    `success`, a variable which indicates whether OPF was solved
     successfully or not
 
 #### 4/7/97
   - fixed bug in `ucopf.m`, assumed all generators are initially
     available
+
+--
 
 [1]: https://github.com/MATPOWER/mptest
 [2]: https://github.com/MATPOWER/mips
