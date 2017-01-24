@@ -119,8 +119,8 @@ function reference][9], or the built-in help documentation for the various MATPO
     help caseformat
 
 
----------------
-# Documentation
+Documentation
+-------------
 
 There are four primary sources of documentation for MATPOWER.
   - [MATPOWER User's Manual][5]
@@ -148,6 +148,14 @@ Documentation for the case data file format can be found by typing:
 
 If something is still unclear after checking the manual and the help,
 the source code *is* the documentation. :wink:
+
+
+Contributing
+------------
+
+Please see our [contributing guidelines][8] for details on how to
+contribute to the project or report issues.
+
 
 Publications and Technnical Notes
 ---------------------------------
@@ -209,13 +217,6 @@ acknowledge that fact by citing [reference \[4\]][24] as well as [\[1\]][19].
     R. J. Thomas, "Secure Planning and Operations of Systems with
     Stochastic Sources, Energy Storage and Active Demand," Smart Grid,
     IEEE Transactions on, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
-
-
-Contributing
-------------
-
-Please see our [contributing guidelines][8] for details on how to
-contribute to the project or report issues.
 
 
 E-mail Lists
