@@ -119,8 +119,8 @@ function reference][9], or the built-in help documentation for the various MATPO
     help caseformat
 
 
-Documentation
 -------------
+Documentation
 
 There are four primary sources of documentation for MATPOWER.
   - [MATPOWER User's Manual][5]
@@ -149,45 +149,41 @@ Documentation for the case data file format can be found by typing:
 If something is still unclear after checking the manual and the help,
 the source code *is* the documentation. :wink:
 
-Publications & Presentations
-----------------------------
+Publications and Technnical Notes
+---------------------------------
 
 1.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
+    ["MATPOWER: Steady-State Operations, Planning and Analysis Tools
+    for Power Systems Research and Education,"][18] *Power Systems, IEEE
+    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.  
+    DOI: [10.1109/TPWRS.2010.2051168][19].
+
+2.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     ["MATPOWER's Extensible Optimal Power Flow Architecture,"][20]
     *Power and Energy Society General Meeting, 2009 IEEE*, pp. 1-7,
     July 26-30 2009.  
     DOI: [10.1109/PES.2009.5275967][21].
      - [slides of presentation][22]
 
-2.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
-    ["MATPOWER: Steady-State Operations, Planning and Analysis Tools
-    for Power Systems Research and Education,"][23] *Power Systems, IEEE
-    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.  
-    DOI: [10.1109/TPWRS.2010.2051168][24].
-
 3.  H. Wang, C. E. Murillo-Sánchez, R. D. Zimmerman, R. J. Thomas,
-     ["On Computational Issues of Market-Based Optimal Power Flow,"][25]
+     ["On Computational Issues of Market-Based Optimal Power Flow,"][23]
      *Power Systems, IEEE Transactions on*, vol. 22, no. 3,
      pp. 1185-1193, Aug. 2007.  
-     DOI: [10.1109/TPWRS.2007.901301][25].
+     DOI: [10.1109/TPWRS.2007.901301][23].
 
 4.  C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
      R. J. Thomas, ["Secure Planning and Operations of Systems with
-     Stochastic Sources, Energy Storage and Active Demand,"][26]
+     Stochastic Sources, Energy Storage and Active Demand,"][24]
      *Smart Grid, IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229,
      Dec. 2013.  
-     DOI: [10.1109/TSG.2013.2281001][26].
+     DOI: [10.1109/TSG.2013.2281001][24].
 
-#### Tech Notes
-
-There are also two MATPOWER Technical Notes that may be of interest:
-
-1.  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
-    Power Flow"][18], *MATPOWER Technical Note 1*, February 2010.  
+5.  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
+    Power Flow"][25], *MATPOWER Technical Note 1*, February 2010.  
     Available: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
 
-2.  R. D. Zimmerman, ["AC Power Flows, Generalized OPF Costs
-    and their Derivatives using Complex Matrix Notation"][19],
+6.  R. D. Zimmerman, ["AC Power Flows, Generalized OPF Costs
+    and their Derivatives using Complex Matrix Notation"][26],
     *MATPOWER Technical Note 2*, February 2010.  
     Available:
     http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
@@ -198,7 +194,7 @@ Citing MATPOWER
 
 While not required by the terms of the license, we do request that
 publications derived from the use of MATPOWER explicitly acknowledge
-that fact by citing [reference \[2\]][24] above, namely:
+that fact by citing [reference \[1\]][19] above, namely:
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     "MATPOWER: Steady-State Operations, Planning and Analysis Tools
@@ -207,7 +203,7 @@ that fact by citing [reference \[2\]][24] above, namely:
 
 Additionally, we request that publications derived from the use of
 the [MATPOWER Optimal Scheduling Tool (MOST)][12], explicitly
-acknowledge that fact by citing [reference \[4\]][26] as well as [\[2\]][24].
+acknowledge that fact by citing [reference \[4\]][24] as well as [\[1\]][19].
 
 >   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
     R. J. Thomas, "Secure Planning and Operations of Systems with
@@ -281,15 +277,15 @@ MATPOWER is distributed under the [3-clause BSD license][30].
 [15]: https://github.com/MATPOWER/
 [16]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
 [17]: docs/MOST-manual.pdf
+[18]: http://www.pserc.cornell.edu/matpower/MATPOWER-paper.pdf
+[19]: http://dx.doi.org/10.1109/TPWRS.2010.2051168
 [20]: http://www.pserc.cornell.edu/matpower/MATPOWER-OPF.pdf
 [21]: http://dx.doi.org/10.1109/PES.2009.5275967
 [22]: http://www.pserc.cornell.edu/matpower/MATPOWER-OPF-slides.pdf
-[23]: http://www.pserc.cornell.edu/matpower/MATPOWER-paper.pdf
-[24]: http://dx.doi.org/10.1109/TPWRS.2010.2051168
-[25]: http://dx.doi.org/10.1109/TPWRS.2007.901301
-[26]: http://dx.doi.org/10.1109/TSG.2013.2281001
-[18]: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
-[19]: http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
+[23]: http://dx.doi.org/10.1109/TPWRS.2007.901301
+[24]: http://dx.doi.org/10.1109/TSG.2013.2281001
+[25]: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
+[26]: http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
 [27]: http://www.pserc.cornell.edu/matpower/mailinglists.html#announcelist
 [28]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
 [29]: http://www.pserc.cornell.edu/matpower/mailinglists.html
