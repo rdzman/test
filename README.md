@@ -267,15 +267,15 @@ Below is a summary of the changes since version 5.1 of MATPOWER. See the
 ---------------
 
 There are four primary sources of documentation for MATPOWER.
-    - MATPOWER User's Manual
-    - MOST User's Manual
-    - MATPOWER Online Function Reference
-      (http://www.pserc.cornell.edu/matpower/docs/ref)
-    - MATLAB's 'help' command
+  - [MATPOWER User's Manual][5]
+  - [MOST User's Manual][17]
+  - [MATPOWER Online Function Reference][9]
+  - MATLAB's `help` command
 
 The MATPOWER and MOST User's Manuals are included in the distribution
-(docs/MATPOWER-manual.pdf and docs/MOST-manual.pdf) or they can be downloaded
-separately from http://www.pserc.cornell.edu/matpower/MATPOWER-manual.pdf and
+([`docs/MATPOWER-manual.pdf`][5] and [`docs/MOST-manual.pdf`][17]) or
+they can be downloaded separately from
+http://www.pserc.cornell.edu/matpower/MATPOWER-manual.pdf and
 http://www.pserc.cornell.edu/matpower/MOST-manual.pdf. Previous
 versions are available at http://www.pserc.cornell.edu/matpower/docs/.
 
@@ -289,7 +289,7 @@ Documentation for the case data file format can be found by typing:
     help caseformat
 
 If something is still unclear after checking the manual and the help,
-the source code *is* the documentation. ;-)
+the source code *is* the documentation. ::wink::
 
 TECH NOTES
 
