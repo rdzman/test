@@ -40,7 +40,7 @@ There are three ways to get a copy of MATPOWER:
     current stable release, with the latest bug fixes and new
     features, using a simple `git pull` command, or if you want to
     help with testing the latest versions. This requires that you
-    have a [Git (GUI or command-line) client][6] installed.*
+    have a [Git client][6] (GUI or command-line) installed.*
 3. Download a zip file of the MATPOWER repository from GitHub.
   - Go to the [MATPOWER GitHub repository page][2]
   - Click the green "Clone or download" button, then "Download ZIP".
