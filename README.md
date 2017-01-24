@@ -29,7 +29,7 @@ System Requirements
 Getting MATPOWER
 ----------------
 
-There are three ways to get a copy of MATPOWER:
+There are three options for obtaining a copy of MATPOWER:
 
 1. Download the latest release version from the [MATPOWER website][1].
   - Go to the [MATPOWER website][1].
@@ -50,6 +50,9 @@ There are three ways to get a copy of MATPOWER:
     are not ready to begin using Git (but don't be afraid to
     [give Git a try][7]).*
 
+See [CONTRIBUTING.md][8] for information on how to get a local copy
+of your own MATPOWER fork, if you are interesting in contributing
+your own code or modifications.
 
 Installation
 ------------
@@ -110,7 +113,7 @@ in branch 51.
     branch51_flow   = results.branch(51, PF);
 
 For additional info, see the [MATPOWER User's Manual][5], the [on-line
-function reference][8], or the built-in help documentation for the various MATPOWER functions. For example:
+function reference][9], or the built-in help documentation for the various MATPOWER functions. For example:
 
     help runpf
     help runopf
@@ -469,4 +472,5 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [5]: docs/MATPOWER-manual.pdf
 [6]: https://git-scm.com/downloads
 [7]: https://git-scm.com
-[8]: http://www.pserc.cornell.edu/matpower/docs/ref/
+[8]: CONTRIBUTING.md
+[9]: http://www.pserc.cornell.edu/matpower/docs/ref/
