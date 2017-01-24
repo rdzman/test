@@ -153,7 +153,7 @@ Below is a summary of the changes since version 5.1 of MATPOWER. See the
     and Wu.
 
 * New Features:
-  - [MATPOWER Optimal Scheduling Tool (MOST)][] is a major new feature,
+  - [MATPOWER Optimal Scheduling Tool (MOST)][12] is a major new feature,
     implementing a full range of optimal power scheduling problems, from a
     simple as a deterministic, single period economic dispatch problem
     with no transmission constraints to as complex as a stochastic,
@@ -161,104 +161,105 @@ Below is a summary of the changes since version 5.1 of MATPOWER. See the
     problem with locational contingency and load-following reserves,
     ramping costs and constraints, deferrable demands, lossy storage
     resources and uncertain renewable generation.
-    See docs/MOST-manual.pdf for details.
+    See [`docs/MOST-manual.pdf`][17] for details.
   - General mechanism for applying modifications to an existing MATPOWER
-    case. See apply_changes() and idx_ct().
+    case. See `apply_changes()` and `idx_ct()`.
   - Redesigned CPF callback mechanism to handle CPF events such as
     generator limits, nose point detection, etc. Included event log
     in CPF results.
-  - Added options 'cpf.enforce_p_lims' and 'cpf.enforce_q_lims' to
+  - Added options `cpf.enforce_p_lims` and `cpf.enforce_q_lims` to
     enforce generator active and reactive power limts in the
     continuation power flow.
-  - Added OPF option 'opf.use_vg' to provide a convenient way to have
+  - Added OPF option `opf.use_vg` to provide a convenient way to have
     the OPF respect the generator voltage setpoints specified in the
     gen matrix.
   - Experimental foundation for handling of ZIP load models in power flow
     (Newton, fast-decoupled only), continuation power flow, and optimal
     power flow (MIPS, fmincon, Knitro, IPOPT solvers only). Currently,
     ZIP loads can only be specified on a system-wide basis using the
-    experimental options 'exp.sys_wide_zip_loads.pw' and
-    'exp.sys_wide_zip_loads.qw'.
- - Support for quadprog() under GNU Octave.
+    experimental options `exp.sys_wide_zip_loads.pw` and
+    `exp.sys_wide_zip_loads.qw`.
+ - Support for `quadprog()` under GNU Octave.
  - New contributed extras:
     - Plot electrically meaningful drawings of a MATPOWER case using
-      plot_mpc() in extras/misc, contributed by Paul Cuffe.
+      `plot_mpc()` in `extras/misc`, *contributed by Paul Cuffe*.
     - Find the maximum loadability limit of a system via an optimal power
-      flow and dispatchable loads, using maxloadlim() in extras/maxloadlim,
-      contributed by Camille Hamon.
+      flow and dispatchable loads, using `maxloadlim()` in `extras/maxloadlim`,
+      *contributed by Camille Hamon*.
     - Create a quadratically-constrained quadratic programming (QCQP)
       representation of the AC optimal power flow problem using using
-      qcqp_opf() in extras/misc, contributed by Cedric Josz and colleagues.
+      `qcqp_opf()` in `extras/misc`, *contributed by Cedric Josz and
+      colleagues*.
   - New functions:
-    - apply_changes() and idx_ct() provide a general mechanism for
+    - `apply_changes()` and `idx_ct()` provide a general mechanism for
       applying modifications to an existing MATPOWER case.
-    - feval_w_path() evaluates a function located at a specified path,
+    - `feval_w_path()` evaluates a function located at a specified path,
       outside of the Matlab path.
-    - mpopt2qpopt() provides a common interface for creating options
-      struct for mi/qps_matpower() from a MATPOWER options struct.
+    - `mpopt2qpopt()` provides a common interface for creating options
+      struct for `mi/qps_matpower()` from a MATPOWER options struct.
   - New function options:
-    - Option to call makeB(), makeBdc(), makePTDF(), scale_load(), and
-      total_load() with full case struct (mpc) instead of individual data
-      matrices (bus, branch, etc.).
-    - total_load(), which now computes voltage-dependent load values,
-      accepts the values 'bus' and 'area' as valid values for 'load_zone'
+    - Option to call `makeB()`, `makeBdc()`, `makePTDF()`, `scale_load()`,
+      and `total_load()` with full case struct (`mpc`) instead of
+      individual data matrices (`bus`, `branch`, etc.).
+    - `total_load()`, which now computes voltage-dependent load values,
+      accepts the values `bus` and `area` as valid values for `load_zone`
       argument.
 
 * Other Improvements:
   - Changed default solver order for LP, QP, MILP, MIQP problems to move
     Gurobi before CPLEX and BPMPD after OT and GLPK.
-  - Added some caching to mpoption() and made minor changes to
-    nested_struct_copy() to greatly decrease the overhead added by
-    mpoption() when running many small problems.
-  - Added option 'cpf.adapt_step_damping' to control oscillations in
+  - Added some caching to `mpoption()` and made minor changes to
+    `nested_struct_copy()` to greatly decrease the overhead added by
+    `mpoption()` when running many small problems.
+  - Added option `cpf.adapt_step_damping` to control oscillations in
     adaptive step size control for continuation power flow.
   - Added CPF user options for setting tolerances for target lambda
-    detection and nose point detection, 'cpf.target_lam_tol' and
-    'cpf.nose_tol', respectively.
+    detection and nose point detection, `cpf.target_lam_tol` and
+    `cpf.nose_tol`, respectively.
   - Added support for Matlab Optimization Toolbox 7.5 (R2016b).
   - Added support for MOSEK v8.x.
-  - Added tests for power flow with 'pf.enforce_q_lims' option.
+  - Added tests for power flow with `pf.enforce_q_lims` option.
   - Updated network reduction code to handle cases with radially
     connected external buses.
-  - Updated versions of qcqp_opf() and qcqp_opf() in extras/misc, from
-    Cedric Josz.
+  - Updated versions of `qcqp_opf()` and `qcqp_opf()` in `extras/misc`,
+    *from Cedric Josz*.
   - Added "Release History" section to Appendix of manual.
   - Many new tests.
 
 * Bugs fixed:
-  - Fixed bug in toggle_dclines() that resulted in fatal error when used
-    with OPF with reactive power costs. Thanks to Irina Boiarchuk.
-  - Fixed fatal bug in update_mupq() affecting cases where QMIN is greater
-    than or equal to QC1MIN and QC2MIN (or QMAX is less than or equal to
-    QC1MAX and QC2MAX) for all generators. Thanks Jose Miguel.
+  - Fixed bug in `toggle_dclines()` that resulted in fatal error when used
+    with OPF with reactive power costs. *Thanks to Irina Boiarchuk.*
+  - Fixed fatal bug in `update_mupq()` affecting cases where `QMIN` is greater
+    than or equal to `QC1MIN` and `QC2MIN` (or `QMAX` is less than or equal to
+    `QC1MAX` and `QC2MAX`) for all generators. *Thanks Jose Miguel.*
   - Copying a field containing a struct to a non-struct field with
-    nested_struct_copy() now overwrites rather than causing a fatal error.
-  - Fixed a bug in psse_convert_xfmr() where conversion of data for
-    transformers with CZ=3 was done incorrectly. Thanks to Jose Marin
-    and Yujia Zhu.
-  - Fixed a fatal bug in psse_convert_xfmr() affecting transformers with
-    CW and/or CZ equal to 1. Thanks to Matthias Resch.
-  - Fixed a crash in have_fcn() caused by changes in OPTI Toolbox v2.15
+    `nested_struct_copy()` now overwrites rather than causing a fatal error.
+  - Fixed a bug in `psse_convert_xfmr()` where conversion of data for
+    transformers with CZ=3 was done incorrectly. *Thanks to Jose Marin
+    and Yujia Zhu.*
+  - Fixed a fatal bug in `psse_convert_xfmr()` affecting transformers with
+    CW and/or CZ equal to 1. *Thanks to Matthias Resch.*
+  - Fixed a crash in `have_fcn()` caused by changes in OPTI Toolbox v2.15
     (or possibly v2.12)
-  - Commented out isolated bus 10287 in case3375wp.m.
-  - Added code to DC OPF to return success = 0 for cases where the matrix
+  - Commented out isolated bus 10287 in `case3375wp.m`.
+  - Added code to DC OPF to return `success` = 0 for cases where the matrix
     is singular (e.g. islanded system without slack).
-  - Fixed problem in have_fcn() where SeDuMi was turning off and leaving
+  - Fixed problem in `have_fcn()` where SeDuMi was turning off and leaving
     off all warnings.
   - Fixed shadow prices on variable bounds for AC OPF for fmincon,
     IPOPT, and Knitro.
-  - In savecase() single quotes are now escaped properly in bus names.
+  - In `savecase()` single quotes are now escaped properly in bus names.
   - Generator capability curve parameters that define a zero-reactive
     power line no longer cause a fatal error.
   - Bad bus numbers no longer cause a fatal error (after reporting the
-    bad bus numbers) in case_info().
+    bad bus numbers) in `case_info()`.
 
 * Incompatible Changes:
-  - Removed fairmax() from the public interface by moving it inside uopf(),
+  - Removed `fairmax()` from the public interface by moving it inside `uopf()`,
     the only place it was used.
-  - Removed 'cpf.user_callback_args' option and modified
-    'cpf.user_callback'.
-  - Changed name of 'cpf.error_tol' option to 'cpf.adapt_step_tol'.
+  - Removed `cpf.user_callback_args` option and modified
+    `cpf.user_callback`.
+  - Changed name of `cpf.error_tol` option to `cpf.adapt_step_tol`.
 
 
 ---------------
@@ -480,3 +481,4 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [14]: https://github.com/MATPOWER/mptest
 [15]: https://github.com/MATPOWER/
 [16]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
+[17]: docs/MOST-manual.pdf
