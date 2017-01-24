@@ -158,7 +158,7 @@ the source code *is* the documentation. :wink:
 Changes to MATPOWER in each released version are summarized in the
 [release notes](docs/relnotes), found in `docs/relnotes` and in
 Appendix H of the [MATPOWER User's Manual][8]. A complete, detailed
-change log, even for unreleased versions is available in the
+change log, even for unreleased versions, is available in the
 [`CHANGES.md`][11] file.
 
 
