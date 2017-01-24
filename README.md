@@ -192,15 +192,33 @@ There are also two MATPOWER Technical Notes that may be of interest:
      DOI: [10.1109/TSG.2013.2281001][26].
 
 
-Optional Packages
------------------
+Citing MATPOWER
+---------------
 
-There are numerous optional packages to enhance the performance of
-MATPOWER that must be installed separately. The terms of use and
-license agreements vary. Some are free of charge for all to use,
-others are only free for academic use, and others may require a
-commercial license. Please see Appendix G of the [MATPOWER User's
-Manual][5] for details.
+While not required by the terms of the license, we do request that
+publications derived from the use of MATPOWER explicitly acknowledge
+that fact by citing [reference \[2\]][24] above, namely:
+
+>   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
+    "MATPOWER: Steady-State Operations, Planning and Analysis Tools
+    for Power Systems Research and Education," Power Systems, IEEE
+    Transactions on, vol. 26, no. 1, pp. 12–19, Feb. 2011.
+
+Additionally, we request that publications derived from the use of
+the [MATPOWER Optimal Scheduling Tool (MOST)][12], explicitly
+acknowledge that fact by citing [reference \[4\]][26] as well as [\[2\]][24].
+
+>   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
+    R. J. Thomas, "Secure Planning and Operations of Systems with
+    Stochastic Sources, Energy Storage and Active Demand," Smart Grid,
+    IEEE Transactions on, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
+
+
+Contributing
+------------
+
+Please see our [contributing guidelines][8] for details on how to
+contribute to the project or report issues.
 
 
 E-mail Lists
@@ -228,32 +246,21 @@ software patches, proposed enhancements, etc. should be submitted to
 the [issue tracker on GitHub][11].
 
 
+Optional Packages
+-----------------
+
+There are numerous optional packages to enhance the performance of
+MATPOWER that must be installed separately. The terms of use and
+license agreements vary. Some are free of charge for all to use,
+others are only free for academic use, and others may require a
+commercial license. Please see Appendix G of the [MATPOWER User's
+Manual][5] for details.
+
+
 License and Terms of Use
 ------------------------
 
 MATPOWER is distributed under the [3-clause BSD license][30].
-
-
-Citing MATPOWER
----------------
-
-While not required by the terms of the license, we do request that
-publications derived from the use of MATPOWER explicitly acknowledge
-that fact by citing [reference \[2\]][24] above, namely:
-
->   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
-    "MATPOWER: Steady-State Operations, Planning and Analysis Tools
-    for Power Systems Research and Education," Power Systems, IEEE
-    Transactions on, vol. 26, no. 1, pp. 12–19, Feb. 2011.
-
-Additionally, we request that publications derived from the use of
-the [MATPOWER Optimal Scheduling Tool (MOST)][12], explicitly
-acknowledge that fact by citing [reference \[4\]][26] as well as [\[2\]][24].
-
->   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
-    R. J. Thomas, "Secure Planning and Operations of Systems with
-    Stochastic Sources, Energy Storage and Active Demand," Smart Grid,
-    IEEE Transactions on, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
 
 
 [1]: http://www.pserc.cornell.edu/matpower/
