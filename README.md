@@ -147,8 +147,8 @@ Below is a summary of the changes since version 5.1 of MATPOWER. See the
     Estimation (PEGASE) project. *Thanks again to Cedric Josz and
     colleagues from the French Transmission System Operator.*
   - Added `case145.m`, IEEE 145 bus, 50 generator dynamic test case
-    from
-    [here](http://www.ee.washington.edu/research/pstca/dyn50/pg_tcadd50.htm).
+    from the [UW Power Systems Test Case Archive]
+    (http://www.ee.washington.edu/research/pstca/dyn50/pg_tcadd50.htm).
   - Added `case33bw.m`, a 33-bus radial distribution system from Baran
     and Wu.
 
