@@ -153,21 +153,21 @@ the source code *is* the documentation. :wink:
 
 There are also two MATPOWER Technical Notes that may be of interest:
 
-  - **[TN1]**  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
-   Power Flow"][18], *MATPOWER Technical Note 1*, February 2010.  
-   http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
+1.  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
+    Power Flow"][18], *MATPOWER Technical Note 1*, February 2010.
+    Available: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
 
-  - **[TN2]**  R. D. Zimmerman, ["AC Power Flows, Generalized OPF Costs
+2.  R. D. Zimmerman, ["AC Power Flows, Generalized OPF Costs
     and their Derivatives using Complex Matrix Notation"][19],
-    *MATPOWER Technical Note 2*, February 2010.  
+    *MATPOWER Technical Note 2*, February 2010. Available:
     http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
 
 #### Publications & Presentations
 
-[1]  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
-     "MATPOWER's Extensible Optimal Power Flow Architecture," Power
-     and Energy Society General Meeting, 2009 IEEE, pp. 1-7,
-     July 26-30 2009.
+3.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
+    "MATPOWER's Extensible Optimal Power Flow Architecture," Power
+    and Energy Society General Meeting, 2009 IEEE, pp. 1-7,
+    July 26-30 2009.
         http://www.pserc.cornell.edu/matpower/MATPOWER-OPF.pdf
         http://dx.doi.org/10.1109/PES.2009.5275967
      slides of presentation:
