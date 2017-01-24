@@ -18,8 +18,9 @@ and the latest stable and work-in-progress versions can always be
 downloaded or cloned from the [MATPOWER GitHub project][2]. The
 `master` branch should always contain a stable version.
 
-GETTING STARTED
----------------
+-----------------
+ GETTING STARTED
+-----------------
 
 System Requirements
 -------------------
@@ -126,35 +127,32 @@ function reference][9], or the built-in help documentation for the various MATPO
 ---------------------------
 
 Below is a summary of the changes since version 5.1 of MATPOWER. See the
-CHANGES file in the docs directory for all the gory details.
+[`CHANGES.md`][10] file for all the gory details.
 
 * New Open Development Model
-  - MATPOWER development has moved to GitHub! The code repository is
+  - MATPOWER development has moved to GitHub! The [code repository][2] is
     now publicly available to clone and submit pull requests.
-    <https://github.com/MATPOWER/matpower>
-  - Public issue tracker for reporting bugs, submitting patches, etc.
-    <https://github.com/MATPOWER/matpower/issues>
-  - Separate repositories for MOST, MIPS, MP-Test, all available
-    from <https://github.com/MATPOWER/>.
-  - New developer e-mail list (MATPOWER-DEV-L) to facilitate
+  - [Public issue tracker][11] for reporting bugs, submitting patches, etc.
+  - Separate repositories for [MOST][12], [MIPS][13], [MP-Test][14],
+    all available from the [MATPOWER Development][15] page (a GitHub
+    organization).
+  - New developer e-mail list ([MATPOWER-DEV-L][16]) to facilitate
     communication between those collaborating on MATPOWER development.
-    Sign up at:
-    <http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist>.
 
 * New Case Files:
   - Added 9 new case files, 8 cases ranging from 1888 to 6515 buses
     representing the French system, and a 13,659-bus case representing
     parts of the of the European high voltage transmission network,
     stemming from the Pan European Grid Advanced Simulation and State
-    Estimation (PEGASE) project. Thanks again to Cedric Josz and
-    colleagues from the French Transmission System Operator.
-  - Added case145.m, IEEE 145 bus, 50 generator dynamic test case from
+    Estimation (PEGASE) project. *Thanks again to Cedric Josz and
+    colleagues from the French Transmission System Operator.*
+  - Added `case145.m`, IEEE 145 bus, 50 generator dynamic test case from
     http://www.ee.washington.edu/research/pstca/dyn50/pg_tcadd50.htm.
-  - Added case33bw.m, a 33-bus radial distribution system from Baran
+  - Added `case33bw.m`, a 33-bus radial distribution system from Baran
     and Wu.
 
 * New Features:
-  - MATPOWER Optimal Scheduling Tool (MOST) is a major new feature,
+  - [MATPOWER Optimal Scheduling Tool (MOST)][] is a major new feature,
     implementing a full range of optimal power scheduling problems, from a
     simple as a deterministic, single period economic dispatch problem
     with no transmission constraints to as complex as a stochastic,
@@ -474,3 +472,10 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [7]: https://git-scm.com
 [8]: CONTRIBUTING.md
 [9]: http://www.pserc.cornell.edu/matpower/docs/ref/
+[10]: CHANGES.md
+[11]: https://github.com/MATPOWER/matpower/issues
+[12]: https://github.com/MATPOWER/most
+[13]: https://github.com/MATPOWER/mips
+[14]: https://github.com/MATPOWER/mptest
+[15]: https://github.com/MATPOWER/
+[16]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
