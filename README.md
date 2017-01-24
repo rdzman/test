@@ -4,8 +4,8 @@
 A Power System Simulation Package for Matlab and Octave
 -------------------------------------------------------
 
-- **MATPOWER Website:**           http://www.pserc.cornell.edu/matpower/
-- **MATPOWER GitHub Project:**    https://github.com/MATPOWER/matpower
+- **MATPOWER Website**          - http://www.pserc.cornell.edu/matpower/
+- **MATPOWER GitHub Project**   - https://github.com/MATPOWER/matpower
 
 Introduction
 ------------
