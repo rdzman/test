@@ -41,9 +41,9 @@ There are three ways to get a copy of MATPOWER:
     features, using a simple `git pull` command, or if you want to
     help with testing the latest versions. This requires that you
     have a [Git (GUI or command-line) client][6] installed.*
-3. Download a ZIP of the MATPOWER repository from GitHub.
-  - Go to the [MATPOWER GitHub repository page][2] and click the
-    green "Clone or download" button, then "Download ZIP".
+3. Download a zip file of the MATPOWER repository from GitHub.
+  - Go to the [MATPOWER GitHub repository page][2]
+  - Click the green "Clone or download" button, then "Download ZIP".
   - *Use this option if you need features or fixes introduced since
     the latest versioned release, but you don't have access to or
     are not ready to begin using Git (but don't be afraid to
@@ -57,38 +57,31 @@ Make sure you follow the installation instructions for the version
 of MATPOWER you are installing. There were some changes with the
 move to GitHub after version 6.0.
 
-1.  Get a copy of MATPOWER.
+1.  Get a copy of MATPOWER as described above. Clone the repository
+    or download and extract the zip file of the MATPOWER distribution
+    and place the resulting directory in the location of your choice.
+    We will use `<MATPOWER>` to denote the path to this directory.
+    The files in `<MATPOWER>` should not need to be modified, so it
+    is recommended that they be kept separate from your own code.
 
-The result should be a directory, which we will refer to here as
-`<MATPOWER>`, containing the MATPOWER distribution. You should find
-the [MATPOWER User's Manual][5] in the `docs` sub-directory.
+2.  Open MATLAB or Octave and change to the `<MATPOWER>` directory.
+    Type `install_matpower` and follow the directions to add the
+    add the required directories to your MATLAB or Octave path.
 
-2.  Unzip the downloaded file. Move the resulting matpowerXXX directory
-    to the location of your choice. These files should not need to be
-    modified, so it is recommended that they be kept separate from your
-    own code. Let <MATPOWER> denote the path to this directory.
-
-3.  Add the following directories to your MATLAB path:
-      <MATPOWER>        - core MATPOWER functions
-      <MATPOWER>/t      - test scripts for MATPOWER
-      <MATPOWER>/most   - core MOST functions
-      <MATPOWER>/most/t - test scripts for MOST
-      (optional) subdirectories of <MATPOWER>/extras -
-            additional functionality and contributed code
-
-4.  At the MATLAB prompt, type 'test_matpower' (without the quotes) to
-    run the test suite and verify that MATPOWER is properly installed
+3.  That's it. There is no step 3. Unless, you chose not to run the
+    test suite in step 2, in which case, you can type `test_matpower`
+    to run the test suite and verify that MATPOWER is properly installed
     and functioning.
 
 Running MATPOWER
 ----------------
-To run a simple Newton power flow on the 9-bus system specified in the
-file case9.m, with the default algorithm options, at the MATLAB prompt,
-type:
+To run a simple Newton power flow on the 9-bus system specified in
+the file `case9.m`, with the default algorithm options, at the
+MATLAB or Octave prompt, type:
 
     runpf('case9')
 
-To load the 30-bus system data from case30.m, increase its real power
+To load the 30-bus system data from `case30.m`, increase its real power
 demand at bus 2 to 30 MW, then run an AC optimal power flow with
 default options, type:
 
@@ -98,9 +91,9 @@ default options, type:
     runopf(mpc);
 
 By default, the results of the simulation are pretty-printed to the
-screen, but the solution can also be optionally returned in a 'results'
+screen, but the solution can also be optionally returned in a `results`
 struct. The following example shows how simple it is, after running a DC
-OPF on the 118-bus system in case118.m, to access the final objective
+OPF on the 118-bus system in `case118.m`, to access the final objective
 function value, the real power output of generator 6 and the power flow
 in branch 51.
 
@@ -109,8 +102,9 @@ in branch 51.
     gen6_output     = results.gen(6, PG);
     branch51_flow   = results.branch(51, PF);
 
-For additional info, see the User's Manual and the on-line help
-documentation for the various MATPOWER functions. For example:
+For additional info, see the [MATPOWER User's Manual][5], the [on-line
+function reference][8], or the built-in help documentation for the various MATPOWER functions. For example:
+
     help runpf
     help runopf
     help mpoption
@@ -468,4 +462,4 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [5]: docs/MATPOWER-manual.pdf
 [6]: https://git-scm.com/downloads
 [7]: https://git-scm.com
-
+[8]: http://www.pserc.cornell.edu/matpower/docs/ref/
