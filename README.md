@@ -26,8 +26,8 @@ System Requirements
 *   [Matlab][3] version 7 (R14) or later, or
 *   [GNU Octave][4] version 3.4 or later
 
-Get a copy of MATPOWER
-----------------------
+Getting MATPOWER
+----------------
 
 There are three ways to get a copy of MATPOWER:
 
