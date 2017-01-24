@@ -58,21 +58,23 @@ Make sure you follow the installation instructions for the version
 of MATPOWER you are installing. There were some changes with the
 move to GitHub after version 6.0.
 
-1.  Get a copy of MATPOWER as described above. Clone the repository
+1.  **Get a copy of MATPOWER** as described above. Clone the repository
     or download and extract the zip file of the MATPOWER distribution
     and place the resulting directory in the location of your choice.
     We will use `<MATPOWER>` to denote the path to this directory.
     The files in `<MATPOWER>` should not need to be modified, so it
     is recommended that they be kept separate from your own code.
 
-2.  Open MATLAB or Octave and change to the `<MATPOWER>` directory.
-    Type `install_matpower` and follow the directions to add the
-    add the required directories to your MATLAB or Octave path.
+2.  **Run the installer.**
+    - Open MATLAB or Octave and change to the `<MATPOWER>` directory.
+    - Type `install_matpower` and follow the directions to add the
+      required directories to your MATLAB or Octave path.
 
-3.  That's it. There is no step 3. Unless, you chose not to run the
-    test suite in step 2, in which case, you can type `test_matpower`
-    to run the test suite and verify that MATPOWER is properly installed
-    and functioning.
+3.  **That's it.** There is no step 3.
+    - Unless, you chose not to run the test suite in step 2, in which
+      case, you can type `test_matpower` to run it now and verify that
+      MATPOWER is installed and functioning properly.
+
 
 Running MATPOWER
 ----------------
