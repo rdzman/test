@@ -29,24 +29,25 @@ System Requirements
 Get a copy of MATPOWER
 ----------------------
 
-There are three ways to get a copy of MATPOWER.
+There are three ways to get a copy of MATPOWER:
 
 1. Download the latest release version from the [MATPOWER website][1].
   - Go to the [MATPOWER website][1], click the "Download Now" button.
   - Use this option if you want to stick to using versioned releases.
 2. Clone the MATPOWER repository.
   - `git clone https://github.com/MATPOWER/matpower.git`
-  - Use this option if you want to be able to update to the
+  - Use this option if you want to be able to easily update to the
     current stable release, with the latest bug fixes and new
-    features with a simple `git pull` command, or if you want to
-    help with testing the latest versions.
+    features, using a simple `git pull` command, or if you want to
+    help with testing the latest versions. This requires that you
+    have a [Git (GUI or command-line) client][6] installed.
 3. Download a ZIP of the MATPOWER repository from GitHub.
   - Go to the [MATPOWER GitHub repository page][2] and click the
     green "Clone or download" button, then "Download ZIP".
   - Use this option if you need features or fixes introduced since
     the latest versioned release, but you don't have access to or
-    are not ready to begin using `git` (but don't be afraid to
-    [give `git` a try][6]).
+    are not ready to begin using Git (but don't be afraid to
+    [give Git a try][7]).
 
 
 Installation
@@ -56,15 +57,7 @@ Make sure you follow the installation instructions for the version
 of MATPOWER you are installing. There were some changes with the
 move to GitHub after version 6.0.
 
-1.  Get a copy of MATPOWER. There are 3 ways to get a copy of MATPOWER:
-  1. Download the latest release version from the [MATPOWER website][1].
-    - Extract the contents of the ZIP file wherever you like.
-  2. Clone the MATPOWER repository.
-    - `git clone https://github.com/MATPOWER/matpower.git`
-  3. Download a ZIP of the MATPOWER repository from GitHub.
-    - Go to the [MATPOWER GitHub repository page][2] and click the
-      green "Clone or download" button, then "Download ZIP".
-    - Extract the contents of the ZIP file wherever you like.
+1.  Get a copy of MATPOWER.
 
 The result should be a directory, which we will refer to here as
 `<MATPOWER>`, containing the MATPOWER distribution. You should find
@@ -473,5 +466,6 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [3]: https://github.com/MATPOWER/matpower
 [4]: http://www.mathworks.com/
 [5]: docs/MATPOWER-manual.pdf
-[6]: https://www.atlassian.com/git/tutorials/install-git
+[6]: https://git-scm.com/downloads
+[7]: https://git-scm.com
 
