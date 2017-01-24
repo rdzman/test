@@ -5,16 +5,17 @@ What's New in Version 6.0
 -------------------------
 
 Below is a summary of the changes since version 5.1 of MATPOWER. See the
-[`CHANGES.md`][1] file for all the gory details.
+[`CHANGES.md`][1] file for all the gory details. For release notes for
+previous versions, see Appendix H of the [MATPOWER User's Manual][2].
 
 * New Open Development Model
-  - MATPOWER development has moved to GitHub! The [code repository][2] is
+  - MATPOWER development has moved to GitHub! The [code repository][4] is
     now publicly available to clone and submit pull requests.
-  - [Public issue tracker][3] for reporting bugs, submitting patches, etc.
-  - Separate repositories for [MOST][4], [MIPS][5], [MP-Test][6],
-    all available from the [MATPOWER Development][7] page (a GitHub
+  - [Public issue tracker][4] for reporting bugs, submitting patches, etc.
+  - Separate repositories for [MOST][5], [MIPS][6], [MP-Test][7],
+    all available from the [MATPOWER Development][8] page (a GitHub
     organization).
-  - New developer e-mail list ([MATPOWER-DEV-L][8]) to facilitate
+  - New developer e-mail list ([MATPOWER-DEV-L][9]) to facilitate
     communication between those collaborating on MATPOWER development.
 
 * New Case Files:
@@ -31,7 +32,7 @@ Below is a summary of the changes since version 5.1 of MATPOWER. See the
     and Wu.
 
 * New Features:
-  - [MATPOWER Optimal Scheduling Tool (MOST)][4] is a major new feature,
+  - [MATPOWER Optimal Scheduling Tool (MOST)][5] is a major new feature,
     implementing a full range of optimal power scheduling problems, from a
     simple as a deterministic, single period economic dispatch problem
     with no transmission constraints to as complex as a stochastic,
@@ -39,7 +40,7 @@ Below is a summary of the changes since version 5.1 of MATPOWER. See the
     problem with locational contingency and load-following reserves,
     ramping costs and constraints, deferrable demands, lossy storage
     resources and uncertain renewable generation.
-    See [`docs/MOST-manual.pdf`][9] for details.
+    See [`docs/MOST-manual.pdf`][10] for details.
   - General mechanism for applying modifications to an existing MATPOWER
     case. See `apply_changes()` and `idx_ct()`.
   - Redesigned CPF callback mechanism to handle CPF events such as
@@ -140,12 +141,13 @@ Below is a summary of the changes since version 5.1 of MATPOWER. See the
   - Changed name of `cpf.error_tol` option to `cpf.adapt_step_tol`.
 
 
-[1]: CHANGES.md
-[2]: https://github.com/MATPOWER/matpower
-[3]: https://github.com/MATPOWER/matpower/issues
-[4]: https://github.com/MATPOWER/most
-[5]: https://github.com/MATPOWER/mips
-[6]: https://github.com/MATPOWER/mptest
-[7]: https://github.com/MATPOWER/
-[8]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
-[9]: docs/MOST-manual.pdf
+[1]: ../../CHANGES.md
+[2]: ../MATPOWER-manual.pdf
+[3]: https://github.com/MATPOWER/matpower
+[4]: https://github.com/MATPOWER/matpower/issues
+[5]: https://github.com/MATPOWER/most
+[6]: https://github.com/MATPOWER/mips
+[7]: https://github.com/MATPOWER/mptest
+[8]: https://github.com/MATPOWER/
+[9]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
+[10]: ../MOST-manual.pdf
