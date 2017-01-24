@@ -75,7 +75,7 @@ move to GitHub after version 6.0.
       it now to verify that MATPOWER is installed and functioning
       properly, by typing:
 
-        test_matpower
+            test_matpower
 
 
 Running MATPOWER
