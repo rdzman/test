@@ -227,39 +227,29 @@ cross-post to both MATPOWER-L and MATPOWER-DEV-L. Bug reports,
 software patches, proposed enhancements, etc. should be submitted to
 the [issue tracker on GitHub][11].
 
---------------
- TERMS OF USE
---------------
 
-Please see the LICENSE file for the details. But here is the summary:
+License and Terms of Use
+------------------------
 
-- Beginning with version 5.1, the code in MATPOWER is distributed under
-  the 3-clause BSD license.
-
-- MATPOWER is distributed in the hope that it will be useful, but
-  WITHOUT ANY WARRANTY.
+MATPOWER is distributed under the [3-clause BSD license][30].
 
 - While not required by the terms of the license, we do request that
   publications derived from the use of MATPOWER explicitly acknowledge
-  that fact by citing [2].
+  that fact by citing [reference 2][24] above, namely:
 
-[2]  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
+    >  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
      "MATPOWER: Steady-State Operations, Planning and Analysis Tools
      for Power Systems Research and Education," Power Systems, IEEE
      Transactions on, vol. 26, no. 1, pp. 12–19, Feb. 2011.
 
-  Additionally, we request that publications derived from the use of
-  the MATPOWER Optimal Scheduling Tool (MOST), explicitly acknowledge
-  that fact by citing [4] as well as [2].
+- Additionally, we request that publications derived from the use of
+  the [MATPOWER Optimal Scheduling Tool (MOST)][12], explicitly
+  acknowledge that fact by citing [reference 4][26] as well as \[2\].
 
-[4]  C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
+    > C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
      R. J. Thomas, "Secure Planning and Operations of Systems with
      Stochastic Sources, Energy Storage and Active Demand," Smart Grid,
      IEEE Transactions on, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
-        http://dx.doi.org/10.1109/TSG.2013.2281001
-
-Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
-       prior to MATPOWER 4 use a different license.
 
 
 [1]: http://www.pserc.cornell.edu/matpower/
@@ -291,3 +281,4 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 [27]: http://www.pserc.cornell.edu/matpower/mailinglists.html#announcelist
 [28]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
 [29]: http://www.pserc.cornell.edu/matpower/mailinglists.html
+[30]: LICENSE
