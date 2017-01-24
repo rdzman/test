@@ -293,7 +293,7 @@ Documentation for the case data file format can be found by typing:
 If something is still unclear after checking the manual and the help,
 the source code *is* the documentation. :wink:
 
-#### TECH NOTES
+#### Tech Notes
 
 There are also two MATPOWER Technical Notes that may be of interest:
 
@@ -306,7 +306,7 @@ There are also two MATPOWER Technical Notes that may be of interest:
        Technical Note 2*, February 2010.
           http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
 
-#### PUBLICATIONS & PRESENTATIONS
+#### Publications & Presentations
 
 [1]  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
      "MATPOWER's Extensible Optimal Power Flow Architecture," Power
@@ -469,8 +469,8 @@ Note:  Versions 4.0 through 5.0 were licensed under the GPL and versions
 
 [1]: http://www.pserc.cornell.edu/matpower/
 [2]: https://github.com/MATPOWER/matpower
-[3]: https://github.com/MATPOWER/matpower
-[4]: http://www.mathworks.com/
+[3]: http://www.mathworks.com/
+[4]: https://www.gnu.org/software/octave/
 [5]: docs/MATPOWER-manual.pdf
 [6]: https://git-scm.com/downloads
 [7]: https://git-scm.com
