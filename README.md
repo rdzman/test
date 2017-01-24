@@ -77,9 +77,9 @@ move to GitHub after version 6.0.
             install_matpower
 
 3.  **That's it.** There is no step 3.
-    - If you chose not to run the test suite in step 2, you can run
-      it now to verify that MATPOWER is installed and functioning
-      properly, by typing:
+    - If you chose not to have the installer run the test suite for
+      you in step 2, you can run it now to verify that MATPOWER is
+      installed and functioning properly, by typing:
 
             test_matpower
 
@@ -146,8 +146,9 @@ Below is a summary of the changes since version 5.1 of MATPOWER. See the
     stemming from the Pan European Grid Advanced Simulation and State
     Estimation (PEGASE) project. *Thanks again to Cedric Josz and
     colleagues from the French Transmission System Operator.*
-  - Added `case145.m`, IEEE 145 bus, 50 generator dynamic test case from
-    http://www.ee.washington.edu/research/pstca/dyn50/pg_tcadd50.htm.
+  - Added `case145.m`, IEEE 145 bus, 50 generator dynamic test case
+    from
+    [here](http://www.ee.washington.edu/research/pstca/dyn50/pg_tcadd50.htm).
   - Added `case33bw.m`, a 33-bus radial distribution system from Baran
     and Wu.
 
