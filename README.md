@@ -128,6 +128,8 @@ There are four primary sources of documentation for MATPOWER.
   - [MATPOWER Online Function Reference][9]
   - MATLAB's `help` command
 
+#### Manuals
+
 The MATPOWER and MOST User's Manuals are included in the distribution
 ([`docs/MATPOWER-manual.pdf`][8] and [`docs/MOST-manual.pdf`][10]) and
 the latest released versions are always available online, respectively, at:
@@ -136,6 +138,8 @@ the latest released versions are always available online, respectively, at:
 
 Previous versions are also available at
   - http://www.pserc.cornell.edu/matpower/docs/.
+
+#### Built-in Help
 
 Each M-file has its own documentation which can be accessed by typing at
 the MATLAB prompt:
@@ -148,6 +152,8 @@ Documentation for the case data file format can be found by typing:
 
 If something is still unclear after checking the manual and the help,
 the source code *is* the documentation. :wink:
+
+#### Changes
 
 Changes to MATPOWER are summarized in the [release notes](docs/relnotes)
 for each version, found in `docs/relnotes` and in Appendix H of the
