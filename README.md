@@ -119,8 +119,8 @@ function reference][9], or the built-in help documentation for the various MATPO
     help caseformat
 
 
--------------
-Documentation
+---------------
+# Documentation
 
 There are four primary sources of documentation for MATPOWER.
   - [MATPOWER User's Manual][5]
