@@ -34,11 +34,11 @@ of MATPOWER you are installing. There were some changes with the
 move to GitHub after version 6.0.
 
 1.  Get a copy of MATPOWER. There are 3 ways to get a copy of MATPOWER:
-  a. Download a release from the [MATPOWER website][1].
+  1. Download a release from the [MATPOWER website][1].
     - Extract the contents of the ZIP file wherever you like.
-  b. Clone the MATPOWER repository.
+  2. Clone the MATPOWER repository.
     - `git clone https://github.com/MATPOWER/matpower.git`
-  c. Download a ZIP of the MATPOWER repository from GitHub.
+  3. Download a ZIP of the MATPOWER repository from GitHub.
     - Go to the [MATPOWER GitHub repository page][2] and click the
       green "Clone or download" button, then "Download ZIP".
     - Extract the contents of the ZIP file wherever you like.
