@@ -67,8 +67,10 @@ move to GitHub after version 6.0.
 
 2.  **Run the installer.**
     - Open MATLAB or Octave and change to the `<MATPOWER>` directory.
-    - Type `install_matpower` and follow the directions to add the
-      required directories to your MATLAB or Octave path.
+    - Run the installer and follow the directions to add the
+      required directories to your MATLAB or Octave path, by typing:
+
+            install_matpower
 
 3.  **That's it.** There is no step 3.
     - If you chose not to run the test suite in step 2, you can run
