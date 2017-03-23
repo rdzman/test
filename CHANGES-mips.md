@@ -13,17 +13,9 @@ Since last release
     whether to use permutation vectors or matrices (`opt.lu.vec`) and
     pivot threshold options (`opt.lu.thresh`). The following values for
     the `solver` argument act as shortcuts for specifying various
-    combinations of options:
-      - `'LU3'`
-      - `'LU3a'`
-      - `'LU4'`
-      - `'LU5'`
-      - `'LU3m'`
-      - `'LU3am'`
-      - `'LU4m'`
-      - `'LU5m'`
-
-    See `help mplinsolve` for details.
+    combinations of options: `'LU3'`, `'LU3a'`, `'LU4'`, `'LU5'`,
+    `'LU3m'`, `'LU3am'`, `'LU4m'`, `'LU5m'`. See `help mplinsolve` for
+    details.
     *Thanks to Jose Luis Marin.*
 
 #### 12/21/16
