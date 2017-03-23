@@ -22,6 +22,7 @@ Since last release
       - `'LU3am'`
       - `'LU4m'`
       - `'LU5m'`
+
     See `help mplinsolve` for details.
     *Thanks to Jose Luis Marin.*
 
