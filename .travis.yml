@@ -1,13 +1,21 @@
 sudo: required
+# dist: trusty  # octave 4.2.1
+# dist: precision # octave 4.0.2
 os:
-- linux
+# - linux
 - osx
+
+# addons:
+#   apt:
+#     packages:
+#     - octave      # octave 3.8.1
 
 language: generic
 
 install:
-- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update          ; fi
-- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install octave;   fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then rm '/usr/local/include/c++'; fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update                ; fi
+- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install octave        ; fi
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-add-repository -y ppa:octave/stable; fi
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get update -qq                     ; fi
 - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo apt-get install -qq octave             ; fi
