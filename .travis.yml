@@ -1,9 +1,9 @@
 sudo: required
-dist: trusty  # octave 4.2.1
+dist: trusty  # octave 4.2.2
 # dist: precision # octave 3.2.4
 os:
 - linux
-- osx
+- osx       # octave 4.4.1
 
 # addons:
 #   apt:
