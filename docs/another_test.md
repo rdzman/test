@@ -23,7 +23,8 @@ previous versions, see Appendix H of the [MATPOWER User's Manual][2].
   selected via the three new options for `pf.alg`, namely `'PQSUM'`,
   `'ISUM'`, `'YSUM'`. Also includes new MATPOWER options
   `pf.radial.max_it` and `pf.radial.vcorr`. See Section 4.3 on
-  "Distribution Power Flow" for details. *Thanks to Mirko Todorovski.*
+  "Distribution Power Flow" in the [MATPOWER User's Manual][2] for
+  details. *Thanks to Mirko Todorovski.*
 - Major update to OPF soft limit functionality, supporting soft limits
   on all AC and DC OPF inequality constraints, including branch flow
   constraints, bus voltage bounds, generator active and reactive
@@ -94,21 +95,6 @@ previous versions, see Appendix H of the [MATPOWER User's Manual][2].
     - `save2psse()` to export a MATPOWER case to PSS/E RAW data format.
     - `savechgtab()` to save change tables, such as those used by
      `apply_changes`, to a file.
-- Deprecated functions:
-    - `d2AIbr_dV2()` -- use `dA2br_dV2()` instead.
-    - `d2ASbr_dV2()` -- use `dA2br_dV2()` instead.
-    - `opt_model/add_constraints()` -- use the corresponding one of the
-      following methods instead: `add_lin_constraint()`,
-      `add_nln_constraint()`, or `init_indexed_name()`.
-    - `opt_model/add_costs()` -- use the corresponding one of the
-      following methods instead: `add_quad_cost()`,  `add_nln_cost()`,
-      `add_legacy_cost()`, or `init_indexed_name()`.
-    - `opt_model/linear_constraints()` -- use
-      `opt_model/params_lin_constraint()` instead.
-    - `opt_model/build_cost_params()` -- no longer needed, incorporated
-      into `opt_model/params_legacy_cost()`.
-    - `opt_model/get_cost_params()` -- use
-      `opt_model/params_legacy_cost()` instead.
 
 #### New Case Files:
 - Seven new purely synthetic cases from the ACTIVSg team (**A**SU,
@@ -190,6 +176,21 @@ previous versions, see Appendix H of the [MATPOWER User's Manual][2].
   `savecase`.
 - Add support for `bus_name` field of MATPOWER case struct to
   `extract_islands`, `ext2int` and `int2ext`.
+- Deprecated functions:
+    - `d2AIbr_dV2()` -- use `dA2br_dV2()` instead.
+    - `d2ASbr_dV2()` -- use `dA2br_dV2()` instead.
+    - `opt_model/add_constraints()` -- use the corresponding one of the
+      following methods instead: `add_lin_constraint()`,
+      `add_nln_constraint()`, or `init_indexed_name()`.
+    - `opt_model/add_costs()` -- use the corresponding one of the
+      following methods instead: `add_quad_cost()`,  `add_nln_cost()`,
+      `add_legacy_cost()`, or `init_indexed_name()`.
+    - `opt_model/linear_constraints()` -- use
+      `opt_model/params_lin_constraint()` instead.
+    - `opt_model/build_cost_params()` -- no longer needed, incorporated
+      into `opt_model/params_legacy_cost()`.
+    - `opt_model/get_cost_params()` -- use
+      `opt_model/params_legacy_cost()` instead.
 
 #### Bugs Fixed:
 - Fix bug in conversion of older versions of MATPOWER options.
@@ -229,7 +230,8 @@ previous versions, see Appendix H of the [MATPOWER User's Manual][2].
   in `mpc.softlims` now implements soft limits for all constraints,
   by default, not just branch flow limits. And the format of the input
   parameters in `mpc.softlims` has changed. See `help toggle_softlims`
-  or Tables 7-9, 7-10 and 7-11 for the details.
+  or Tables 7-9, 7-10 and 7-11 in the [MATPOWER User's Manual][2] for
+  the details.
 - Swap the order of the output arguments of `dSbus_dV()`) for polar
   coordinate voltages (angle before magnitude) for consistency.
 - Correct signs of phase shifter angles in Polish system cases, since
@@ -241,6 +243,7 @@ previous versions, see Appendix H of the [MATPOWER User's Manual][2].
   - `case2746wop`
   - `case2746wp`
   - `case3375wp`
+
   *Thanks to Mikhail Khokhlov and Dr. Artjoms Obusevs for reporting.*
 - Remove `nln.mu.l.<name>` and `nln.mu.u.<name>` fields from OPF
   `results` struct. Use `nle.lambda.<name>` and `nli.mu.<name>` fields
