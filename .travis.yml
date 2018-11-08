@@ -1,18 +1,23 @@
 sudo: required
-dist: xenial  # octave 4.2.2
+dist: xenial
 # dist: trusty  # octave 4.2.2
 # dist: precision # octave 3.2.4
 
 addons:
   apt:
     sources:
-      - ppa:octave/stable
+    - sourceline: 'ppa:octave/stable'
     packages:
     - octave
-# os:
-# - linux
-# - osx       # octave 4.4.1
-# 
+    update: true
+  homebrew:
+    packages:
+    - octave
+    update: true
+os:
+- linux
+- osx       # octave 4.4.1
+
 # # addons:
 # #   apt:
 # #     packages:
