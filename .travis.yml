@@ -1,27 +1,22 @@
 sudo: required
 dist: xenial
-# dist: trusty  # octave 4.2.2
+# dist: trusty
 # dist: precision # octave 3.2.4
 
 addons:
   apt:
     sources:
-    - sourceline: 'ppa:octave/stable'
+    - sourceline: 'ppa:octave/stable'   ## without this, it's octave 4.0.0
     packages:
-    - octave
+    - octave        # octave 4.2.2
     update: true
   homebrew:
     packages:
-    - octave
+    - octave        # octave 4.4.1
     update: true
 os:
 - linux
-- osx       # octave 4.4.1
-
-# # addons:
-# #   apt:
-# #     packages:
-# #     - octave      # octave 3.8.1
+- osx
 
 language: generic
 
@@ -39,3 +34,4 @@ env:
 
 script:
 - octave --no-gui -p $SEARCH_PATH --eval ver
+- octave --no-gui -p $SEARCH_PATH --eval exit(1)
