@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "Running run_docker_tests.sh"
-if [ 0 ]
-then
+if [ 0 = 1 ]; then
   echo "Tests passed!"
   exit 0
 else
