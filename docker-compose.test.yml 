@@ -1,7 +1,8 @@
 version: '3.3'
 
 services:
+
   sut:
     build: .
-    image: gforghetti/helloworld:latest
-    command: run_docker_tests.sh
+    image: rdzman/test:latest
+    command: /bin/bash run_docker_tests.sh
