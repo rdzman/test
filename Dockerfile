@@ -1,3 +1,3 @@
 FROM debian:stable
 WORKDIR /workspace
-COPY run_docker_tests.sh /usr/local/bin
+COPY run_docker_tests.sh /workspace
