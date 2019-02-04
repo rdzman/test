@@ -3,4 +3,5 @@ version: '3.3'
 services:
   sut:
     build: .
+    image: rdzman/test:latest
     command: run_docker_tests.sh
