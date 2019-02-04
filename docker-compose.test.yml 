@@ -4,5 +4,4 @@ services:
 
   sut:
     build: .
-    image: rdzman/test:test
     command: /bin/bash run_docker_tests.sh
