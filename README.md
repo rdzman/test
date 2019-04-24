@@ -7,6 +7,9 @@ MATPOWER
 - Pre-Release:  ![Pre-Release ](https://img.shields.io/github/downloads-pre/MATPOWER/matpower/7.0b1/total.svg)
 - Rel (Asset):  ![Asset       ](https://img.shields.io/github/downloads/MATPOWER/matpower/7.0b1/matpower7.0b1.zip.svg)
 - PreRel(Asset):![Pre-Asset   ](https://img.shields.io/github/downloads-pre/MATPOWER/matpower/7.0b1/matpower7.0b1.zip.svg)
+- Code Size:    ![Code-Size   ](https://img.shields.io/github/languages/code-size/MATPOWER/matpower.svg)
+- Repo Size:    ![Repo-Size   ](https://img.shields.io/github/languages/repo-size/MATPOWER/matpower.svg)
+- File Size:    ![File-Size   ](https://img.shields.io/github/languages/size/MATPOWER/matpower/7.0b1/matpower7.0b1.zip.svg)
 
 Test
 - All Releases: ![All Releases](https://img.shields.io/github/downloads/rdzman/test/total.svg)
