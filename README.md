@@ -1,7 +1,22 @@
 MATPOWER
 =========
 
-![Version](https://img.shields.io/github/downloads/rdzman/test/total.svg)
+MATPOWER
+
+All Releases: ![All Releases](https://img.shields.io/github/downloads/MATPOWER/matpower/total.svg)
+Release:      ![Release     ](https://img.shields.io/github/downloads/MATPOWER/matpower/7.0b1/total.svg)
+Pre-Release:  ![Pre-Release ](https://img.shields.io/github/downloads-pre/MATPOWER/matpower/7.0b1/total.svg)
+Rel (Asset):  ![Asset       ](https://img.shields.io/github/downloads/MATPOWER/matpower/7.0b1/matpower7.0b1.zip.svg)
+PreRel(Asset):![Pre-Asset   ](https://img.shields.io/github/downloads-pre/MATPOWER/matpower/7.0b1/matpower7.0b1.zip.svg)
+
+Test
+
+All Releases: ![All Releases]https://img.shields.io/github/downloads/rdzman/test/total.svg)
+Release:      ![Release     ]https://img.shields.io/github/downloads/rdzman/test/1.0/total.svg)
+Pre-Release:  ![Pre-Release ]https://img.shields.io/github/downloads-pre/rdzman/test/1.0/total.svg)
+Rel (Asset):  ![Asset       ]https://img.shields.io/github/downloads/rdzman/test/1.0/test-1.0.zip.svg)
+PreRel(Asset):![Pre-Asset   ]https://img.shields.io/github/downloads-pre/rdzman/test/1.0/test-1.0.zip.svg)
+
 
 A Power System Simulation Package for Matlab and Octave
 -------------------------------------------------------
