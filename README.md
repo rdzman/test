@@ -1,5 +1,7 @@
- MATPOWER
+MATPOWER
 =========
+
+![Version](https://img.shields.io/github/downloads/rdzman/test/total.svg)
 
 A Power System Simulation Package for Matlab and Octave
 -------------------------------------------------------
