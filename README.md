@@ -17,6 +17,7 @@ Test
 - Pre-Release:  ![Pre-Release ](https://img.shields.io/github/downloads-pre/rdzman/test/v1.0/total.svg)
 - Rel (Asset):  ![Asset       ](https://img.shields.io/github/downloads/rdzman/test/v1.0/test-1.0.zip.svg)
 - PreRel(Asset):![Pre-Asset   ](https://img.shields.io/github/downloads-pre/rdzman/test/v1.0/test-1.0.zip.svg)
+- License:      ![License     ](https://img.shields.io/github/license/rdzman/test.svg)
 
 
 A Power System Simulation Package for Matlab and Octave
