@@ -38,17 +38,18 @@ Test
 - License:      ![License     ](https://img.shields.io/github/license/rdzman/test.svg)
 
 
-A Power System Simulation Package for Matlab and Octave
+A Power System Simulation Package for MATLAB and Octave
 -------------------------------------------------------
 
 - **MATPOWER Website**          - http://www.pserc.cornell.edu/matpower/
 - **MATPOWER GitHub Project**   - https://github.com/MATPOWER/matpower
 
-MATPOWER is a package of M-files for solving power flow and optimal
-power flow problems using Matlab or Octave. It is intended as a
-simulation tool for researchers and educators that is easy to use
-and modify. MATPOWER is designed to give the best performance
-possible while keeping the code simple to understand and modify.
+MATPOWER is a package of M-files for solving power flow, continuation
+power flow and optimal power flow problems using MATLAB or Octave. It
+is intended as a simulation tool for researchers and educators that is
+easy to use and modify. MATPOWER is designed to give the best
+performance possible while keeping the code simple to understand and
+modify.
 
 MATPOWER releases can be downloaded from the [MATPOWER website][1],
 and the latest stable and work-in-progress versions can always be
@@ -58,50 +59,82 @@ downloaded or cloned from the [MATPOWER GitHub project][2]. The
 
 System Requirements
 -------------------
-*   [Matlab][3] version 7 (R14) or later, or
-*   [GNU Octave][4] version 3.4 or later
+*   [MATLAB][3] version 7.3 (R2006b) or later, or
+*   [GNU Octave][4] version 4 or later
+
 
 Getting MATPOWER
 ----------------
 
-There are three options for obtaining a copy of MATPOWER:
+You can either download an official *versioned release* or you can obtain
+the *current development version*, which
+we also attempt to keep stable enough for everyday use. The development
+version includes new features and bug fixes added since the last
+versioned release.
 
-1. Download the latest release version from the [MATPOWER website][1].
-  - Go to the [MATPOWER website][1].
-  - Click the "Download Now" button.
-  - *Use this option if you want to stick to using versioned releases.*
-2. Clone the MATPOWER repository.
-  - `git clone https://github.com/MATPOWER/matpower.git`
-  - *Use this option if you want to be able to easily update to the
-    current stable release, with the latest bug fixes and new
-    features, using a simple `git pull` command, or if you want to
-    help with testing the latest versions. This requires that you
-    have a [Git client][5] (GUI or command-line) installed.*
-3. Download a zip file of the MATPOWER repository from GitHub.
-  - Go to the [MATPOWER GitHub repository page][2].
-  - Click the green "Clone or download" button, then "Download ZIP".
-  - *Use this option if you need features or fixes introduced since
-    the latest versioned release, but you don't have access to or
-    are not ready to begin using Git (but don't be afraid to
-    [give Git a try][6]).*
+#### Versioned Releases
+
+- Download the ZIP file of the latest official versioned release from the
+[MATPOWER website][1].
+    - Go to the [MATPOWER website][1].
+    - Click the **Download Now** button.
+
+#### Current Development Version
+
+There are also two options for obtaining the most recent development version
+of MATPOWER from the `master` branch on GitHub.
+
+1. Clone the [MATPOWER repository from GitHub][2].
+   *Use this option if you want to be able to easily update to the current
+   development release, with the latest bug fixes and new features, using a
+   simple `git pull` command, or if you want to help with testing or
+   or development. This requires that you have a [Git client][5] (GUI
+   or command-line) installed.*
+    - From the command line:
+        - `git clone https://github.com/MATPOWER/matpower.git`
+    - Or, from the [MATPOWER GitHub repository page][2]:
+        - Click the green **Clone or download** button, then **Open in Desktop**.
+
+2. Download a ZIP file of the MATPOWER repository from GitHub.
+   *Use this option if you need features or fixes introduced since
+   the latest versioned release, but you do not have access to or
+   are not ready to begin using Git (but don't be afraid to
+   [give Git a try][6]).*
+    - Go to the [MATPOWER GitHub repository page][2].
+    - Click the green **Clone or download** button, then **Download ZIP**.
 
 See [CONTRIBUTING.md][7] for information on how to get a local copy
 of your own MATPOWER fork, if you are interesting in contributing
 your own code or modifications.
 
+#### MATPOWER Docker Image
+
+MATPOWER is also available on [Docker Hub][7a] as the pre-packaged
+[Docker][7b] image tagged [matpower/matpower-desktop][7c], providing an
+Ubuntu desktop environment with Octave, MATPOWER, and the
+[MATPOWER Extras][7d] pre-installed. See the [MATPOWER-Docker page][7e]
+for more details.
+
+Docker images are provided for both versioned releases and
+development versions.
+
+
 Installation
 ------------
 
-Make sure you follow the installation instructions for the version
-of MATPOWER you are installing. There were some changes with the
-move to GitHub after version 6.0.
+Installation and use of MATPOWER requires familiarity with the basic
+operation of MATLAB or Octave. Make sure you follow the installation
+instructions for the version of MATPOWER you are installing. The process
+was simplified with an install script following version 6.0.
 
 1.  **Get a copy of MATPOWER** as described above. Clone the repository
-    or download and extract the zip file of the MATPOWER distribution
-    and place the resulting directory in the location of your choice.
-    We will use `<MATPOWER>` to denote the path to this directory.
-    The files in `<MATPOWER>` should not need to be modified, so it
-    is recommended that they be kept separate from your own code.
+    or download and extract the ZIP file of the MATPOWER distribution
+    and place the resulting directory in the location of your choice
+    and call it anything you like. We will use `<MATPOWER>` as a
+    placeholder to denote the path to this directory (the one
+    containing `install_matpower.m`). The files in `<MATPOWER>` should
+    not need to be modified, so it is recommended that they be kept
+    separate from your own code.
 
 2.  **Run the installer.**
     - Open MATLAB or Octave and change to the `<MATPOWER>` directory.
@@ -111,7 +144,7 @@ move to GitHub after version 6.0.
             install_matpower
 
 3.  **That's it.** There is no step 3.
-    - If you chose not to have the installer run the test suite for
+    - But, if you chose not to have the installer run the test suite for
       you in step 2, you can run it now to verify that MATPOWER is
       installed and functioning properly, by typing:
 
@@ -148,7 +181,8 @@ in branch 51.
     branch51_flow   = results.branch(51, PF);
 
 For additional info, see the [MATPOWER User's Manual][8], the [on-line
-function reference][9], or the built-in help documentation for the various MATPOWER functions. For example:
+function reference][9], or the built-in help documentation for the various
+MATPOWER functions. For example:
 
     help runpf
     help runopf
@@ -168,7 +202,7 @@ There are four primary sources of documentation for MATPOWER.
 #### Manuals
 
 The MATPOWER and MOST User's Manuals are included in the distribution
-([`docs/MATPOWER-manual.pdf`][8] and [`docs/MOST-manual.pdf`][10]) and
+([`docs/MATPOWER-manual.pdf`][8] and [`most/docs/MOST-manual.pdf`][10]) and
 the latest released versions are always available online, respectively, at:
   - http://www.pserc.cornell.edu/matpower/MATPOWER-manual.pdf
   - http://www.pserc.cornell.edu/matpower/MOST-manual.pdf.
@@ -223,47 +257,74 @@ Publications and Tech Notes
      - [slides of presentation][16]
 
 3.  H. Wang, C. E. Murillo-Sánchez, R. D. Zimmerman, R. J. Thomas,
-     ["On Computational Issues of Market-Based Optimal Power Flow,"][17]
-     *Power Systems, IEEE Transactions on*, vol. 22, no. 3,
-     pp. 1185-1193, Aug. 2007.  
-     DOI: [10.1109/TPWRS.2007.901301][17].
+    ["On Computational Issues of Market-Based Optimal Power Flow,"][17]
+    *Power Systems, IEEE Transactions on*, vol. 22, no. 3,
+    pp. 1185-1193, Aug. 2007.  
+    DOI: [10.1109/TPWRS.2007.901301][17].
 
 4.  C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
-     R. J. Thomas, ["Secure Planning and Operations of Systems with
-     Stochastic Sources, Energy Storage and Active Demand,"][18]
-     *Smart Grid, IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229,
-     Dec. 2013.  
-     DOI: [10.1109/TSG.2013.2281001][18].
+    R. J. Thomas, ["Secure Planning and Operations of Systems with
+    Stochastic Sources, Energy Storage and Active Demand,"][18]
+    *Smart Grid, IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229,
+    Dec. 2013.  
+    DOI: [10.1109/TSG.2013.2281001][18].
 
-5.  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
-    Power Flow"][19], *MATPOWER Technical Note 1*, February 2010.  
+5.  A. J. Lamadrid, D. Munoz-Alvarez, C. E. Murillo-Sanchez,
+    R. D. Zimmerman, H. D. Shin and R. J. Thomas, ["Using the MATPOWER
+    Optimal Scheduling Tool to Test Power System Operation Methodologies
+    Under Uncertainty,"][19] *Sustainable Energy, IEEE Transactions on*,
+    2018.
+    DOI: [10.1109/TSTE.2018.2865454][19].
+
+6.  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
+    Power Flow,"][20] *MATPOWER Technical Note 1*, February 2010.  
     Available: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
 
-6.  R. D. Zimmerman, ["AC Power Flows, Generalized OPF Costs
-    and their Derivatives using Complex Matrix Notation"][20],
+7.  R. D. Zimmerman, ["AC Power Flows, Generalized OPF Costs
+    and their Derivatives using Complex Matrix Notation,"][21]
     *MATPOWER Technical Note 2*, February 2010.  
     Available:
     http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
+
+8.  B. Sereeter and R. D. Zimmerman, ["Addendum to AC Power Flows and
+    their Derivatives using Complex Matrix Notation: Nodal Current
+    Balance,"][22] *MATPOWER Technical Note 3*, April 2018.  
+    Available: http://www.pserc.cornell.edu/matpower/TN3-More-OPF-Derivatives.pdf
+
+9.  B. Sereeter and R. D. Zimmerman, ["AC Power Flows, Generalized
+    OPF Costs and their Derivatives using Complex Matrix Notation
+    and Cartesian Coordinate Voltages,"][23] *MATPOWER Technical
+    Note 4*, April 2018.  
+    Available:
+    http://www.pserc.cornell.edu/matpower/TN4-OPF-Derivatives-Cartesian.pdf
 
 
 Citing MATPOWER
 ---------------
 
-We request that publications derived from the use of MATPOWER explicitly acknowledge that fact by citing [reference \[1\]][13] above, namely:
+We request that publications derived from the use of MATPOWER explicitly
+acknowledge that fact by citing [reference \[1\]][13] above, namely:
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     "MATPOWER: Steady-State Operations, Planning and Analysis Tools
-    for Power Systems Research and Education," Power Systems, IEEE
-    Transactions on, vol. 26, no. 1, pp. 12–19, Feb. 2011.
+    for Power Systems Research and Education," *Power Systems, IEEE
+    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.
 
 Additionally, we request that publications derived from the use of
-the [MATPOWER Optimal Scheduling Tool (MOST)][21], explicitly
+the [MATPOWER Optimal Scheduling Tool (MOST)][24], explicitly
 acknowledge that fact by citing [reference \[4\]][18] as well as [\[1\]][13].
 
 >   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
     R. J. Thomas, "Secure Planning and Operations of Systems with
-    Stochastic Sources, Energy Storage and Active Demand," Smart Grid,
-    IEEE Transactions on, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
+    Stochastic Sources, Energy Storage and Active Demand," *Smart Grid,
+    IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
+
+In the interest of facilitating research reproducibility and thereby
+increasing the value of your MATPOWER-related research publications, we
+strongly encourage you to also publish, whenever possible, all of the code
+and data required to generate the results you are publishing.
+[Zenodo/GitHub][31] and [IEEE DataPort][32] are two of [many available
+options][33]. Please also mention the specific version of MATPOWER used.
 
 
 E-mail Lists
@@ -272,23 +333,23 @@ E-mail Lists
 There are three MATPOWER e-mail lists available to serve the MATPOWER
 community:
 
-- [MATPOWER-ANNOUNCE-L][22] is a simple announcement list for those who
+- [MATPOWER-ANNOUNCE-L][25] is a simple announcement list for those who
   wish to be notified of the release of new versions of MATPOWER.
 
-- [MATPOWER-L][23] is for MATPOWER users, to facilitate discussion and
+- [MATPOWER-L][26] is for MATPOWER users, to facilitate discussion and
   provide a forum for help with MATPOWER related questions.
 
-- [MATPOWER-DEV-L][24] is for MATPOWER developers, to provide a forum for
+- [MATPOWER-DEV-L][27] is for MATPOWER developers, to provide a forum for
   discussion related to the development of the MATPOWER software or
   proposed contributions.
 
-For details see the [Mailing Lists section][25] of the
+For details see the [Mailing Lists section][28] of the
 [MATPOWER website][1].
 
 Please select the most appropriate list for your post and do *not*
 cross-post to both MATPOWER-L and MATPOWER-DEV-L. Bug reports,
 software patches, proposed enhancements, etc. should be submitted to
-the [issue tracker on GitHub][26].
+the [issue tracker on GitHub][29].
 
 
 Optional Packages
@@ -305,33 +366,45 @@ Manual][8] for details.
 License and Terms of Use
 ------------------------
 
-MATPOWER is distributed under the [3-clause BSD license][27].
+MATPOWER is distributed as open-source under the [3-clause BSD license][30].
 
+---
 
 [1]: http://www.pserc.cornell.edu/matpower/
 [2]: https://github.com/MATPOWER/matpower
-[3]: http://www.mathworks.com/
+[3]: https://www.mathworks.com/
 [4]: https://www.gnu.org/software/octave/
 [5]: https://git-scm.com/downloads
 [6]: https://git-scm.com
 [7]: CONTRIBUTING.md
+[7a]: https://hub.docker.com/
+[7b]: https://www.docker.com
+[7c]: https://hub.docker.com/r/matpower/matpower-desktop
+[7d]: https://github.com/MATPOWER/matpower-extras
+[7e]: docker/MATPOWER-Docker.md
 [8]: docs/MATPOWER-manual.pdf
 [9]: http://www.pserc.cornell.edu/matpower/docs/ref/
-[10]: docs/MOST-manual.pdf
+[10]: most/docs/MOST-manual.pdf
 [11]: CHANGES.md
 [12]: http://www.pserc.cornell.edu/matpower/MATPOWER-paper.pdf
-[13]: http://dx.doi.org/10.1109/TPWRS.2010.2051168
+[13]: https://doi.org/10.1109/TPWRS.2010.2051168
 [14]: http://www.pserc.cornell.edu/matpower/MATPOWER-OPF.pdf
-[15]: http://dx.doi.org/10.1109/PES.2009.5275967
+[15]: https://doi.org/10.1109/PES.2009.5275967
 [16]: http://www.pserc.cornell.edu/matpower/MATPOWER-OPF-slides.pdf
-[17]: http://dx.doi.org/10.1109/TPWRS.2007.901301
-[18]: http://dx.doi.org/10.1109/TSG.2013.2281001
-[19]: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
-[20]: http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
-[21]: https://github.com/MATPOWER/most
-[22]: http://www.pserc.cornell.edu/matpower/mailinglists.html#announcelist
-[23]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
-[24]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
-[25]: http://www.pserc.cornell.edu/matpower/mailinglists.html
-[26]: https://github.com/MATPOWER/matpower/issues
-[27]: LICENSE
+[17]: https://doi.org/10.1109/TPWRS.2007.901301
+[18]: https://doi.org/10.1109/TSG.2013.2281001
+[19]: https://doi.org/10.1109/TSTE.2018.2865454
+[20]: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf
+[21]: http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf
+[22]: http://www.pserc.cornell.edu/matpower/TN3-More-OPF-Derivatives.pdf
+[23]: http://www.pserc.cornell.edu/matpower/TN4-OPF-Derivatives-Cartesian.pdf
+[24]: https://github.com/MATPOWER/most
+[25]: http://www.pserc.cornell.edu/matpower/mailinglists.html#announcelist
+[26]: http://www.pserc.cornell.edu/matpower/mailinglists.html#discusslist
+[27]: http://www.pserc.cornell.edu/matpower/mailinglists.html#devlist
+[28]: http://www.pserc.cornell.edu/matpower/mailinglists.html
+[29]: https://github.com/MATPOWER/matpower/issues
+[30]: LICENSE
+[31]: https://guides.github.com/activities/citable-code/
+[32]: https://ieee-dataport.org
+[33]: https://www.re3data.org
