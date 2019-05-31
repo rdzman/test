@@ -194,7 +194,7 @@ Documentation
 -------------
 
 There are four primary sources of documentation for MATPOWER.
-  - [MATPOWER User's Manual][8]
+  - [MATPOWER User's Manual][8] [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3236519.svg)](https://doi.org/10.5281/zenodo.3236519)
   - [MOST User's Manual][10]
   - [MATPOWER Online Function Reference][9]
   - MATLAB's `help` command
