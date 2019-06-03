@@ -249,7 +249,7 @@ Publications and Tech Notes
     Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.  
     DOI: [10.1109/TPWRS.2010.2051168][13].  
     [![DOI](https://zenodo.org/badge/DOI/10.1109/TPWRS.2010.2051168.svg)](https://doi.org/10.1109/TPWRS.2010.2051168)  
-    [![DOI](https://zenodo.org/badge/DOI/10.1109/TPWRS.2010.2051168.svg)]([13])
+    [![DOI](https://zenodo.org/badge/DOI/10.1109/TPWRS.2010.2051168.svg)][13]
 
 2.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     ["MATPOWER's Extensible Optimal Power Flow Architecture,"][14]
