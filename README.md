@@ -38,6 +38,9 @@ Test
 - License:      ![License     ](https://img.shields.io/github/license/rdzman/test.svg)
 
 
+---------------------
+
+
 A Power System Simulation Package for MATLAB and Octave
 -------------------------------------------------------
 
@@ -194,7 +197,7 @@ Documentation
 -------------
 
 There are four primary sources of documentation for MATPOWER.
-  - [MATPOWER User's Manual][8] [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3236519.svg)](https://doi.org/10.5281/zenodo.3236519)
+  - [MATPOWER User's Manual][8]
   - [MOST User's Manual][10]
   - [MATPOWER Online Function Reference][9]
   - MATLAB's `help` command
@@ -247,52 +250,52 @@ Publications and Tech Notes
     ["MATPOWER: Steady-State Operations, Planning and Analysis Tools
     for Power Systems Research and Education,"][12] *Power Systems, IEEE
     Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.  
-    [![DOI](https://zenodo.org/badge/DOI/10.1109/TPWRS.2010.2051168.svg)][13]
+    doi: [10.1109/TPWRS.2010.2051168][13].
 
 2.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     ["MATPOWER's Extensible Optimal Power Flow Architecture,"][14]
     *Power and Energy Society General Meeting, 2009 IEEE*, pp. 1-7,
     July 26-30 2009.  
-    [![DOI](https://zenodo.org/badge/DOI/10.1109/PES.2009.5275967.svg)][15]
+    doi: [10.1109/PES.2009.5275967][15].
      - [slides of presentation][16]
 
 3.  H. Wang, C. E. Murillo-Sánchez, R. D. Zimmerman, R. J. Thomas,
     ["On Computational Issues of Market-Based Optimal Power Flow,"][17]
     *Power Systems, IEEE Transactions on*, vol. 22, no. 3,
     pp. 1185-1193, Aug. 2007.  
-    [![DOI](https://zenodo.org/badge/DOI/10.1109/TPWRS.2007.901301.svg)][17]
+    doi: [10.1109/TPWRS.2007.901301][17].
 
 4.  C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
     R. J. Thomas, ["Secure Planning and Operations of Systems with
     Stochastic Sources, Energy Storage and Active Demand,"][18]
     *Smart Grid, IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229,
     Dec. 2013.  
-    [![DOI](https://zenodo.org/badge/DOI/10.1109/TSG.2013.2281001.svg)][18]
+    doi: [10.1109/TSG.2013.2281001][18].
 
 5.  A. J. Lamadrid, D. Munoz-Alvarez, C. E. Murillo-Sanchez,
     R. D. Zimmerman, H. D. Shin and R. J. Thomas, ["Using the MATPOWER
     Optimal Scheduling Tool to Test Power System Operation Methodologies
     Under Uncertainty,"][19] *Sustainable Energy, IEEE Transactions on*,
-    2018.  
-    [![DOI](https://zenodo.org/badge/DOI/10.1109/TSTE.2018.2865454.svg)][19]
+    2018.
+    doi: [10.1109/TSTE.2018.2865454][19].
 
 6.  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
     Power Flow,"][20] *MATPOWER Technical Note 1*, February 2010.  
     Available: http://www.pserc.cornell.edu/matpower/TN1-OPF-Auctions.pdf  
-    [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3237850.svg)](https://doi.org/10.5281/zenodo.3237850)
+    doi: [10.1109/TSTE.2018.2865454](https://doi.org/10.5281/zenodo.3237850).
 
 7.  R. D. Zimmerman, ["AC Power Flows, Generalized OPF Costs
     and their Derivatives using Complex Matrix Notation,"][21]
     *MATPOWER Technical Note 2*, February 2010.  
     Available:
     http://www.pserc.cornell.edu/matpower/TN2-OPF-Derivatives.pdf  
-    [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3237866.svg)](https://doi.org/10.5281/zenodo.3237866)
+    doi: [10.5281/zenodo.3237866](https://doi.org/10.5281/zenodo.3237866).
 
 8.  B. Sereeter and R. D. Zimmerman, ["Addendum to AC Power Flows and
     their Derivatives using Complex Matrix Notation: Nodal Current
     Balance,"][22] *MATPOWER Technical Note 3*, April 2018.  
     Available: http://www.pserc.cornell.edu/matpower/TN3-More-OPF-Derivatives.pdf  
-    [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3237900.svg)](https://doi.org/10.5281/zenodo.3237900)
+    doi: [10.5281/zenodo.3237900](https://doi.org/10.5281/zenodo.3237900).
 
 9.  B. Sereeter and R. D. Zimmerman, ["AC Power Flows, Generalized
     OPF Costs and their Derivatives using Complex Matrix Notation
@@ -300,11 +303,110 @@ Publications and Tech Notes
     Note 4*, April 2018.  
     Available:
     http://www.pserc.cornell.edu/matpower/TN4-OPF-Derivatives-Cartesian.pdf  
-    [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3237909.svg)](https://doi.org/10.5281/zenodo.3237909)
+    doi: [10.5281/zenodo.3237909](https://doi.org/10.5281/zenodo.3237909).
 
 
 Citing MATPOWER
 ---------------
+
+We request that publications derived from the use of MATPOWER or the
+included data files explicitly acknowledge that fact by citing the
+appropriate paper(s) and the software itself.
+
+### Papers
+
+All publications derived from the use of MATPOWER or the included data
+files should cite the 2011 MATPOWER paper:
+
+  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas, "MATPOWER:
+  Steady-State Operations, Planning and Analysis Tools for Power Systems
+  Research and Education," Power Systems, IEEE Transactions on, vol. 26,
+  no. 1, pp. 12-19, Feb. 2011.
+  doi: 10.1109/TPWRS.2010.2051168
+
+Publications derived from the use of the MATPOWER Optimal Scheduling
+Tool (MOST), should cite the 2013 MOST paper, in addition to the 2011
+MATPOWER paper above.
+
+  C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and R. J. Thomas,
+  "Secure Planning and Operations of Systems with Stochastic Sources,
+  Energy Storage and Active Demand," Smart Grid, IEEE Transactions on,
+  vol. 4, no. 4, pp. 2220-2229, Dec. 2013.
+  doi: 10.1109/TSG.2013.2281001
+
+Work making specific reference to the MATPOWER Interior Point Solver
+(MIPS) should also cite:
+
+  H. Wang, C. E. Murillo-Sánchez, R. D. Zimmerman, R. J. Thomas, "On
+  Computational Issues of Market-Based Optimal Power Flow," Power Systems,
+  IEEE Transactions on, vol. 22, no. 3, pp. 1185-1193, Aug. 2007.
+  doi: 10.1109/TPWRS.2007.901301.
+
+Some of the case files included with MATPOWER also request the citation
+of corresponding publications. This includes the ACTIVSg, PEGASE, and
+RTE cases. Details are available in the help text at the top of the
+corresponding case file.
+
+### Software
+
+For the sake of reproducibility of research results, it is best to cite
+the specific version of the software used with the version-specfic DOI.
+For example, for version 6.0:
+
+  R. D. Zimmerman, C. E. Murillo-Sanchez (2016). MATPOWER (Version 6.0)
+  [Software]. Available: http://www.pserc.cornell.edu/matpower/
+  doi: 10.5281/zenodo.3237810
+
+To cite the MATPOWER software generally, without reference to a specific
+version, use the following citation and DOI, with YYYY replaced by the
+year of the most recent release:
+
+  R. D. Zimmerman, C. E. Murillo-Sanchez (YYYY). MATPOWER
+  [Software]. Available: http://www.pserc.cornell.edu/matpower/
+  doi: 10.5281/zenodo.3236535
+
+A list of versions with release dates and version-specific DOI's can be
+found via the above DOI: https://doi.org/10.5281/zenodo.3236535.
+
+### User's Manuals
+
+The MATPOWER, MIPS and MOST User's Manuals should also be cited
+explicitly by work that references or is derived from their content. As
+with the software, the citation and DOI can be version-specific or
+general, as appropriate. For the MATPOWER User's Manual for Version 6.0
+use:
+
+  R. D. Zimmerman, C. E. Murillo-Sanchez. MATPOWER User's Manual,
+  Version 6.0. 2016. [Online].
+  Available: https://matpower.org/docs/MATPOWER-manual-6.0.pdf
+  doi: 10.5281/zenodo.3236526
+
+For a version non-specific citation, use the following citation and DOI,
+with YYYY replaced by the year of the most recent release:
+
+  R. D. Zimmerman, C. E. Murillo-Sanchez. MATPOWER User's Manual. YYYY.
+  [Online]. Available: https://matpower.org/docs/MATPOWER-manual.pdf
+  doi: 10.5281/zenodo.3236519
+
+A list of versions of the User's Manual with release dates and
+version-specific DOI's can be found via the above DOI:
+https://doi.org/10.5281/zenodo.3236519
+
+For information on citing the MIPS or MOST User's Manuals, please see
+the MIPS CITATION file and MOST CITATION file, respectively.
+
+
+### Recommendation
+
+In the interest of facilitating research reproducibility and thereby
+increasing the value of your MATPOWER-related research publications, we
+strongly encourage you to also publish, whenever possible, all of the
+code and data required to generate the results you are publishing.
+Zenodo/GitHub and IEEE DataPort are two of many available options.
+
+
+
+
 
 We request that publications derived from the use of MATPOWER explicitly
 acknowledge that fact by citing [reference \[1\]][13] above, namely:
@@ -313,7 +415,7 @@ acknowledge that fact by citing [reference \[1\]][13] above, namely:
     "MATPOWER: Steady-State Operations, Planning and Analysis Tools
     for Power Systems Research and Education," *Power Systems, IEEE
     Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.  
-    [![DOI](https://zenodo.org/badge/DOI/10.1109/TPWRS.2010.2051168.svg)][13]
+    doi: [10.1109/TPWRS.2010.2051168][13]
 
 Additionally, we request that publications derived from the use of
 the [MATPOWER Optimal Scheduling Tool (MOST)][24], explicitly
@@ -323,7 +425,7 @@ acknowledge that fact by citing [reference \[4\]][18] as well as [\[1\]][13].
     R. J. Thomas, "Secure Planning and Operations of Systems with
     Stochastic Sources, Energy Storage and Active Demand," *Smart Grid,
     IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.  
-    [![DOI](https://zenodo.org/badge/DOI/10.1109/TSG.2013.2281001.svg)][18]
+    doi: [10.1109/TSG.2013.2281001][18]
 
 In the interest of facilitating research reproducibility and thereby
 increasing the value of your MATPOWER-related research publications, we
