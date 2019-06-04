@@ -313,7 +313,7 @@ We request that publications derived from the use of MATPOWER, or the
 included data files, explicitly acknowledge that fact by citing the
 appropriate paper(s) and the software itself.
 
-### Papers
+#### Papers
 
 All publications derived from the use of MATPOWER or the included data
 files should cite the 2011 MATPOWER paper:
