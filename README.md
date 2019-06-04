@@ -313,7 +313,7 @@ We request that publications derived from the use of MATPOWER, or the
 included data files, explicitly acknowledge that fact by citing the
 appropriate paper(s) and the software itself.
 
-### Papers
+#### Papers
 
 All publications derived from the use of MATPOWER or the included data
 files should cite the 2011 MATPOWER paper ([reference \[1\]][13] above):
@@ -347,7 +347,7 @@ of corresponding publications. This includes the ACTIVSg, PEGASE, and
 RTE cases. Details are available in the help text at the top of the
 corresponding case files.
 
-### Software
+#### Software
 
 For the sake of reproducibility of research results, it is best to cite
 the specific version of the software used with the version-specfic DOI.
@@ -368,7 +368,7 @@ year of the most recent release:
 A list of versions with release dates and version-specific DOI's can be
 found via the above DOI at https://doi.org/10.5281/zenodo.3236535.
 
-### User's Manuals
+#### User's Manuals
 
 The MATPOWER, MIPS and MOST User's Manuals should also be cited
 explicitly by work that references or is derived from their content. As
@@ -395,7 +395,7 @@ https://doi.org/10.5281/zenodo.3236519
 For information on citing the MIPS or MOST User's Manuals, please see
 the MIPS [CITATION][34] file and MOST [CITATION][35] file, respectively.
 
-### Recommendation
+#### Recommendation
 
 In the interest of facilitating research reproducibility and thereby
 increasing the value of your MATPOWER-related research publications, we
