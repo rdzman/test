@@ -483,12 +483,12 @@ MATPOWER is distributed as open-source under the [3-clause BSD license][30].
 [28]: http://www.pserc.cornell.edu/matpower/mailinglists.html
 [29]: https://github.com/MATPOWER/matpower/issues
 [30]: LICENSE
-[31]: CITING
+[31]: CITATION
 [32]: https://github.com/MATPOWER/mips
 [33]: https://doi.org/10.5281/zenodo.3236535
 [34]: https://doi.org/10.5281/zenodo.3236519
-[35]: mips/CITING
-[36]: most/CITING
+[35]: mips/CITATION
+[36]: most/CITATION
 [41]: https://guides.github.com/activities/citable-code/
 [42]: https://ieee-dataport.org
 [43]: https://www.re3data.org
