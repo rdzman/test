@@ -325,7 +325,7 @@ files should cite the 2011 MATPOWER paper ([reference \[1\]][13] above):
     doi: [10.1109/TPWRS.2010.2051168][13]
 
 Publications derived from the use of the [MATPOWER Optimal Scheduling
-Tool (MOST)][24], should cite the 2013 MOST paper (reference \[4\]][18]),
+Tool (MOST)][24], should cite the 2013 MOST paper ([reference \[4\]][18]),
 in addition to the 2011 MATPOWER paper (reference \[1\]][13]) above.
 
 >   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and R. J. Thomas,
