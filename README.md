@@ -306,8 +306,8 @@ Publications and Tech Notes
     doi: [10.5281/zenodo.3237909](https://doi.org/10.5281/zenodo.3237909).
 
 
-Citing MATPOWER
----------------
+[Citing MATPOWER][31]
+---------------------
 
 We request that publications derived from the use of MATPOWER, or the
 included data files, explicitly acknowledge that fact by citing the
