@@ -316,7 +316,7 @@ appropriate paper(s) and the software itself.
 #### Papers
 
 All publications derived from the use of MATPOWER or the included data
-files should cite the 2011 MATPOWER paper ([\[1\]][13]):
+files should cite the 2011 MATPOWER paper [\[1\]][13]:
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas, "MATPOWER:
     Steady-State Operations, Planning and Analysis Tools for Power Systems
@@ -325,8 +325,8 @@ files should cite the 2011 MATPOWER paper ([\[1\]][13]):
     doi: [10.1109/TPWRS.2010.2051168][13]
 
 Publications derived from the use of the [MATPOWER Optimal Scheduling
-Tool (MOST)][24], should cite the 2013 MOST paper ([\[4\]][18]),
-in addition to the 2011 MATPOWER paper ([\[1\]][13]) above.
+Tool (MOST)][24] should cite the 2013 MOST paper [\[4\]][18],
+in addition to the 2011 MATPOWER paper [\[1\]][13] above.
 
 >   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and R. J. Thomas,
     "Secure Planning and Operations of Systems with Stochastic Sources,
@@ -513,12 +513,12 @@ MATPOWER is distributed as open-source under the [3-clause BSD license][30].
 [28]: http://www.pserc.cornell.edu/matpower/mailinglists.html
 [29]: https://github.com/MATPOWER/matpower/issues
 [30]: LICENSE
-[31]: 
+[31]: CITING
 [32]: https://github.com/MATPOWER/mips
 [33]: https://doi.org/10.5281/zenodo.3236535
 [34]: https://doi.org/10.5281/zenodo.3236519
-[35]: mips
-[36]: most
+[35]: mips/CITING
+[36]: most/CITING
 [41]: https://guides.github.com/activities/citable-code/
 [42]: https://ieee-dataport.org
 [43]: https://www.re3data.org
