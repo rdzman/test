@@ -377,14 +377,14 @@ general, as appropriate. For the MATPOWER User's Manual for Version 6.0
 use:
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez. MATPOWER User's Manual,
-    Version 6.0. 2016. [Online].
-    Available: https://matpower.org/docs/MATPOWER-manual-6.0.pdf  
+    Version 6.0. 2016.  
+    [Online]. Available: https://matpower.org/docs/MATPOWER-manual-6.0.pdf  
     doi: [10.5281/zenodo.3236526](https://doi.org/10.5281/zenodo.3236526)
 
 For a version non-specific citation, use the following citation and DOI,
 with YYYY replaced by the year of the most recent release:
 
->   R. D. Zimmerman, C. E. Murillo-Sanchez. MATPOWER User's Manual. YYYY.
+>   R. D. Zimmerman, C. E. Murillo-Sanchez. MATPOWER User's Manual. YYYY.  
     [Online]. Available: https://matpower.org/docs/MATPOWER-manual.pdf  
     doi: [10.5281/zenodo.3236519][34]
 
@@ -393,7 +393,7 @@ version-specific DOI's can be found via the above DOI at
 https://doi.org/10.5281/zenodo.3236519
 
 For information on citing the MIPS or MOST User's Manuals, please see
-the MIPS [CITATION][35] file and MOST [CITATION][36] file, respectively.
+the MIPS [`CITATION`][35] file and MOST [`CITATION`][36] file, respectively.
 
 #### Recommendation
 
@@ -403,36 +403,6 @@ strongly encourage you to also publish, whenever possible, all of the
 code and data required to generate the results you are publishing.
 [Zenodo/GitHub][41] and [IEEE DataPort][42] are two of [many available
 options][43].
-
-
--------------
-
-
-We request that publications derived from the use of MATPOWER explicitly
-acknowledge that fact by citing [reference \[1\]][13] above, namely:
-
->   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
-    "MATPOWER: Steady-State Operations, Planning and Analysis Tools
-    for Power Systems Research and Education," *Power Systems, IEEE
-    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.  
-    doi: [10.1109/TPWRS.2010.2051168][13]
-
-Additionally, we request that publications derived from the use of
-the [MATPOWER Optimal Scheduling Tool (MOST)][24], explicitly
-acknowledge that fact by citing [reference \[4\]][18] as well as [\[1\]][13].
-
->   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
-    R. J. Thomas, "Secure Planning and Operations of Systems with
-    Stochastic Sources, Energy Storage and Active Demand," *Smart Grid,
-    IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.  
-    doi: [10.1109/TSG.2013.2281001][18]
-
-In the interest of facilitating research reproducibility and thereby
-increasing the value of your MATPOWER-related research publications, we
-strongly encourage you to also publish, whenever possible, all of the code
-and data required to generate the results you are publishing.
-[Zenodo/GitHub][41] and [IEEE DataPort][42] are two of [many available
-options][43]. Please also mention the specific version of MATPOWER used.
 
 
 E-mail Lists
