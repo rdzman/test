@@ -247,14 +247,12 @@ Publications and Tech Notes
     ["MATPOWER: Steady-State Operations, Planning and Analysis Tools
     for Power Systems Research and Education,"][12] *Power Systems, IEEE
     Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.  
-    DOI: [10.1109/TPWRS.2010.2051168][13].  
     [![DOI](https://zenodo.org/badge/DOI/10.1109/TPWRS.2010.2051168.svg)][13]
 
 2.  R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     ["MATPOWER's Extensible Optimal Power Flow Architecture,"][14]
     *Power and Energy Society General Meeting, 2009 IEEE*, pp. 1-7,
     July 26-30 2009.  
-    DOI: [10.1109/PES.2009.5275967][15].  
     [![DOI](https://zenodo.org/badge/DOI/10.1109/PES.2009.5275967.svg)][15]
      - [slides of presentation][16]
 
@@ -262,7 +260,6 @@ Publications and Tech Notes
     ["On Computational Issues of Market-Based Optimal Power Flow,"][17]
     *Power Systems, IEEE Transactions on*, vol. 22, no. 3,
     pp. 1185-1193, Aug. 2007.  
-    DOI: [10.1109/TPWRS.2007.901301][17].  
     [![DOI](https://zenodo.org/badge/DOI/10.1109/TPWRS.2007.901301.svg)][17]
 
 4.  C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
@@ -270,7 +267,6 @@ Publications and Tech Notes
     Stochastic Sources, Energy Storage and Active Demand,"][18]
     *Smart Grid, IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229,
     Dec. 2013.  
-    DOI: [10.1109/TSG.2013.2281001][18].  
     [![DOI](https://zenodo.org/badge/DOI/10.1109/TSG.2013.2281001.svg)][18]
 
 5.  A. J. Lamadrid, D. Munoz-Alvarez, C. E. Murillo-Sanchez,
@@ -278,7 +274,6 @@ Publications and Tech Notes
     Optimal Scheduling Tool to Test Power System Operation Methodologies
     Under Uncertainty,"][19] *Sustainable Energy, IEEE Transactions on*,
     2018.
-    DOI: [10.1109/TSTE.2018.2865454][19].  
     [![DOI](https://zenodo.org/badge/DOI/10.1109/TSTE.2018.2865454.svg)][19]
 
 6.  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
@@ -317,7 +312,8 @@ acknowledge that fact by citing [reference \[1\]][13] above, namely:
 >   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
     "MATPOWER: Steady-State Operations, Planning and Analysis Tools
     for Power Systems Research and Education," *Power Systems, IEEE
-    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.
+    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.  
+    [![DOI](https://zenodo.org/badge/DOI/10.1109/TPWRS.2010.2051168.svg)][13]
 
 Additionally, we request that publications derived from the use of
 the [MATPOWER Optimal Scheduling Tool (MOST)][24], explicitly
@@ -326,7 +322,8 @@ acknowledge that fact by citing [reference \[4\]][18] as well as [\[1\]][13].
 >   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
     R. J. Thomas, "Secure Planning and Operations of Systems with
     Stochastic Sources, Energy Storage and Active Demand," *Smart Grid,
-    IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
+    IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.  
+    [![DOI](https://zenodo.org/badge/DOI/10.1109/TSG.2013.2281001.svg)][18]
 
 In the interest of facilitating research reproducibility and thereby
 increasing the value of your MATPOWER-related research publications, we
@@ -417,3 +414,5 @@ MATPOWER is distributed as open-source under the [3-clause BSD license][30].
 [31]: https://guides.github.com/activities/citable-code/
 [32]: https://ieee-dataport.org
 [33]: https://www.re3data.org
+
+[logo]: docs/src/images/MATPOWER-md.png
