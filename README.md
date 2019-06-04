@@ -273,7 +273,7 @@ Publications and Tech Notes
     R. D. Zimmerman, H. D. Shin and R. J. Thomas, ["Using the MATPOWER
     Optimal Scheduling Tool to Test Power System Operation Methodologies
     Under Uncertainty,"][19] *Sustainable Energy, IEEE Transactions on*,
-    2018.
+    2018.  
     [![DOI](https://zenodo.org/badge/DOI/10.1109/TSTE.2018.2865454.svg)][19]
 
 6.  R. D. Zimmerman, ["Uniform Price Auctions and Optimal
