@@ -313,26 +313,26 @@ We request that publications derived from the use of MATPOWER, or the
 included data files, explicitly acknowledge that fact by citing the
 appropriate paper(s) and the software itself.
 
-#### Papers
+### Papers
 
 All publications derived from the use of MATPOWER or the included data
-files should cite the 2011 MATPOWER paper:
+files should cite the 2011 MATPOWER paper ([reference \[1\]][13] above):
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas, "MATPOWER:
     Steady-State Operations, Planning and Analysis Tools for Power Systems
     Research and Education," Power Systems, IEEE Transactions on, vol. 26,
     no. 1, pp. 12-19, Feb. 2011.  
-    doi: 10.1109/TPWRS.2010.2051168
+    doi: [10.1109/TPWRS.2010.2051168][13]
 
-Publications derived from the use of the MATPOWER Optimal Scheduling
-Tool (MOST), should cite the 2013 MOST paper, in addition to the 2011
-MATPOWER paper above.
+Publications derived from the use of the [MATPOWER Optimal Scheduling
+Tool (MOST)][24], should cite the 2013 MOST paper (reference \[4\]][18]),
+in addition to the 2011 MATPOWER paper (reference \[1\]][13]) above.
 
 >   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and R. J. Thomas,
     "Secure Planning and Operations of Systems with Stochastic Sources,
     Energy Storage and Active Demand," Smart Grid, IEEE Transactions on,
     vol. 4, no. 4, pp. 2220-2229, Dec. 2013.  
-    doi: 10.1109/TSG.2013.2281001
+    doi: [10.1109/TSG.2013.2281001][18]
 
 Work making specific reference to the MATPOWER Interior Point Solver
 (MIPS) should also cite:
@@ -340,7 +340,7 @@ Work making specific reference to the MATPOWER Interior Point Solver
 >   H. Wang, C. E. Murillo-Sánchez, R. D. Zimmerman, R. J. Thomas, "On
     Computational Issues of Market-Based Optimal Power Flow," Power Systems,
     IEEE Transactions on, vol. 22, no. 3, pp. 1185-1193, Aug. 2007.  
-    doi: 10.1109/TPWRS.2007.901301.
+    doi: [10.1109/TPWRS.2007.901301][17]
 
 Some of the case files included with MATPOWER also request the citation
 of corresponding publications. This includes the ACTIVSg, PEGASE, and
@@ -355,7 +355,7 @@ For example, for version 6.0:
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez (2016). MATPOWER (Version 6.0)
     [Software]. Available: http://www.pserc.cornell.edu/matpower/  
-    doi: 10.5281/zenodo.3237810
+    doi: [10.5281/zenodo.3237810](https://doi.org/10.5281/zenodo.3237810)
 
 To cite the MATPOWER software generally, without reference to a specific
 version, use the following citation and DOI, with YYYY replaced by the
@@ -363,10 +363,10 @@ year of the most recent release:
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez (YYYY). MATPOWER
     [Software]. Available: http://www.pserc.cornell.edu/matpower/  
-    doi: 10.5281/zenodo.3236535
+    doi: [10.5281/zenodo.3236535][32]
 
 A list of versions with release dates and version-specific DOI's can be
-found via the above DOI: https://doi.org/10.5281/zenodo.3236535.
+found via the above DOI at https://doi.org/10.5281/zenodo.3236535.
 
 ### User's Manuals
 
@@ -379,22 +379,21 @@ use:
 >   R. D. Zimmerman, C. E. Murillo-Sanchez. MATPOWER User's Manual,
     Version 6.0. 2016. [Online].
     Available: https://matpower.org/docs/MATPOWER-manual-6.0.pdf  
-    doi: 10.5281/zenodo.3236526
+    doi: [10.5281/zenodo.3236526](https://doi.org/10.5281/zenodo.3236526)
 
 For a version non-specific citation, use the following citation and DOI,
 with YYYY replaced by the year of the most recent release:
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez. MATPOWER User's Manual. YYYY.
     [Online]. Available: https://matpower.org/docs/MATPOWER-manual.pdf  
-    doi: 10.5281/zenodo.3236519
+    doi: [10.5281/zenodo.3236519][33]
 
 A list of versions of the User's Manual with release dates and
-version-specific DOI's can be found via the above DOI:
+version-specific DOI's can be found via the above DOI at
 https://doi.org/10.5281/zenodo.3236519
 
 For information on citing the MIPS or MOST User's Manuals, please see
-the MIPS CITATION file and MOST CITATION file, respectively.
-
+the MIPS [CITATION][34] file and MOST [CITATION][35] file, respectively.
 
 ### Recommendation
 
@@ -402,10 +401,11 @@ In the interest of facilitating research reproducibility and thereby
 increasing the value of your MATPOWER-related research publications, we
 strongly encourage you to also publish, whenever possible, all of the
 code and data required to generate the results you are publishing.
-Zenodo/GitHub and IEEE DataPort are two of many available options.
+[Zenodo/GitHub][41] and [IEEE DataPort][42] are two of [many available
+options][43].
 
 
-
+-------------
 
 
 We request that publications derived from the use of MATPOWER explicitly
@@ -431,8 +431,8 @@ In the interest of facilitating research reproducibility and thereby
 increasing the value of your MATPOWER-related research publications, we
 strongly encourage you to also publish, whenever possible, all of the code
 and data required to generate the results you are publishing.
-[Zenodo/GitHub][31] and [IEEE DataPort][32] are two of [many available
-options][33]. Please also mention the specific version of MATPOWER used.
+[Zenodo/GitHub][41] and [IEEE DataPort][42] are two of [many available
+options][43]. Please also mention the specific version of MATPOWER used.
 
 
 E-mail Lists
@@ -513,8 +513,13 @@ MATPOWER is distributed as open-source under the [3-clause BSD license][30].
 [28]: http://www.pserc.cornell.edu/matpower/mailinglists.html
 [29]: https://github.com/MATPOWER/matpower/issues
 [30]: LICENSE
-[31]: https://guides.github.com/activities/citable-code/
-[32]: https://ieee-dataport.org
-[33]: https://www.re3data.org
+[31]: 
+[32]: https://doi.org/10.5281/zenodo.3236535
+[33]: https://doi.org/10.5281/zenodo.3236519
+[34]: mips
+[35]: most
+[41]: https://guides.github.com/activities/citable-code/
+[42]: https://ieee-dataport.org
+[43]: https://www.re3data.org
 
 [logo]: docs/src/images/MATPOWER-md.png
