@@ -123,8 +123,8 @@ Publications
     doi: [10.1109/TSTE.2018.2865454][11].
 
 
-Citing MATPOWER and MOST
-------------------------
+[Citing MOST][13]
+-----------------
 
 We request that publications derived from the use of the [MATPOWER
 Optimal Scheduling Tool (MOST)][1] explicitly acknowledge that fact by
@@ -158,7 +158,7 @@ with *\<YEAR\>* replaced by the year of the most recent release:
 >   R. D. Zimmerman, C. E. Murillo-Sanchez. *MATPOWER Optimal Scheduling
     Tool (MOST) User's Manual*. *\<YEAR\>*. [Online].
     Available: https://matpower.org/docs/MOST-manual.pdf  
-    doi: [10.5281/zenodo.3236531][13]
+    doi: [10.5281/zenodo.3236531][14]
 
 A list of versions of the User's Manual with release dates and
 version-specific DOI's can be found via the general DOI at
@@ -190,4 +190,5 @@ MOST is distributed under the [3-clause BSD license][12].
 [10]: https://doi.org/10.1109/TSG.2013.2281001
 [11]: https://doi.org/10.1109/TSTE.2018.2865454
 [12]: LICENSE
-[13]: https://doi.org/10.5281/zenodo.3236531
+[13]: CITATION
+[14]: https://doi.org/10.5281/zenodo.3236531
