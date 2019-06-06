@@ -184,7 +184,7 @@ acknowledge that fact by citing one or more of the following references:
     Systems, IEEE Transactions on*, 2018.  
     doi: [10.1109/TPWRS.2018.2863266][17]
 
-The [SynGrid User's Manual][6] should also be cited explicitly by work that
+The [SynGrid User's Manual][6] should also be cited explicitly in work that
 refers to or is derived from its content. The citation and DOI can be
 version-specific or general, as appropriate. For version 1.0, use:
 
