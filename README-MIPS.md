@@ -91,7 +91,7 @@ the following 2007 paper.
     IEEE Transactions on*, vol. 22, no. 3, pp. 1185-1193, Aug. 2007.  
     doi: [10.1109/TPWRS.2007.901301][10]
 
-The MATPOWER Interior Point Solver (MIPS) User's Manual should also be
+The [MATPOWER Interior Point Solver (MIPS) User's Manual][7] should also be
 cited explicitly in work that refers to or is derived from its content.
 The citation and DOI can be version-specific or general, as appropriate.
 For version 1.3, use:
@@ -111,7 +111,7 @@ with *\<YEAR\>* replaced by the year of the most recent release:
 
 A list of versions of the User's Manual with release dates and
 version-specific DOI's can be found via the general DOI at
-https://doi.org/10.5281/zenodo.3236506
+https://doi.org/10.5281/zenodo.3236506.
 
 
 Contributing
@@ -132,7 +132,7 @@ MIPS is distributed under the [3-clause BSD license][9].
 [4]: https://www.mathworks.com/
 [5]: https://www.gnu.org/software/octave/
 [6]: https://github.com/MATPOWER/mptest
-[7]: https://github.com/MATPOWER/mips/blob/master/docs/MIPS-manual.pdf
+[7]: docs/MIPS-manual.pdf
 [8]: CONTRIBUTING.md
 [9]: LICENSE
 [10]: https://doi.org/10.1109/TPWRS.2007.901301

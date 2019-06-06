@@ -373,7 +373,7 @@ found via the general DOI at https://doi.org/10.5281/zenodo.3236535.
 The MATPOWER, MIPS and MOST User's Manuals should also be cited
 explicitly in work that refers to or is derived from their content. As
 with the software, the citation and DOI can be version-specific or
-general, as appropriate. For version 6.0 of the MATPOWER User's Manual,
+general, as appropriate. For version 6.0 of the [MATPOWER User's Manual][8],
 use:
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez. *MATPOWER User's Manual,
@@ -390,7 +390,7 @@ with *\<YEAR\>* replaced by the year of the most recent release:
 
 A list of versions of the User's Manual with release dates and
 version-specific DOI's can be found via the general DOI at
-https://doi.org/10.5281/zenodo.3236519
+https://doi.org/10.5281/zenodo.3236519.
 
 For information on citing the MIPS or MOST User's Manuals, please see
 the [`mips/CITATION`][35] and [`most/CITATION`][36] files, respectively.

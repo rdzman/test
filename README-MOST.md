@@ -162,7 +162,7 @@ with *\<YEAR\>* replaced by the year of the most recent release:
 
 A list of versions of the User's Manual with release dates and
 version-specific DOI's can be found via the general DOI at
-https://doi.org/10.5281/zenodo.3236531
+https://doi.org/10.5281/zenodo.3236531.
 
 
 Contributing
