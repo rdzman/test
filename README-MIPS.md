@@ -137,4 +137,4 @@ MIPS is distributed under the [3-clause BSD license][9].
 [9]: LICENSE
 [10]: https://doi.org/10.1109/TPWRS.2007.901301
 [11]: CITATION
-[12]: 10.5281/zenodo.3236506
+[12]: https://doi.org/10.5281/zenodo.3236506
