@@ -191,7 +191,7 @@ version-specific or general, as appropriate. For version 1.0, use:
 >   Z. Wang, H. Sadeghian, S. H. Elyas, R. D. Zimmerman, E. Schweitzer,
     A. Scaglione. *SynGrid User's Manual, Version 1.0*. 2018. [Online].
     Available: https://matpower.org/docs/SynGrid-manual-1.0.pdf  
-    doi: 10.5281/zenodo.3238680
+    doi: [10.5281/zenodo.3238680](https://doi.org/10.5281/zenodo.3238680)
 
 For a version non-specific citation, use the following citation and DOI,
 with *\<YEAR\>* replaced by the year of the most recent release:
@@ -199,7 +199,7 @@ with *\<YEAR\>* replaced by the year of the most recent release:
 >   Z. Wang, H. Sadeghian, S. H. Elyas, R. D. Zimmerman, E. Schweitzer,
     A. Scaglione. *SynGrid User's Manual*. *\<YEAR\>*. [Online].
     Available: https://matpower.org/docs/SynGrid-manual.pdf  
-    doi: 10.5281/zenodo.3238679
+    doi: [10.5281/zenodo.3238679][19]
 
 A list of versions of the User's Manual with release dates and
 version-specific DOI's can be found via the general DOI at
@@ -237,3 +237,4 @@ SynGrid is distributed under the [3-clause BSD license][10].
 [16]: https://doi.org/10.1109/PESGM.2018.8586110
 [17]: https://doi.org/10.1109/TPWRS.2018.2863266
 [18]: CITING
+[19]: https://doi.org/10.5281/zenodo.3238679
