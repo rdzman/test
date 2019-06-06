@@ -88,7 +88,7 @@ the following 2007 paper.
 
 >   H. Wang, C. E. Murillo-Sánchez, R. D. Zimmerman, R. J. Thomas, "On
     Computational Issues of Market-Based Optimal Power Flow," *Power Systems,
-    IEEE Transactions on*, vol. 22, no. 3, pp. 1185-1193, Aug. 2007.
+    IEEE Transactions on*, vol. 22, no. 3, pp. 1185-1193, Aug. 2007.  
     doi: [10.1109/TPWRS.2007.901301][10]
 
 The MATPOWER Interior Point Solver (MIPS) User's Manual should also be
@@ -98,16 +98,16 @@ For version 1.3, use:
 
 >   R. D. Zimmerman, H. Wang. *MATPOWER Interior Point Solver (MIPS)
     User's Manual, Version 1.3*. 2018. [Online].
-    Available: https://matpower.org/docs/MIPS-manual-1.3.pdf
+    Available: https://matpower.org/docs/MIPS-manual-1.3.pdf  
     doi: [10.5281/zenodo.3236508](https://doi.org/10.5281/zenodo.3236508)
 
 For a version non-specific citation, use the following citation and DOI,
 with *\<YEAR\>* replaced by the year of the most recent release:
 
-  R. D. Zimmerman, H. Wang. MATPOWER Interior Point Solver (MIPS)
-  User's Manual. *\<YEAR\>*. [Online].
-  Available: https://matpower.org/docs/MIPS-manual.pdf
-  doi: 10.5281/zenodo.3236506
+>   R. D. Zimmerman, H. Wang. *MATPOWER Interior Point Solver (MIPS)
+    User's Manual*. *\<YEAR\>*. [Online].
+    Available: https://matpower.org/docs/MIPS-manual.pdf  
+    doi: [10.5281/zenodo.3236506][12]
 
 A list of versions of the User's Manual with release dates and
 version-specific DOI's can be found via the general DOI at
@@ -137,5 +137,4 @@ MIPS is distributed under the [3-clause BSD license][9].
 [9]: LICENSE
 [10]: https://doi.org/10.1109/TPWRS.2007.901301
 [11]: CITATION
-[12]: 
-[13]: 
+[12]: 10.5281/zenodo.3236506
