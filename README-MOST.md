@@ -126,27 +126,9 @@ Publications
 Citing MATPOWER and MOST
 ------------------------
 
-We request that publications derived from the use of MATPOWER explicitly
-acknowledge that fact by citing [reference \[1\]][9] above, namely:
-
->   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas,
-    "MATPOWER: Steady-State Operations, Planning and Analysis Tools
-    for Power Systems Research and Education," *Power Systems, IEEE
-    Transactions on*, vol. 26, no. 1, pp. 12–19, Feb. 2011.
-
-Additionally, we request that publications derived from the use of
-the [MATPOWER Optimal Scheduling Tool (MOST)][1], explicitly
-acknowledge that fact by citing [reference \[2\]][10] as well as [\[1\]][9].
-
->   C. E. Murillo-Sanchez, R. D. Zimmerman, C. L. Anderson, and
-    R. J. Thomas, "Secure Planning and Operations of Systems with
-    Stochastic Sources, Energy Storage and Active Demand," *Smart Grid,
-    IEEE Transactions on*, vol. 4, no. 4, pp. 2220–2229, Dec. 2013.
-
-
-We request that publications derived from the use of the [MATPOWER Optimal
-Scheduling Tool (MOST)][1] explicitly acknowledge that fact by citing both the
-2011 MATPOWER paper and the 2013 MOST paper.
+We request that publications derived from the use of the [MATPOWER
+Optimal Scheduling Tool (MOST)][1] explicitly acknowledge that fact by
+citing both the 2011 MATPOWER paper and the 2013 MOST paper.
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez, and R. J. Thomas, "MATPOWER:
     Steady-State Operations, Planning and Analysis Tools for Power Systems
@@ -160,10 +142,10 @@ Scheduling Tool (MOST)][1] explicitly acknowledge that fact by citing both the
     vol. 4, no. 4, pp. 2220-2229, Dec. 2013.  
     doi: [10.1109/TSG.2013.2281001][10]
 
-The [MATPOWER Optimal Scheduling Tool (MOST) User's Manual][7] should also be
-cited explicitly in work that refers to or is derived from its content.
-The citation and DOI can be version-specific or general, as appropriate.
-For version 1.0.1, use:
+The [MATPOWER Optimal Scheduling Tool (MOST) User's Manual][7] should
+also be cited explicitly in work that refers to or is derived from its
+content. The citation and DOI can be version-specific or general, as
+appropriate. For version 1.0.1, use:
 
 >   R. D. Zimmerman, C. E. Murillo-Sanchez. *MATPOWER Optimal Scheduling
     Tool (MOST) User's Manual, Version 1.0.1*. 2018. [Online].
