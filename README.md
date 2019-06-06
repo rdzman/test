@@ -358,10 +358,10 @@ For example, for version 6.0 of MATPOWER, use:
     doi: [10.5281/zenodo.3237810](https://doi.org/10.5281/zenodo.3237810)
 
 To cite the MATPOWER software generally, without reference to a specific
-version, use the following citation and DOI, with <YEAR> replaced by the
+version, use the following citation and DOI, with \<YEAR\> replaced by the
 year of the most recent release:
 
->   R. D. Zimmerman, C. E. Murillo-Sanchez (<YEAR>). *MATPOWER*
+>   R. D. Zimmerman, C. E. Murillo-Sanchez (\<YEAR\>). *MATPOWER*
     [Software]. Available: http://www.pserc.cornell.edu/matpower/  
     doi: [10.5281/zenodo.3236535][33]
 
