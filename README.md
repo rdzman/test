@@ -37,6 +37,8 @@ Test
 - PreRel(Asset):![Pre-Asset   ](https://img.shields.io/github/downloads-pre/rdzman/test/v1.0/test-1.0.zip.svg)
 - License:      ![License     ](https://img.shields.io/github/license/rdzman/test.svg)
 
+MIPS
+- License:      ![License     ](https://img.shields.io/github/license/MATPOWER/mips.svg)
 
 ---------------------
 
