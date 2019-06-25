@@ -1,7 +1,6 @@
-version: '3.3'
-
+version: '3'
 services:
-
   sut:
     build: .
+    image: matpower/matpower-desktop:${CACHE_TAG}
     command: /bin/bash run_docker_tests.sh
