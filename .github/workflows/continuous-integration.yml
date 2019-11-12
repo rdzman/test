@@ -21,9 +21,9 @@ jobs:
     - name: Install GNU Octave (Mac)
       if: startsWith(matrix.os, 'macos')
       run: |
-        sudo brew update
-        sudo brew install ipopt
-        sudo brew install octave
+        brew update
+        brew install ipopt
+        brew install octave
     - name: Clone MATPOWER
       run: git clone --depth=50 https://github.com/MATPOWER/matpower.git $HOME/matpower
     - name: Build IPOPT MEX interface
