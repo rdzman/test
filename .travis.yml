@@ -55,4 +55,4 @@ script:
 - octave-cli --no-gui --eval mpver
 # - octave-cli --no-gui --eval exit(1)
 - octave-cli --no-gui --eval "qps_glpk( [],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 3));"
-- octave-cli --no-gui --eval "qps_ipopt([],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 2));"
+- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then octave-cli --no-gui --eval "qps_ipopt([],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 2));"; fi
