@@ -8,6 +8,8 @@ addons:
     sources:
     - sourceline: 'ppa:octave/stable'   ## without this, it's octave 4.0.0
     packages:
+    - coinor-libipopt-dev
+    - liboctave-dev
     - octave        # octave 4.2.2
     update: true
   homebrew:
@@ -20,7 +22,8 @@ os:
 
 language: generic
 
-# install:
+install:
+- git clone --depth=50 https://github.com/MATPOWER/matpower.git $TRAVIS_BUILD_DIR/matpower
 # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then rm '/usr/local/include/c++'; fi
 # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew update                ; fi
 # - if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then brew install octave        ; fi
@@ -30,8 +33,22 @@ language: generic
 
 env:
   global:
-    - SEARCH_PATH=$TRAVIS_BUILD_DIR/docs
+  - IPOPT_VER=3.11.9
+  - SEARCH_PATH=$TRAVIS_BUILD_DIR/matpower
+#   - MATPOWER_PATH=$TRAVIS_BUILD_DIR/matpower/lib:$TRAVIS_BUILD_DIR/matpower/data:$TRAVIS_BUILD_DIR/matpower/lib/t
+#   - SEARCH_PATH=$MOST_PATH:$MPTEST_PATH:$MIPS_PATH:$MATPOWER_PATH
 
 script:
-- octave --no-gui -p $SEARCH_PATH --eval ver
-- octave --no-gui -p $SEARCH_PATH --eval exit(1)
+- mkdir $TRAVIS_BUILD_DIR/build
+- curl -SL https://www.coin-or.org/download/source/Ipopt/Ipopt-${IPOPT_VER}.tgz | tar -xzC $TRAVIS_BUILD_DIR/build
+- mv $TRAVIS_BUILD_DIR/build/Ipopt-${IPOPT_VER}/Ipopt/contrib/MatlabInterface $TRAVIS_BUILD_DIR/build/ipopt
+- mv $TRAVIS_BUILD_DIR/matpower/.travis/Makefile $TRAVIS_BUILD_DIR/build/ipopt/src
+- make -C $TRAVIS_BUILD_DIR/build/ipopt/src
+- mv $TRAVIS_BUILD_DIR/build/ipopt/src/*.mex $TRAVIS_BUILD_DIR/build/ipopt/
+# - octave --no-gui -p $SEARCH_PATH --eval ver
+# - octave --no-gui -p $SEARCH_PATH --eval exit(1)
+- octave-cli --no-gui --eval ver
+- octave-cli --no-gui --eval "addpath('$TRAVIS_BUILD_DIR/build/ipopt'); savepath"
+- octave-cli --no-gui --eval "install_matpower(1,1,1)"
+- octave-cli --no-gui --eval mpver
+# - octave-cli --no-gui --eval exit(1)
