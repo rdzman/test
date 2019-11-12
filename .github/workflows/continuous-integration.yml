@@ -4,20 +4,29 @@ on: [push]
 
 jobs:
   build:
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-16.04, ubuntu-18.04]
 
-    runs-on: ubuntu-16.04
+    runs-on: ${{ matrix.os }}
 
     steps: 
     - uses: actions/checkout@v1
-    - name: Install GNU Octave
+    - name: Install GNU Octave (Linux)
+      if: startsWith(matrix.os, 'ubuntu')
       run: |
         sudo add-apt-repository ppa:octave/stable
         sudo apt-get update -qq
         sudo apt-get install -y -qq coinor-libipopt-dev liboctave-dev octave
-    - name: Clone MATPOWER
+    - name: Install GNU Octave (Mac)
+      if: startsWith(matrix.os, 'macos')
       run: |
-        git clone --depth=50 https://github.com/MATPOWER/matpower.git $HOME/matpower
-    - name: Install IPOPT MEX interface
+        sudo brew update
+        sudo brew install ipopt
+        sudo brew install octave
+    - name: Clone MATPOWER
+      run: git clone --depth=50 https://github.com/MATPOWER/matpower.git $HOME/matpower
+    - name: Build IPOPT MEX interface
       env:
         IPOPT_VER: 3.11.9
       run: |
@@ -27,16 +36,21 @@ jobs:
         mv $HOME/matpower/.travis/Makefile $HOME/build/ipopt/src
         make -C $HOME/build/ipopt/src
         mv $HOME/build/ipopt/src/*.mex $HOME/build/ipopt/
-    - name: Install MATPOWER
+    - name: Install IPOPT MEX interface
+      if: startsWith(matrix.os, 'ubuntu')
       run: |
         octave-cli --no-gui --eval ver
         octave-cli --no-gui --eval "addpath('$HOME/build/ipopt'); savepath"
+    - name: Install MATPOWER
+      run: |
+        octave-cli --no-gui --eval ver
         octave-cli --no-gui -p $HOME/matpower --eval "install_matpower(1,1,1)"
         octave-cli --no-gui --eval mpver
-    - name: Print GLPK and IPOPT version numbers
-      run: |
-        octave-cli --no-gui --eval "qps_glpk( [],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 3));"
-        octave-cli --no-gui --eval "qps_ipopt([],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 2));"
+    - name: Print GLPK version number
+      run: octave-cli --no-gui --eval "qps_glpk( [],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 3));"
+    - name: Print IPOPT version number
+      if: startsWith(matrix.os, 'ubuntu')
+      run: octave-cli --no-gui --eval "qps_ipopt([],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 2));"
     - name: Test MP-Test
       run: octave-cli --no-gui --eval "test_mptest(0,1)"
     - name: Test MIPS
