@@ -22,6 +22,7 @@ jobs:
       if: startsWith(matrix.os, 'macos')
       run: |
         brew update
+        brew install pkg-config
         brew install ipopt
         brew install octave
     - name: Clone MATPOWER
