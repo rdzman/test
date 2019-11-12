@@ -24,7 +24,7 @@ jobs:
         mkdir $HOME/build
         curl -SL https://www.coin-or.org/download/source/Ipopt/Ipopt-${IPOPT_VER}.tgz | tar -xzC $HOME/build
         mv $HOME/build/Ipopt-${IPOPT_VER}/Ipopt/contrib/MatlabInterface $HOME/build/ipopt
-        mv $GITHUB_WORKSPACE/.travis/Makefile $HOME/build/ipopt/src
+        mv $HOME/matpower/.travis/Makefile $HOME/build/ipopt/src
         make -C $HOME/build/ipopt/src
         mv $HOME/build/ipopt/src/*.mex $HOME/build/ipopt/
     - name: Install MATPOWER
