@@ -38,7 +38,7 @@ jobs:
         make -C $HOME/build/ipopt/src
         mv $HOME/build/ipopt/src/*.mex $HOME/build/ipopt/
     - name: Install IPOPT MEX interface
-#      if: startsWith(matrix.os, 'ubuntu')
+      if: startsWith(matrix.os, 'ubuntu')
       run: |
         octave-cli --no-gui --eval ver
         octave-cli --no-gui --eval "addpath('$HOME/build/ipopt'); savepath"
@@ -50,7 +50,7 @@ jobs:
     - name: Print GLPK version number
       run: octave-cli --no-gui --eval "qps_glpk( [],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 3));"
     - name: Print IPOPT version number
-#      if: startsWith(matrix.os, 'ubuntu')
+      if: startsWith(matrix.os, 'ubuntu')
       run: octave-cli --no-gui --eval "qps_ipopt([],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 2));"
     - name: Test MP-Test
       run: octave-cli --no-gui --eval "test_mptest(0,1)"
