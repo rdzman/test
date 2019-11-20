@@ -22,10 +22,14 @@ jobs:
         ls -l /usr/local/opt/
         echo "ls -l /usr/opt/ipopt/"
         ls -l /usr/local/opt/ipopt/
-        echo "ls -l /usr/local/opt/ipopt/Ipopt/"
-        ls -l /usr/local/opt/ipopt/Ipopt/
-        echo "ls -l /usr/local/opt/ipopt/Ipopt/test/"
-        ls -l /usr/local/opt/ipopt/Ipopt/test/
+        echo "ls -l /usr/local/opt/ipopt/include/"
+        ls -l /usr/local/opt/ipopt/include/
+        echo "ls -l /usr/local/opt/ipopt/lib/"
+        ls -l /usr/local/opt/ipopt/lib/
+        echo "ls -l /usr/local/opt/ipopt/share/"
+        ls -l /usr/local/opt/ipopt/share/
+        echo "ls -l /usr/local/bin/"
+        ls -l /usr/local/bin/
 #         $(brew --prefix ipopt)/bin/ipopt /usr/local/Cellar/ipopt/3.12.13_2/Ipopt/test/mytop.nl
 #         ipopt /usr/local/Cellar/ipopt/3.12.13_2/Ipopt/test/mytop.nl
 #     - name: octave-app Homebrew installs
