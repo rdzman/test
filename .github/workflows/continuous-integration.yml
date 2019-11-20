@@ -12,14 +12,18 @@ jobs:
 
     steps: 
     - uses: actions/checkout@v1
-    - name: Install GNU Octave (Mac)
+    - name: octave-app Homebrew installs
       run: |
         brew tap octave-app/octave-app-blas
         brew tap octave-app/octave-app-bases
         brew update
         brew install pkg-config
-        brew install octave-openblas
+        brew install octave-openblas --without-docs
         brew install ipopt-openblas
+        ln -s $(brew --prefix octave-openblas)/bin/octave /usr/local/bin/octave
+        ln -s $(brew --prefix octave-openblas)/bin/octave-cli /usr/local/bin/octave-cli
+#     - name: Install GNU Octave (Mac)
+#       run: |
 #
 #         brew install gcc
 #         brew install bash
@@ -43,9 +47,9 @@ jobs:
 #         mv $HOME/matpower/.travis/Makefile $HOME/build/ipopt/src
 #         make -C $HOME/build/ipopt/src
 #         mv $HOME/build/ipopt/src/*.mex $HOME/build/ipopt/
-#     - name: Install IPOPT MEX interface
-#       run: |
-#         octave-cli --no-gui --eval ver
+    - name: Install IPOPT MEX interface
+      run: |
+        octave-cli --no-gui --eval ver
 #         octave-cli --no-gui --eval "addpath('$HOME/build/ipopt'); savepath"
 #     - name: Install MATPOWER
 #       run: |
