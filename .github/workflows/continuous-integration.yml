@@ -16,14 +16,13 @@ jobs:
       run: |
         brew update
         brew install pkg-config
-        brew install gcc wget svn git
+        brew install gcc
+        brew install bash
         git clone https://www.github.com/coin-or/coinbrew
         cd coinbrew
-        ls -al coinbrew
-        chmod u+x coinbrew
         ./coinbrew fetch Ipopt --no-prompt
         ./coinbrew build Ipopt --prefix=$HOME/install --test --no-prompt
-        sudo ./coinbrew install Ipopt
+        ./coinbrew install Ipopt
 #        brew install ipopt
 #        brew install octave
 #     - name: Clone MATPOWER
