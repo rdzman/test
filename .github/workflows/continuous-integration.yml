@@ -17,7 +17,7 @@ jobs:
         brew tap dpo/homebrew-openblas
         brew update
         brew install pkg-config
-        brew install dpo/homebrew-openblas ipopt
+        brew install dpo/homebrew-openblas/ipopt
 #
 #         brew install gcc
 #         brew install bash
