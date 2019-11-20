@@ -18,9 +18,14 @@ jobs:
         brew install pkg-config
         brew install ipopt
         echo $(brew --prefix ipopt)
+        echo "ls -l /usr/local/opt/"
         ls -l /usr/local/opt/
-        ls -l /usr/local/opt/ipopt
-        ls -l $(brew --prefix ipopt)
+        echo "ls -l /usr/opt/ipopt/"
+        ls -l /usr/local/opt/ipopt/
+        echo "ls -l /usr/local/opt/ipopt/Ipopt/"
+        ls -l /usr/local/opt/ipopt/Ipopt/
+        echo "ls -l /usr/local/opt/ipopt/Ipopt/test/"
+        ls -l /usr/local/opt/ipopt/Ipopt/test/
 #         $(brew --prefix ipopt)/bin/ipopt /usr/local/Cellar/ipopt/3.12.13_2/Ipopt/test/mytop.nl
 #         ipopt /usr/local/Cellar/ipopt/3.12.13_2/Ipopt/test/mytop.nl
 #     - name: octave-app Homebrew installs
