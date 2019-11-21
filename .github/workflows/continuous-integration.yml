@@ -57,6 +57,10 @@ jobs:
         ./coinbrew install Ipopt
         echo "---pwd"
         pwd
+        echo "echo $HOME"
+        echo $HOME
+        echo "echo $GITHUB_WORKSPACE"
+        echo $GITHUB_WORKSPACE
         echo "---ls -l ."
         ls -l .
         echo "---ls -l ./Ipopt"
@@ -98,9 +102,9 @@ jobs:
     - name: Build IPOPT MEX interface
       env:
         IPOPT_VER: 3.12.13
-        DYLD_LIBRARY_PATH: /Users/runner/install/lib
-        PKG_CONFIG_PATH: /Users/runner/install/lib/pkgconfig
       run: |
+        export DYLD_LIBRARY_PATH=$HOME/install/lib
+        export PKG_CONFIG_PATH=$HOME/install/lib/pkgconfig:${PKG_CONFIG_PATH}
         echo DYLD_LIBRARY_PATH
         echo $DYLD_LIBRARY_PATH
         echo PKG_CONFIG_PATH
@@ -120,7 +124,7 @@ jobs:
         octave-cli --no-gui --eval ver
         octave-cli --no-gui -p $HOME/matpower --eval "install_matpower(1,1,1)"
         octave-cli --no-gui --eval mpver
-#     - name: Print GLPK version number
-#       run: octave-cli --no-gui --eval "qps_glpk( [],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 3));"
-#     - name: Print IPOPT version number
-#       run: octave-cli --no-gui --eval "qps_ipopt([],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 2));"
+    - name: Print GLPK version number
+      run: octave-cli --no-gui --eval "qps_glpk( [],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 3));"
+    - name: Print IPOPT version number
+      run: octave-cli --no-gui --eval "qps_ipopt([],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 2));"
