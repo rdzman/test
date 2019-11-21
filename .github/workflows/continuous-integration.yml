@@ -96,6 +96,8 @@ jobs:
     - name: Build IPOPT MEX interface
       env:
         IPOPT_VER: 3.12.13
+        DYLD_LIBRARY_PATH: $HOME/install/lib
+        PKG_CONFIG_PATH: $HOME/install/lib/pkgconfig
       run: |
         mkdir $HOME/build
         curl -SL https://www.coin-or.org/download/source/Ipopt/Ipopt-${IPOPT_VER}.tgz | tar -xzC $HOME/build
