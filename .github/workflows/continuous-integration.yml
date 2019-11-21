@@ -82,6 +82,8 @@ jobs:
         echo "---ls -l $HOME/install/include/coin"
         ls -l $HOME/install/include/coin
         echo "---ls -l $HOME/install/lib"
+        ls -l $HOME/install/lib/pkgconfig
+        echo "---ls -l $HOME/install/lib/pkgconfig"
         ls -l $HOME/install/lib
         echo "---ls -l $HOME/install/share"
         ls -l $HOME/install/share
@@ -97,8 +99,9 @@ jobs:
       env:
         IPOPT_VER: 3.12.13
         DYLD_LIBRARY_PATH: $HOME/install/lib
-        PKG_CONFIG_PATH: $HOME/install/lib/pkgconfig
+        PKG_CONFIG_PATH: $HOME/install/lib/pkgconfig:${PKG_CONFIG_PATH}
       run: |
+        echo $PKG_CONFIG_PATH
         mkdir $HOME/build
         curl -SL https://www.coin-or.org/download/source/Ipopt/Ipopt-${IPOPT_VER}.tgz | tar -xzC $HOME/build
         mv $HOME/build/Ipopt-${IPOPT_VER}/Ipopt/contrib/MatlabInterface $HOME/build/ipopt
