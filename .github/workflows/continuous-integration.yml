@@ -83,8 +83,12 @@ jobs:
         ls -l $HOME/install/lib
         echo "---ls -l $HOME/install/share"
         ls -l $HOME/install/share
+        echo "---ls -l $HOME/install/share/doc"
+        ls -l $HOME/install/share/doc
+        echo "---ls -l $HOME/install/share/doc/ipopt"
+        ls -l $HOME/install/share/doc/ipopt
         echo "---$HOME/install/bin/ipopt"
-        $HOME/install/bin/ipopt ./Ipopt/test/mytop.nl
+        $HOME/install/bin/ipopt ./Ipopt/test/mytoy.nl
 #     - name: Clone MATPOWER
 #       run: git clone --depth=50 https://github.com/MATPOWER/matpower.git $HOME/matpower
 #     - name: Build IPOPT MEX interface
