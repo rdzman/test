@@ -57,9 +57,9 @@ jobs:
         ./coinbrew install Ipopt
         echo "---pwd"
         pwd
-        echo "echo $HOME"
+        echo 'echo $HOME'
         echo $HOME
-        echo "echo $GITHUB_WORKSPACE"
+        echo 'echo $GITHUB_WORKSPACE'
         echo $GITHUB_WORKSPACE
         echo "---ls -l ."
         ls -l .
