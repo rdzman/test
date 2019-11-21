@@ -57,22 +57,28 @@ jobs:
         ./coinbrew install Ipopt
         echo "---ls -l ."
         ls -l .
+        echo "---ls -l ./Ipopt"
+        ls -l ./Ipopt
+        echo "---ls -l ./ThirdParty"
+        ls -l ./ThirdParty
+        echo "---ls -l ./build"
+        ls -l ./build
         echo "---ls -l $HOME"
         ls -l $HOME
         echo "---ls -l $HOME/install"
         ls -l $HOME/install
         echo "---ls -l $HOME/install/bin"
         ls -l $HOME/install/bin
-        echo "---ls -l $HOME/install/include/coin"
+        echo "---ls -l $HOME/install/include"
         ls -l $HOME/install/include/coin
         echo "---ls -l $HOME/install/lib"
         ls -l $HOME/install/lib
-        echo "---ls -l $HOME/install/share/coin"
+        echo "---ls -l $HOME/install/share"
         ls -l $HOME/install/share/coin
-        echo "---ls -l $HOME/install/share/coin/docs"
-        ls -l $HOME/install/share/coin/docs
         echo "---$HOME/install/bin/ipopt"
-        $HOME/install/bin/ipopt $HOME/Ipopt/Ipopt/test/mytop.nl
+        $HOME/install/bin/ipopt ./Ipopt/Ipopt/test/mytop.nl
+        echo "---ls -l ./Ipopt/test"
+        ls -l ./Ipopt/test
 #     - name: Clone MATPOWER
 #       run: git clone --depth=50 https://github.com/MATPOWER/matpower.git $HOME/matpower
 #     - name: Build IPOPT MEX interface
