@@ -52,9 +52,11 @@ jobs:
         brew install bash
         git clone https://www.github.com/coin-or/coinbrew
         cd coinbrew
-        ./coinbrew fetch Ipopt:stable/3.12 --no-prompt
+        ./coinbrew fetch Ipopt:releases/3.12.13 --no-prompt
         ./coinbrew build Ipopt --prefix=$HOME/install --test --no-prompt
         ./coinbrew install Ipopt
+        echo "---pwd"
+        pwd
         echo "---ls -l ."
         ls -l .
         echo "---ls -l ./Ipopt"
@@ -85,27 +87,31 @@ jobs:
         ls -l $HOME/install/share
         echo "---$HOME/install/bin/ipopt"
         $HOME/install/bin/ipopt ./Ipopt/Ipopt/test/mytoy.nl
-#     - name: Clone MATPOWER
-#       run: git clone --depth=50 https://github.com/MATPOWER/matpower.git $HOME/matpower
-#     - name: Build IPOPT MEX interface
-#       env:
-#         IPOPT_VER: 3.12.13
-#       run: |
-#         mkdir $HOME/build
-#         curl -SL https://www.coin-or.org/download/source/Ipopt/Ipopt-${IPOPT_VER}.tgz | tar -xzC $HOME/build
-#         mv $HOME/build/Ipopt-${IPOPT_VER}/Ipopt/contrib/MatlabInterface $HOME/build/ipopt
-#         mv $HOME/matpower/.travis/Makefile $HOME/build/ipopt/src
-#         make -C $HOME/build/ipopt/src
-#         mv $HOME/build/ipopt/src/*.mex $HOME/build/ipopt/
-#     - name: Install IPOPT MEX interface
-#       run: |
-#         octave-cli --no-gui --eval ver
-#         octave-cli --no-gui --eval "addpath('$HOME/build/ipopt'); savepath"
-#     - name: Install MATPOWER
-#       run: |
-#         octave-cli --no-gui --eval ver
-#         octave-cli --no-gui -p $HOME/matpower --eval "install_matpower(1,1,1)"
-#         octave-cli --no-gui --eval mpver
+    - name: Install Octave
+      run: |
+        brew install octave
+        octave-cli --no-gui --eval ver
+    - name: Clone MATPOWER
+      run: git clone --depth=50 https://github.com/MATPOWER/matpower.git $HOME/matpower
+    - name: Build IPOPT MEX interface
+      env:
+        IPOPT_VER: 3.12.13
+      run: |
+        mkdir $HOME/build
+        curl -SL https://www.coin-or.org/download/source/Ipopt/Ipopt-${IPOPT_VER}.tgz | tar -xzC $HOME/build
+        mv $HOME/build/Ipopt-${IPOPT_VER}/Ipopt/contrib/MatlabInterface $HOME/build/ipopt
+        mv $HOME/matpower/.travis/Makefile $HOME/build/ipopt/src
+        make -C $HOME/build/ipopt/src
+        mv $HOME/build/ipopt/src/*.mex $HOME/build/ipopt/
+    - name: Install IPOPT MEX interface
+      run: |
+        octave-cli --no-gui --eval ver
+        octave-cli --no-gui --eval "addpath('$HOME/build/ipopt'); savepath"
+    - name: Install MATPOWER
+      run: |
+        octave-cli --no-gui --eval ver
+        octave-cli --no-gui -p $HOME/matpower --eval "install_matpower(1,1,1)"
+        octave-cli --no-gui --eval mpver
 #     - name: Print GLPK version number
 #       run: octave-cli --no-gui --eval "qps_glpk( [],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 3));"
 #     - name: Print IPOPT version number
