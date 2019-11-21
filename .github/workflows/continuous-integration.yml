@@ -52,7 +52,7 @@ jobs:
         brew install bash
         git clone https://www.github.com/coin-or/coinbrew
         cd coinbrew
-        ./coinbrew fetch Ipopt:releases/3.12.13 --no-prompt
+        ./coinbrew fetch Ipopt --no-prompt
         ./coinbrew build Ipopt --prefix=$HOME/install --test --no-prompt
         ./coinbrew install Ipopt
         echo "---pwd"
@@ -65,10 +65,10 @@ jobs:
         ls -l .
         echo "---ls -l ./Ipopt"
         ls -l ./Ipopt
-        echo "---ls -l ./Ipopt/Ipopt/test"
-        ls -l ./Ipopt/Ipopt/test
-        echo "---ls -l ./Ipopt/Ipopt/contrib"
-        ls -l ./Ipopt/Ipopt/contrib
+        echo "---ls -l ./Ipopt/test"
+        ls -l ./Ipopt/test
+        echo "---ls -l ./Ipopt/contrib"
+        ls -l ./Ipopt/contrib
         echo "---ls -l ./ThirdParty"
         ls -l ./ThirdParty
         echo "---ls -l ./build"
@@ -83,8 +83,8 @@ jobs:
         ls -l $HOME/install/bin
         echo "---ls -l $HOME/install/include"
         ls -l $HOME/install/include
-        echo "---ls -l $HOME/install/include/coin"
-        ls -l $HOME/install/include/coin
+        echo "---ls -l $HOME/install/include/coin-or"
+        ls -l $HOME/install/include/coin-or
         echo "---ls -l $HOME/install/lib"
         ls -l $HOME/install/lib
         echo "---ls -l $HOME/install/lib/pkgconfig"
@@ -92,7 +92,7 @@ jobs:
         echo "---ls -l $HOME/install/share"
         ls -l $HOME/install/share
         echo "---$HOME/install/bin/ipopt"
-        $HOME/install/bin/ipopt ./Ipopt/Ipopt/test/mytoy.nl
+        $HOME/install/bin/ipopt ./Ipopt/test/mytoy.nl
     - name: Install Octave
       run: |
         brew install octave
