@@ -63,8 +63,6 @@ jobs:
         ls -l ./Ipopt/test
         echo "---ls -l ./Ipopt/contrib"
         ls -l ./Ipopt/contrib
-        echo "---ls -l ./Ipopt/contrib/MatlabInterface"
-        ls -l ./Ipopt/contrib/MatlabInterface
         echo "---ls -l ./ThirdParty"
         ls -l ./ThirdParty
         echo "---ls -l ./build"
@@ -79,6 +77,8 @@ jobs:
         ls -l $HOME/install/bin
         echo "---ls -l $HOME/install/include"
         ls -l $HOME/install/include
+        echo "---ls -l $HOME/install/include/coin-or"
+        ls -l $HOME/install/include/coin-or
         echo "---ls -l $HOME/install/lib"
         ls -l $HOME/install/lib
         echo "---ls -l $HOME/install/share"
