@@ -82,9 +82,9 @@ jobs:
         echo "---ls -l $HOME/install/include/coin"
         ls -l $HOME/install/include/coin
         echo "---ls -l $HOME/install/lib"
-        ls -l $HOME/install/lib/pkgconfig
-        echo "---ls -l $HOME/install/lib/pkgconfig"
         ls -l $HOME/install/lib
+        echo "---ls -l $HOME/install/lib/pkgconfig"
+        ls -l $HOME/install/lib/pkgconfig
         echo "---ls -l $HOME/install/share"
         ls -l $HOME/install/share
         echo "---$HOME/install/bin/ipopt"
@@ -98,8 +98,8 @@ jobs:
     - name: Build IPOPT MEX interface
       env:
         IPOPT_VER: 3.12.13
-        DYLD_LIBRARY_PATH: ${{ $HOME/install/lib }}
-        PKG_CONFIG_PATH: ${{ $HOME/install/lib/pkgconfig:${PKG_CONFIG_PATH} }}
+        DYLD_LIBRARY_PATH: ${{ jobs.build.env.HOME }}/install/lib
+        PKG_CONFIG_PATH: ${{ jobs.build.env.HOME }}/install/lib/pkgconfig
       run: |
         echo DYLD_LIBRARY_PATH
         echo $DYLD_LIBRARY_PATH
