@@ -18,20 +18,22 @@ jobs:
         brew install pkg-config
         brew install ipopt
         echo $(brew --prefix ipopt)
-        echo "ls -l /usr/local/opt/"
+        echo "--ls -l /usr/local/opt/"
         ls -l /usr/local/opt/
-        echo "ls -l /usr/opt/ipopt/"
+        echo "--ls -l /usr/local/opt/ipopt/"
         ls -l /usr/local/opt/ipopt/
-        echo "ls -l /usr/local/opt/ipopt/include/"
-        ls -l /usr/local/opt/ipopt/include/
-        echo "ls -l /usr/local/opt/ipopt/lib/"
+        echo "--cat /usr/local/opt/ipopt/INSTALL_RECEIPT.json"
+        cat /usr/local/opt/ipopt/INSTALL_RECEIPT.json
+        echo "--ls -l /usr/local/opt/ipopt/include/coin/"
+        ls -l /usr/local/opt/ipopt/include/coin
+        echo "--ls -l /usr/local/opt/ipopt/lib/"
         ls -l /usr/local/opt/ipopt/lib/
-        echo "ls -l /usr/local/opt/ipopt/share/"
-        ls -l /usr/local/opt/ipopt/share/
-        echo "ls -l /usr/local/bin/"
+        echo "--ls -l /usr/local/opt/ipopt/share/coin/"
+        ls -l /usr/local/opt/ipopt/share/coin/
+        echo "--ls -l /usr/local/bin/"
         ls -l /usr/local/bin/
+#         /user/local/bin/ipopt /usr/local/Cellar/ipopt/3.12.13_2/Ipopt/test/mytop.nl
 #         $(brew --prefix ipopt)/bin/ipopt /usr/local/Cellar/ipopt/3.12.13_2/Ipopt/test/mytop.nl
-#         ipopt /usr/local/Cellar/ipopt/3.12.13_2/Ipopt/test/mytop.nl
 #     - name: octave-app Homebrew installs
 #       run: |
 #         brew tap octave-app/octave-app-blas
