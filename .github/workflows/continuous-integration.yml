@@ -59,10 +59,18 @@ jobs:
         ls -l .
         echo "---ls -l ./Ipopt"
         ls -l ./Ipopt
+        echo "---ls -l ./Ipopt/test"
+        ls -l ./Ipopt/test
+        echo "---ls -l ./Ipopt/contrib"
+        ls -l ./Ipopt/contrib
+        echo "---ls -l ./Ipopt/contrib/MatlabInterface"
+        ls -l ./Ipopt/contrib/MatlabInterface
         echo "---ls -l ./ThirdParty"
         ls -l ./ThirdParty
         echo "---ls -l ./build"
         ls -l ./build
+        echo "---ls -l ./build/Ipopt"
+        ls -l ./build/Ipopt
         echo "---ls -l $HOME"
         ls -l $HOME
         echo "---ls -l $HOME/install"
@@ -70,15 +78,13 @@ jobs:
         echo "---ls -l $HOME/install/bin"
         ls -l $HOME/install/bin
         echo "---ls -l $HOME/install/include"
-        ls -l $HOME/install/include/coin
+        ls -l $HOME/install/include
         echo "---ls -l $HOME/install/lib"
         ls -l $HOME/install/lib
         echo "---ls -l $HOME/install/share"
-        ls -l $HOME/install/share/coin
+        ls -l $HOME/install/share
         echo "---$HOME/install/bin/ipopt"
-        $HOME/install/bin/ipopt ./Ipopt/Ipopt/test/mytop.nl
-        echo "---ls -l ./Ipopt/test"
-        ls -l ./Ipopt/test
+        $HOME/install/bin/ipopt ./Ipopt/test/mytop.nl
 #     - name: Clone MATPOWER
 #       run: git clone --depth=50 https://github.com/MATPOWER/matpower.git $HOME/matpower
 #     - name: Build IPOPT MEX interface
