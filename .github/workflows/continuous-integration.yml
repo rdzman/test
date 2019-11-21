@@ -93,6 +93,11 @@ jobs:
         ls -l $HOME/install/share
         echo "---$HOME/install/bin/ipopt"
         $HOME/install/bin/ipopt ./Ipopt/test/mytoy.nl
+        echo PKG_CONFIG_PATH
+        echo $PKG_CONFIG_PATH
+        export PKG_CONFIG_PATH=$HOME/install/lib/pkgconfig:${PKG_CONFIG_PATH}
+        echo PKG_CONFIG_PATH
+        echo $PKG_CONFIG_PATH
     - name: Install Octave
       run: |
         brew install octave
@@ -103,10 +108,9 @@ jobs:
       env:
         IPOPT_VER: 3.12.13
       run: |
-        export DYLD_LIBRARY_PATH=$HOME/install/lib
+        echo PKG_CONFIG_PATH
+        echo $PKG_CONFIG_PATH
         export PKG_CONFIG_PATH=$HOME/install/lib/pkgconfig:${PKG_CONFIG_PATH}
-        echo DYLD_LIBRARY_PATH
-        echo $DYLD_LIBRARY_PATH
         echo PKG_CONFIG_PATH
         echo $PKG_CONFIG_PATH
         mkdir $HOME/build
