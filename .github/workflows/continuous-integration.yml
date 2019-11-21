@@ -98,8 +98,8 @@ jobs:
     - name: Build IPOPT MEX interface
       env:
         IPOPT_VER: 3.12.13
-        DYLD_LIBRARY_PATH: ${{ jobs.build.env.HOME }}/install/lib
-        PKG_CONFIG_PATH: ${{ jobs.build.env.HOME }}/install/lib/pkgconfig
+        DYLD_LIBRARY_PATH: /Users/runner/install/lib
+        PKG_CONFIG_PATH: /Users/runner/install/lib/pkgconfig
       run: |
         echo DYLD_LIBRARY_PATH
         echo $DYLD_LIBRARY_PATH
