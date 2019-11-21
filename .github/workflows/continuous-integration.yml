@@ -46,6 +46,8 @@ jobs:
 #         ln -s $(brew --prefix octave-openblas)/bin/octave-cli /usr/local/bin/octave-cli
     - name: Build IPOPT from Source
       run: |
+        brew update
+        brew install pkg-config
         brew install gcc
         brew install bash
         git clone https://www.github.com/coin-or/coinbrew
