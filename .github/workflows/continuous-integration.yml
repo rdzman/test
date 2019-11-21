@@ -77,16 +77,12 @@ jobs:
         ls -l $HOME/install/bin
         echo "---ls -l $HOME/install/include"
         ls -l $HOME/install/include
-        echo "---ls -l $HOME/install/include/coin-or"
-        ls -l $HOME/install/include/coin-or
+        echo "---ls -l $HOME/install/include/coin"
+        ls -l $HOME/install/include/coin
         echo "---ls -l $HOME/install/lib"
         ls -l $HOME/install/lib
         echo "---ls -l $HOME/install/share"
         ls -l $HOME/install/share
-        echo "---ls -l $HOME/install/share/doc"
-        ls -l $HOME/install/share/doc
-        echo "---ls -l $HOME/install/share/doc/ipopt"
-        ls -l $HOME/install/share/doc/ipopt
         echo "---$HOME/install/bin/ipopt"
         $HOME/install/bin/ipopt ./Ipopt/Ipopt/test/mytoy.nl
 #     - name: Clone MATPOWER
