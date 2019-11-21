@@ -60,9 +60,9 @@ jobs:
         echo "---ls -l ./Ipopt"
         ls -l ./Ipopt
         echo "---ls -l ./Ipopt/Ipopt/test"
-        ls -l ./Ipopt/test
+        ls -l ./Ipopt/Ipopt/test
         echo "---ls -l ./Ipopt/Ipopt/contrib"
-        ls -l ./Ipopt/contrib
+        ls -l ./Ipopt/Ipopt/contrib
         echo "---ls -l ./ThirdParty"
         ls -l ./ThirdParty
         echo "---ls -l ./build"
