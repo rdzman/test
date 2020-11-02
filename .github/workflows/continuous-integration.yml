@@ -140,7 +140,7 @@ jobs:
     - name: Test OSQP availability, print version number
       if: env.INCLUDE_OSQP
       run:  |
-        octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval osqpver
+        octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "o = osqp(), vstr = o.version()"
         octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "if ~have_feature('osqp'), exit(1); end"
         octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval osqpver
     - name: Test MP-Test
