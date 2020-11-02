@@ -41,8 +41,22 @@ jobs:
     - name: Include OSQP?
       if: startsWith(env.OCTAVE_VER, '4.0') != 1
       run: echo "INCLUDE_OSQP=1" >> $GITHUB_ENV
-    - name: Build OSQP
+    - name: Cache IPOPT
+      if: env.INCLUDE_IPOPT
+      id: cache-ipopt
+      uses: actions/cache@v2
+      with:
+        path: $HOME/build/ipopt
+        key: ${{ runner.os }}-ipopt
+    - name: Cache OSQP
       if: env.INCLUDE_OSQP
+      id: cache-osqp
+      uses: actions/cache@v2
+      with:
+        path: $HOME/build/osqp-matlab
+        key: ${{ runner.os }}-osqp
+    - name: Build OSQP
+      if: env.INCLUDE_OSQP && steps.cache-osqp.outputs.cache-hit != 'true'
       run: |
         mkdir $HOME/build
         cd $HOME/build
@@ -61,7 +75,7 @@ jobs:
         ls -al
         echo "OSQP_PATH=$HOME/build/osqp-matlab" >> $GITHUB_ENV
     - name: Build IPOPT from source (Mac)
-      if: startsWith(matrix.os, 'macos') && env.INCLUDE_IPOPT
+      if: startsWith(matrix.os, 'macos') && env.INCLUDE_IPOPT && steps.cache-ipopt.outputs.cache-hit != 'true'
       run: |
         git clone https://www.github.com/coin-or/coinbrew
         cd coinbrew
@@ -69,7 +83,7 @@ jobs:
         ./coinbrew build Ipopt --prefix=$HOME/install --test --no-prompt
         ./coinbrew install Ipopt
     - name: Build IPOPT MEX interface
-      if: env.INCLUDE_IPOPT
+      if: env.INCLUDE_IPOPT && steps.cache-ipopt.outputs.cache-hit != 'true'
       env:
         IPOPT_VER: 3.11.9
       run: |
