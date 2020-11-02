@@ -76,7 +76,7 @@ jobs:
         export PKG_CONFIG_PATH=$HOME/install/lib/pkgconfig
         curl -SL https://github.com/coin-or/Ipopt/archive/releases/${IPOPT_VER}.tar.gz | tar -xzC $HOME/build
         mv $HOME/build/Ipopt-releases-${IPOPT_VER}/Ipopt/contrib/MatlabInterface $HOME/build/ipopt
-        mv $GITHUB_WORKSPACE/.travis/Makefile $HOME/build/ipopt/src
+        mv $GITHUB_WORKSPACE/.github/ipopt/Makefile $HOME/build/ipopt/src
         make -C $HOME/build/ipopt/src
         mv $HOME/build/ipopt/src/*.mex $HOME/build/ipopt/
     - name: Install IPOPT Octave interface
