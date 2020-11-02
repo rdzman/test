@@ -6,129 +6,37 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [macos-latest]
+#        os: [macos-10.15, macos-11.0, ubuntu-16.04, ubuntu-18.04, ubuntu-20.04]
+#        os: [macos-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-20.04]
+        os: [macos-latest, ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
 
     steps: 
-    - uses: actions/checkout@v1
-#     - name: core Homebrew install debugging
-#       run: |
-#         brew update
-#         brew install pkg-config
-#         brew install ipopt
-#         echo $(brew --prefix ipopt)
-#         echo "--ls -l /usr/local/opt/"
-#         ls -l /usr/local/opt/
-#         echo "--ls -l /usr/local/opt/ipopt/"
-#         ls -l /usr/local/opt/ipopt/
-#         echo "--cat /usr/local/opt/ipopt/INSTALL_RECEIPT.json"
-#         cat /usr/local/opt/ipopt/INSTALL_RECEIPT.json
-#         echo "--ls -l /usr/local/opt/ipopt/include/coin/"
-#         ls -l /usr/local/opt/ipopt/include/coin
-#         echo "--ls -l /usr/local/opt/ipopt/lib/"
-#         ls -l /usr/local/opt/ipopt/lib/
-#         echo "--ls -l /usr/local/opt/ipopt/share/coin/"
-#         ls -l /usr/local/opt/ipopt/share/coin/
-#         echo "--ls -l /usr/local/bin/"
-#         ls -l /usr/local/bin/
-#         /user/local/bin/ipopt /usr/local/Cellar/ipopt/3.12.13_2/Ipopt/test/mytop.nl
-#         $(brew --prefix ipopt)/bin/ipopt /usr/local/Cellar/ipopt/3.12.13_2/Ipopt/test/mytop.nl
-#     - name: octave-app Homebrew debugging
-#       run: |
-#         brew tap octave-app/octave-app-blas
-#         brew tap octave-app/octave-app-bases
-#         brew update
-#         brew install pkg-config
-#         brew install octave-openblas --without-docs
-#         brew install ipopt-openblas
-#         ln -s $(brew --prefix octave-openblas)/bin/octave /usr/local/bin/octave
-#         ln -s $(brew --prefix octave-openblas)/bin/octave-cli /usr/local/bin/octave-cli
-    - name: Build IPOPT from Source
+    - uses: actions/checkout@v2
+    - name: Clone MP-Test
+      run: git clone --depth=1 https://github.com/MATPOWER/mptest.git ${GITHUB_WORKSPACE}/mptest
+    - name: Initialize Package Manager (Linux)
+      if: startsWith(matrix.os, 'ubuntu')
+      run: sudo apt-get update -qq
+    - name: Initialize Package Manager (Mac)
+      if: startsWith(matrix.os, 'macos')
+      run: brew update
+    - name: Install GNU Octave (Linux)
+      if: startsWith(matrix.os, 'ubuntu')
       run: |
-        brew update
-        brew install pkg-config
-        brew install gcc
-        brew install bash
-        git clone https://www.github.com/coin-or/coinbrew
-        cd coinbrew
-        ./coinbrew fetch Ipopt --no-prompt
-        ./coinbrew build Ipopt --prefix=$HOME/install --test --no-prompt
-        ./coinbrew install Ipopt
-        echo "---pwd"
-        pwd
-        echo 'echo $HOME'
-        echo $HOME
-        echo 'echo $GITHUB_WORKSPACE'
-        echo $GITHUB_WORKSPACE
-        echo "---ls -l ."
-        ls -l .
-        echo "---ls -l ./Ipopt"
-        ls -l ./Ipopt
-        echo "---ls -l ./Ipopt/test"
-        ls -l ./Ipopt/test
-        echo "---ls -l ./Ipopt/contrib"
-        ls -l ./Ipopt/contrib
-        echo "---ls -l ./ThirdParty"
-        ls -l ./ThirdParty
-        echo "---ls -l ./build"
-        ls -l ./build
-        echo "---ls -l ./build/Ipopt"
-        ls -l ./build/Ipopt
-        echo "---ls -l $HOME"
-        ls -l $HOME
-        echo "---ls -l $HOME/install"
-        ls -l $HOME/install
-        echo "---ls -l $HOME/install/bin"
-        ls -l $HOME/install/bin
-        echo "---ls -l $HOME/install/include"
-        ls -l $HOME/install/include
-        echo "---ls -l $HOME/install/include/coin-or"
-        ls -l $HOME/install/include/coin-or
-        echo "---ls -l $HOME/install/lib"
-        ls -l $HOME/install/lib
-        echo "---ls -l $HOME/install/lib/pkgconfig"
-        ls -l $HOME/install/lib/pkgconfig
-        echo "---ls -l $HOME/install/share"
-        ls -l $HOME/install/share
-        echo "---$HOME/install/bin/ipopt"
-        $HOME/install/bin/ipopt ./Ipopt/test/mytoy.nl
-        echo PKG_CONFIG_PATH
-        echo $PKG_CONFIG_PATH
-        export PKG_CONFIG_PATH=$HOME/install/lib/pkgconfig:${PKG_CONFIG_PATH}
-        echo PKG_CONFIG_PATH
-        echo $PKG_CONFIG_PATH
-    - name: Install Octave
+        sudo apt-get install -y -qq liboctave-dev octave
+        octave-cli --no-gui --eval ver
+        echo "OCTAVE_VER=`octave-cli --no-gui --eval "fprintf('%s', ver('octave').Version)"`" >> $GITHUB_ENV
+    - name: Install GNU Octave (Mac)
+      if: startsWith(matrix.os, 'macos')
       run: |
         brew install octave
         octave-cli --no-gui --eval ver
-    - name: Clone MATPOWER
-      run: git clone --depth=50 https://github.com/MATPOWER/matpower.git $HOME/matpower
-    - name: Build IPOPT MEX interface
-      env:
-        IPOPT_VER: 3.12.13
+        echo "OCTAVE_VER=`octave-cli --no-gui --eval "fprintf('%s', ver('octave').Version)"`" >> $GITHUB_ENV
+    - name: Set MPTEST_PATH
+      run: echo "MPTEST_PATH=${GITHUB_WORKSPACE}/mptest/lib:${GITHUB_WORKSPACE}/mptest/lib/t" >> $GITHUB_ENV
+    - name: Test MP-Test
       run: |
-        echo PKG_CONFIG_PATH
-        echo $PKG_CONFIG_PATH
-        export PKG_CONFIG_PATH=$HOME/install/lib/pkgconfig:${PKG_CONFIG_PATH}
-        echo PKG_CONFIG_PATH
-        echo $PKG_CONFIG_PATH
-        mkdir $HOME/build
-        curl -SL https://www.coin-or.org/download/source/Ipopt/Ipopt-${IPOPT_VER}.tgz | tar -xzC $HOME/build
-        mv $HOME/build/Ipopt-${IPOPT_VER}/Ipopt/contrib/MatlabInterface $HOME/build/ipopt
-        mv $HOME/matpower/.travis/Makefile $HOME/build/ipopt/src
-        make -C $HOME/build/ipopt/src
-        mv $HOME/build/ipopt/src/*.mex $HOME/build/ipopt/
-    - name: Install IPOPT MEX interface
-      run: |
-        octave-cli --no-gui --eval ver
-        octave-cli --no-gui --eval "addpath('$HOME/build/ipopt'); savepath"
-    - name: Install MATPOWER
-      run: |
-        octave-cli --no-gui --eval ver
-        octave-cli --no-gui -p $HOME/matpower --eval "install_matpower(1,1,1)"
-        octave-cli --no-gui --eval mpver
-    - name: Print GLPK version number
-      run: octave-cli --no-gui --eval "qps_glpk( [],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 3));"
-    - name: Print IPOPT version number
-      run: octave-cli --no-gui --eval "qps_ipopt([],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 2));"
+        octave-cli --no-gui -p $MPTEST_PATH --eval mptestver
+        octave-cli --no-gui -p $MPTEST_PATH --eval "test_mptest(0,1)"
