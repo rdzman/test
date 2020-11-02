@@ -43,12 +43,19 @@ jobs:
       if: startsWith(env.OCTAVE_VER, '4.0') != 1
       run: echo "INCLUDE_OSQP=1" >> $GITHUB_ENV
     - name: Cache IPOPT
-      if: env.INCLUDE_IPOPT
+      if: startsWith(matrix.os, 'macos') && env.INCLUDE_IPOPT
       id: cache-ipopt
       uses: actions/cache@v2
       with:
-        path: ~/build/ipopt
+        path: ~/install
         key: ${{ matrix.os }}-ipopt
+    - name: Cache IPOPT-MEX
+      if: env.INCLUDE_IPOPT
+      id: cache-ipopt-mex
+      uses: actions/cache@v2
+      with:
+        path: ~/build/ipopt
+        key: ${{ matrix.os }}-ipopt-mex
     - name: Cache OSQP
       if: env.INCLUDE_OSQP
       id: cache-osqp
@@ -84,7 +91,7 @@ jobs:
         ./coinbrew build Ipopt --prefix=$HOME/install --test --no-prompt
         ./coinbrew install Ipopt
     - name: Build IPOPT Octave interface
-      if: env.INCLUDE_IPOPT && steps.cache-ipopt.outputs.cache-hit != 'true'
+      if: env.INCLUDE_IPOPT && steps.cache-ipopt-mex.outputs.cache-hit != 'true'
       env:
         IPOPT_VER: 3.11.9
       run: |
