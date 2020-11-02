@@ -157,4 +157,4 @@ jobs:
       with:
         name: ipopt-mex
         path: |
-          $HOME/build/ipopt
+          ~/build/ipopt
