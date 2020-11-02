@@ -30,23 +30,12 @@ jobs:
         sudo apt-get install -y -qq coinor-libipopt-dev liboctave-dev octave
         octave-cli --no-gui --eval ver
         echo "OCTAVE_VER=`octave-cli --no-gui --eval "fprintf('%s', ver('octave').Version)"`" >> $GITHUB_ENV
-    - name: Cache Octave (Mac)
-      if: startsWith(matrix.os, 'macos')
-      id: cache-octave
-      uses: actions/cache@v2
-      with:
-        path: /usr/local
-        key: ${{ matrix.os }}-octave
     - name: Install GNU Octave (Mac)
-      if: startsWith(matrix.os, 'macos') && steps.cache-octave.outputs.cache-hit != 'true'
+      if: startsWith(matrix.os, 'macos')
       run: |
-        ls -l /usr/local
-        du -hd 1 /usr/local
         brew install octave
         octave-cli --no-gui --eval ver
         echo "OCTAVE_VER=`octave-cli --no-gui --eval "fprintf('%s', ver('octave').Version)"`" >> $GITHUB_ENV
-        ls -l /usr/local
-        du -hd 1 /usr/local
     - name: Include IPOPT?
       if: startsWith(env.OCTAVE_VER, '4.0') != 1
       run: echo "INCLUDE_IPOPT=1" >> $GITHUB_ENV
