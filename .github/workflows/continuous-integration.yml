@@ -14,18 +14,19 @@ jobs:
 
     steps: 
     - uses: actions/checkout@v2
-    - name: Clone MP-Test
-      run: git clone --depth=1 https://github.com/MATPOWER/mptest.git ${GITHUB_WORKSPACE}/mptest
     - name: Initialize Package Manager (Linux)
       if: startsWith(matrix.os, 'ubuntu')
       run: sudo apt-get update -qq
     - name: Initialize Package Manager (Mac)
       if: startsWith(matrix.os, 'macos')
       run: brew update
-    - name: Install GNU Octave (Linux)
+    - name: Install bash (Mac)
+      if: startsWith(matrix.os, 'macos')
+      run: brew install bash
+    - name: Install GNU Octave / IPOPT (Linux)
       if: startsWith(matrix.os, 'ubuntu')
       run: |
-        sudo apt-get install -y -qq liboctave-dev octave
+        sudo apt-get install -y -qq coinor-libipopt-dev liboctave-dev octave
         octave-cli --no-gui --eval ver
         echo "OCTAVE_VER=`octave-cli --no-gui --eval "fprintf('%s', ver('octave').Version)"`" >> $GITHUB_ENV
     - name: Install GNU Octave (Mac)
@@ -34,9 +35,94 @@ jobs:
         brew install octave
         octave-cli --no-gui --eval ver
         echo "OCTAVE_VER=`octave-cli --no-gui --eval "fprintf('%s', ver('octave').Version)"`" >> $GITHUB_ENV
-    - name: Set MPTEST_PATH
-      run: echo "MPTEST_PATH=${GITHUB_WORKSPACE}/mptest/lib:${GITHUB_WORKSPACE}/mptest/lib/t" >> $GITHUB_ENV
-    - name: Test MP-Test
+    - name: Include IPOPT?
+      if: startsWith(env.OCTAVE_VER, '4.0') != 1
+      run: echo "INCLUDE_IPOPT=1" >> $GITHUB_ENV
+    - name: Include OSQP?
+      if: startsWith(env.OCTAVE_VER, '4.0') != 1
+      run: echo "INCLUDE_OSQP=1" >> $GITHUB_ENV
+    - name: Build OSQP
+      if: env.INCLUDE_OSQP
       run: |
+        mkdir $HOME/build
+        cd $HOME/build
+        git clone --recursive https://github.com/oxfordcontrol/osqp
+        git clone --recurse-submodules https://github.com/oxfordcontrol/osqp-matlab
+        mkdir $HOME/build/osqp/build
+        mkdir $HOME/install
+        cd $HOME/build/osqp/build
+        cmake -DCMAKE_INSTALL_PREFIX=$HOME/install -G "Unix Makefiles" ..
+        cmake --build .
+        cmake --install .
+        ln -s /usr/include/octave-${OCTAVE_VER}/octave/Matrix.h $HOME/install/include/osqp/matrix.h
+        ls -al $HOME/install/include/osqp
+        cd $HOME/build/osqp-matlab
+        octave-cli --no-gui --eval "mex -I$HOME/install/include/osqp  -I$HOME/install/include/qdldl -I$HOME/build/osqp/lin_sys/direct/qdldl osqp_mex.cpp $HOME/install/lib/libosqp.a"
+        ls -al
+        echo "OSQP_PATH=$HOME/build/osqp-matlab" >> $GITHUB_ENV
+    - name: Build IPOPT from source (Mac)
+      if: startsWith(matrix.os, 'macos') && env.INCLUDE_IPOPT
+      run: |
+        git clone https://www.github.com/coin-or/coinbrew
+        cd coinbrew
+        ./coinbrew fetch Ipopt --no-prompt
+        ./coinbrew build Ipopt --prefix=$HOME/install --test --no-prompt
+        ./coinbrew install Ipopt
+    - name: Build IPOPT MEX interface
+      if: env.INCLUDE_IPOPT
+      env:
+        IPOPT_VER: 3.11.9
+      run: |
+        export PKG_CONFIG_PATH=$HOME/install/lib/pkgconfig
+        curl -SL https://github.com/coin-or/Ipopt/archive/releases/${IPOPT_VER}.tar.gz | tar -xzC $HOME/build
+        mv $HOME/build/Ipopt-releases-${IPOPT_VER}/Ipopt/contrib/MatlabInterface $HOME/build/ipopt
+        mv $GITHUB_WORKSPACE/.travis/Makefile $HOME/build/ipopt/src
+        make -C $HOME/build/ipopt/src
+        mv $HOME/build/ipopt/src/*.mex $HOME/build/ipopt/
+    - name: Install IPOPT Octave interface
+      if: env.INCLUDE_IPOPT
+      run: octave-cli --no-gui --eval "addpath('$HOME/build/ipopt'); savepath"
+    - name: Fix OSQP for Octave < 5.x (Linux)
+      if: startsWith(matrix.os, 'ubuntu') && env.INCLUDE_OSQP
+      run: echo "OSQP_PATH=${GITHUB_WORKSPACE}/.github/osqp:${HOME}/build/osqp-matlab" >> $GITHUB_ENV
+    - name: Install OSQP Octave interface
+      if: env.INCLUDE_OSQP
+      run: octave-cli --no-gui --eval "addpath('${OSQP_PATH}'); savepath"
+    - name: Install MP-Test, Set MPTEST_PATH
+      run: |
+        git clone --depth=1 https://github.com/MATPOWER/mptest.git $HOME/mptest
+        echo "MPTEST_PATH=$HOME/mptest/lib:$HOME/mptest/lib/t" >> $GITHUB_ENV
+    - name: Install MIPS, Set MIPS_PATH
+      run: |
+        git clone --depth=1 https://github.com/MATPOWER/mips.git $HOME/mips
+        echo "MIPS_PATH=$HOME/mips/lib:$HOME/mips/lib/t:${MPTEST_PATH}" >> $GITHUB_ENV
+    - name: Install MP-Opt-Model, Set MP_OPT_MODEL_PATH
+      run: |
+        git clone --depth=1 https://github.com/MATPOWER/mp-opt-model.git $HOME/mp-opt-model
+        echo "MP_OPT_MODEL_PATH=$HOME/mips/lib:$HOME/mips/lib/t:${MP_OPT_MODEL_PATH}" >> $GITHUB_ENV
+    - name: Print MP-Test/MIPS/MP-Opt-Model version numbers
+      run: |
+        octave-cli --no-gui --eval ver
         octave-cli --no-gui -p $MPTEST_PATH --eval mptestver
-        octave-cli --no-gui -p $MPTEST_PATH --eval "test_mptest(0,1)"
+        octave-cli --no-gui -p $MIPS_PATH --eval mipsver
+        octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval mpomver
+    - name: Test GLPK availability, print version number
+      run:  |
+        octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "if ~have_feature('glpk'), exit(1); end"
+        octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "qps_glpk( [],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 3));"
+    - name: Test IPOPT availability, print version number
+      if: env.INCLUDE_IPOPT
+      run:  |
+        octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "if ~have_feature('ipopt'), exit(1); end"
+        octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "qps_ipopt([],[1; 1],[1 1],[2],[2],[1; 1],[1; 1],[1; 1],struct('verbose', 2));"
+    - name: Test OSQP availability, print version number
+      if: env.INCLUDE_OSQP
+      run:  |
+        octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "if ~have_feature('osqp'), exit(1); end"
+        octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval osqpver
+    - name: Test MP-Test
+      run: octave-cli --no-gui -p $MPTEST_PATH --eval "test_mptest(0,1)"
+    - name: Test MIPS
+      run: octave-cli --no-gui -p $MIPS_PATH --eval "test_mips(0,1)"
+    - name: Test MP-Opt-Model
+      run: octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "test_mp_opt_model(0,1)"
