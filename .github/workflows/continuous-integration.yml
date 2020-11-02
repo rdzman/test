@@ -6,10 +6,10 @@ jobs:
   build:
     strategy:
       matrix:
-#        os: [macos-10.15, macos-11.0, ubuntu-16.04, ubuntu-18.04, ubuntu-20.04]
+        os: [macos-10.15, macos-11.0, ubuntu-16.04, ubuntu-18.04, ubuntu-20.04]
 #        os: [macos-latest, ubuntu-16.04, ubuntu-18.04, ubuntu-20.04]
 #        os: [macos-latest, macos-11.0, ubuntu-latest]
-        os: [macos-11.0, ubuntu-latest]
+#        os: [macos-11.0, ubuntu-latest]
 
     runs-on: ${{ matrix.os }}
 
@@ -97,8 +97,8 @@ jobs:
     - name: Install IPOPT Octave interface
       if: env.INCLUDE_IPOPT
       run: octave-cli --no-gui --eval "addpath('$HOME/build/ipopt'); savepath"
-    - name: Fix OSQP for Octave < 5.x (Linux)
-      if: startsWith(matrix.os, 'ubuntu') && env.INCLUDE_OSQP
+    - name: Fix OSQP for Octave < 5.x
+      if: startsWith(env.OCTAVE_VER, '4') && env.INCLUDE_OSQP
       run: echo "OSQP_PATH=${GITHUB_WORKSPACE}/.github/osqp:${HOME}/build/osqp-matlab" >> $GITHUB_ENV
     - name: Install OSQP Octave interface
       if: env.INCLUDE_OSQP
