@@ -99,7 +99,7 @@ jobs:
     - name: Install MP-Opt-Model, Set MP_OPT_MODEL_PATH
       run: |
         git clone --depth=1 https://github.com/MATPOWER/mp-opt-model.git $HOME/mp-opt-model
-        echo "MP_OPT_MODEL_PATH=$HOME/mp-opt-model/lib:$HOME/mp-opt-model/lib/t:${MP_OPT_MODEL_PATH}" >> $GITHUB_ENV
+        echo "MP_OPT_MODEL_PATH=$HOME/mp-opt-model/lib:$HOME/mp-opt-model/lib/t:${MIPS_PATH}" >> $GITHUB_ENV
     - name: Print MP-Test/MIPS/MP-Opt-Model version numbers
       run: |
         octave-cli --no-gui --eval ver
