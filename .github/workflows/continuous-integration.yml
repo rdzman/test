@@ -29,12 +29,23 @@ jobs:
         sudo apt-get install -y -qq coinor-libipopt-dev liboctave-dev octave
         octave-cli --no-gui --eval ver
         echo "OCTAVE_VER=`octave-cli --no-gui --eval "fprintf('%s', ver('octave').Version)"`" >> $GITHUB_ENV
-    - name: Install GNU Octave (Mac)
+    - name: Cache Octave (Mac)
       if: startsWith(matrix.os, 'macos')
+      id: cache-octave
+      uses: actions/cache@v2
+      with:
+        path: /usr/local
+        key: ${{ runner.os }}-octave
+    - name: Install GNU Octave (Mac)
+      if: startsWith(matrix.os, 'macos') && steps.cache-octave.outputs.cache-hit != 'true'
       run: |
+        ls -l /usr/local
+        du -hd 1 /usr/local
         brew install octave
         octave-cli --no-gui --eval ver
         echo "OCTAVE_VER=`octave-cli --no-gui --eval "fprintf('%s', ver('octave').Version)"`" >> $GITHUB_ENV
+        ls -l /usr/local
+        du -hd 1 /usr/local
     - name: Include IPOPT?
       if: startsWith(env.OCTAVE_VER, '4.0') != 1
       run: echo "INCLUDE_IPOPT=1" >> $GITHUB_ENV
@@ -82,7 +93,7 @@ jobs:
         ./coinbrew fetch Ipopt --no-prompt
         ./coinbrew build Ipopt --prefix=$HOME/install --test --no-prompt
         ./coinbrew install Ipopt
-    - name: Build IPOPT MEX interface
+    - name: Build IPOPT Octave interface
       if: env.INCLUDE_IPOPT && steps.cache-ipopt.outputs.cache-hit != 'true'
       env:
         IPOPT_VER: 3.11.9
@@ -140,7 +151,9 @@ jobs:
       run: octave-cli --no-gui -p $MIPS_PATH --eval "test_mips(0,1)"
     - name: Test MP-Opt-Model
       run: octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "test_mp_opt_model(0,1)"
-    - name: Debug
-      run:  |
-        echo "HOME=$HOME"
-        echo "GITHUB_WORKSPACE=${GITHUB_WORKSPACE}"
+    - name: Create IPOPT artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: ipopt-mex
+        path: |
+          $HOME/build/ipopt
