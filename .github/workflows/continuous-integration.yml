@@ -41,7 +41,9 @@ jobs:
       run: echo "INCLUDE_IPOPT=1" >> $GITHUB_ENV
     - name: Include OSQP?
       if: startsWith(env.OCTAVE_VER, '4.0') != 1
-      run: echo "INCLUDE_OSQP=1" >> $GITHUB_ENV
+      run: |
+        echo "INCLUDE_OSQP=1" >> $GITHUB_ENV
+        echo "OSQP_PATH=$HOME/build/osqp-matlab" >> $GITHUB_ENV
     - name: Cache IPOPT
       if: startsWith(matrix.os, 'macos') && env.INCLUDE_IPOPT
       id: cache-ipopt
@@ -81,7 +83,6 @@ jobs:
         cd $HOME/build/osqp-matlab
         octave-cli --no-gui --eval "mex -I$HOME/install/include/osqp  -I$HOME/install/include/qdldl -I$HOME/build/osqp/lin_sys/direct/qdldl osqp_mex.cpp $HOME/install/lib/libosqp.a"
         ls -al
-        echo "OSQP_PATH=$HOME/build/osqp-matlab" >> $GITHUB_ENV
     - name: Build IPOPT from source (Mac)
       if: startsWith(matrix.os, 'macos') && env.INCLUDE_IPOPT && steps.cache-ipopt.outputs.cache-hit != 'true'
       run: |
