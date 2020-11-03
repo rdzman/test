@@ -101,7 +101,7 @@ jobs:
         git clone https://www.github.com/coin-or/coinbrew
         cd coinbrew
         ./coinbrew fetch Ipopt --no-prompt
-        ./coinbrew build Ipopt --prefix=$HOME/install --static --test --no-prompt
+        ./coinbrew build Ipopt --prefix=$HOME/install --test --no-prompt
         ./coinbrew install Ipopt
 
     - name: Build IPOPT Octave interface
