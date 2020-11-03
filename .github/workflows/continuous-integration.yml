@@ -179,6 +179,7 @@ jobs:
     - name: Create IPOPT artifact
       uses: actions/upload-artifact@v2
       with:
-        name: ${{ matrix.os }}-octave-${{ env.OCTAVE_VER }}-ipopt-mex
+        name: ${{ matrix.os }}-octave-${{ env.OCTAVE_VER }}-mex-files
         path: |
           ~/build/ipopt
+          ~/build/osqp-matlab
