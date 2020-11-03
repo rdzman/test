@@ -176,7 +176,7 @@ jobs:
     - name: Test MP-Opt-Model
       run: octave-cli --no-gui -p $MP_OPT_MODEL_PATH --eval "test_mp_opt_model(0,1)"
 
-    - name: Create IPOPT artifact
+    - name: Create MEX file downloads
       uses: actions/upload-artifact@v2
       with:
         name: ${{ matrix.os }}-octave-${{ env.OCTAVE_VER }}-mex-files
