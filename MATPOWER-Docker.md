@@ -36,15 +36,17 @@ docker run -it --rm matpower/matpower:latest octave-cli
 ```
 
 **_graphical user interface_**  
-_(requires X11 server to be running and `DISPLAY` environment variable to be set properly)_
+_(requires X11 server to be running and `DISPLAY` environment variable
+to be set properly)_
 ```
 docker run -it --rm --network=host --env="DISPLAY" \
   --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
   matpower/matpower:latest octave --force-gui
 ```
 
-This runs Octave in your newly launched Docker container, with [MATPOWER][1]
-and the [MATPOWER Extras][6] already installed in the Octave path.
+This runs [Octave][9] in your newly launched Docker container, with
+[MATPOWER][1] and the [MATPOWER Extras][6] already installed in the
+Octave path.
 
 
 ### 3. Exectute MATPOWER commands
@@ -62,18 +64,20 @@ runopf('case2383wp', mpopt);
 Additional Notes
 ----------------
 
-- To run a different version of MATPOWER or Octave, replace the `latest` tag
-with the appropriate tag from the table in the Versions section below.
+- To run a different version of [MATPOWER][1] or [Octave][9], replace
+  the `latest` tag with the appropriate tag from the table in the Versions
+  section below.
 
 - You can also replace `octave-cli` or `octave --force-gui` in the
-`docker run` command with `bash` to start your container at the shell
-prompt. From there you can, for example, start multiple GUI instances
-of Octave in the same container. Two useful aliases defined in the shell
-are `ot` and `otg` to start command-line and GUI versions of Octave.
+  `docker run` command with `bash` to start your container at the shell
+  prompt. From there you can, for example, start multiple GUI instances of
+  [Octave][9] in the same container. Two useful aliases defined in the shell
+  are `ot` and `otg` to start command-line and GUI versions of [Octave][9],
+  respectively.
 
-- You can also access Octave and [MATPOWER][1] in your running container
-  from the command-line on your host machine directly via `docker exec`
-  where `<container-name>` can be found via `docker container ls --all`.
+- You can also access [Octave][9] and [MATPOWER][1] in your running container
+  from the command-line on your host machine via `docker exec` where the
+  `<container-name>` can be found via `docker container ls --all`.
   ```
   docker exec -it <container-name> octave-cli
   ```
@@ -82,8 +86,9 @@ are `ot` and `otg` to start command-line and GUI versions of Octave.
 Versions
 --------
 
-Several images are available with different combinations of MATPOWER and
-GNU Octave versions, with the following tags and naming conventions:
+Several images are available with different combinations of
+[MATPOWER][1] and [GNU Octave][9] versions, with the following tags and
+naming conventions:
 
 |       tag          |  MATPOWER version  |  Octave version   |
 | ------------------ | :----------------: | :---------------: |
@@ -110,9 +115,10 @@ GNU Octave versions, with the following tags and naming conventions:
 | `4.0`              |        4.0         |       4.0.3       |
 
 Here _current release_ means the most recent numbered release (currently
-7.1 for MATPOWER, and 6.4.0 for Octave) and _latest_ `master` refers to
-the most recent build from the `master` branch of the [MATPOWER][5] and [MATPOWER
-Extras][6] (and possibly [MP-Element][11] GitHub repositories.
+7.1 for [MATPOWER][1], and 6.4.0 for [Octave][9]) and _latest_ `master`
+refers to the most recent build from the `master` branch of the
+[MATPOWER][5] and [MATPOWER Extras][6] (and possibly [MP-Element][11]
+GitHub repositories.
 
 
 ---
