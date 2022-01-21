@@ -43,12 +43,35 @@ GNU Octave versions, with the following tags and naming conventions:
 | `4.1`              |        4.1         |       4.0.3       |
 | `4.0c`             |        4.0         | _current release_ |
 | `4.0`              |        4.0         |       4.0.3       |
-| `dev-latest`       | _latest `master`_  | _current release_ |
-| `dev-latest-5.2.0` | _latest `master`_  |       5.2.0       |
-| `dev-YYYY-MM-DD`   | _`master` on date_ | _current release_ |
+|                    |                    |                   |
+| `dev-latest`       | _latest_ `master`  | _current release_ |
+| `dev-latest-5.2.0` | _latest_ `master`  |       5.2.0       |
+| `dev-YYYY-MM-DD`   | `master` _on date_ | _current release_ |
+|                    |                    |                   |
+| _development versions_ |                |                   |
+| `dev-latest`       | _latest_ `master`  | _current release_ |
+| `dev-latest-5.2.0` | _latest_ `master`  |       5.2.0       |
+| `dev-YYYY-MM-DD`   | `master` _on date_ | _current release_ |
+|                    |                    |                   |
+| _release versions_ |                    |                   |
+| `latest`           | _current release_  | _current release_ |
+| `7.1c`             |        7.1         | _current release_ |
+| `7.1`              |        7.1         |       5.2.0       |
+| `7.0c`             |        7.0         | _current release_ |
+| `7.0`              |        7.0         |       5.1.0       |
+| `6.0c`             |        6.0         | _current release_ |
+| `6.0`              |        6.0         |       4.2.2       |
+| `5.1c`             |        5.1         | _current release_ |
+| `5.1`              |        5.1         |       4.0.3       |
+| `5.0c`             |        5.0         | _current release_ |
+| `5.0`              |        5.0         |       4.0.3       |
+| `4.1c`             |        4.1         | _current release_ |
+| `4.1`              |        4.1         |       4.0.3       |
+| `4.0c`             |        4.0         | _current release_ |
+| `4.0`              |        4.0         |       4.0.3       |
 
 Here _current release_ means the most recent numbered release (currently
-7.1 for MATPOWER, and 6.4.0 for Octave) and _latest `master`_ refers to
+7.1 for MATPOWER, and 6.4.0 for Octave) and _latest__ `master` refers to
 the most recent build from the `master` branch on GitHub.
 
 
