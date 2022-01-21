@@ -4,8 +4,8 @@ MATPOWER's Octave Docker Image
 A complete [GNU Octave][1] environment is available in a [Docker][2]
 container by using the [matpower/octave][3] image on [Docker Hub][4].
 This image is used as base for the [MATPOWER Docker image][5]
-([matpower/matpower][5]) and consists of the corresponding official [GNU
-Octave][1] image ([gnuoctave/octave][6]) with MEX interfaces for several
+([matpower/matpower][6]) and consists of the corresponding official [GNU
+Octave][1] image ([gnuoctave/octave][7]) with MEX interfaces for several
 optimization packages pre-installed.
 
 Specifically, the following packages are included, depending on the
@@ -30,7 +30,7 @@ System Requirements
 -------------------
 
 You will need working installations of:
-- [Docker][7], and
+- [Docker][8], and
 - an X11 server _(optional, required for use of the GUI)_
 
 
@@ -97,6 +97,7 @@ Additional Notes
 [2]: https://www.docker.com
 [3]: https://hub.docker.com/r/matpower/octave
 [4]: https://hub.docker.com/
-[5]: https://hub.docker.com/r/matpower/matpower
-[6]: https://hub.docker.com/r/gnuoctave/octave
-[7]: https://www.docker.com/products/docker-desktop
+[5]: https://matpower.org
+[6]: https://hub.docker.com/r/matpower/matpower
+[7]: https://hub.docker.com/r/gnuoctave/octave
+[8]: https://www.docker.com/products/docker-desktop
