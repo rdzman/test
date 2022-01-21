@@ -28,12 +28,12 @@ GNU Octave versions, with the following tags and naming conventions:
 
 |       tag          |  MATPOWER version  |  Octave version   |
 | ------------------ | :----------------: | :---------------: |
-| _development versions_
+| *_development versions_* |                |                   |
 | `dev-latest`       | _latest_ `master`  | _current release_ |
 | `dev-latest-5.2.0` | _latest_ `master`  |       5.2.0       |
 | `dev-YYYY-MM-DD`   | `master` _on date_ | _current release_ |
 |                    |                    |                   |
-| _release versions_
+| **_release versions_** |                    |                   |
 | `latest`           | _current release_  | _current release_ |
 | `7.1c`             |        7.1         | _current release_ |
 | `7.1`              |        7.1         |       5.2.0       |
