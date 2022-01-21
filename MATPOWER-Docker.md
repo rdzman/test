@@ -20,7 +20,7 @@ version of the Octave image being used.
 |     4.0.x      |         |      |   x    |  x   |   x    |
 
 All packages are built from the latest versions of the source from GitHub,
-except YALMIP, which uses R20180817.-
+except YALMIP, which uses R20180817.
 
 This image supports both a simple command-line mode and, with an X11
 server running on the host, the full Octave GUI.
@@ -37,7 +37,7 @@ You will need working installations of:
 Getting Started
 ---------------
 
-### 1. Get the MATPOWER Docker image
+### 1. Get the Octave Docker image
 ```
 docker pull docker.io/matpower/octave:latest
 ```
