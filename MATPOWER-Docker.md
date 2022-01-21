@@ -20,6 +20,65 @@ You will need working installations of:
 - an X11 server _(optional, required for use of the GUI)_
 
 
+Quick Start
+-----------
+
+### 1. Get the MATPOWER Docker image
+```
+docker pull docker.io/matpower/matpower:latest
+```
+
+### 2. Start Octave in the container
+
+**_command line only_**
+```
+docker run -it --rm matpower/matpower:latest octave-cli
+```
+
+**_graphical user interface_**  
+_(requires X11 server to be running and `DISPLAY` environment variable to be set properly)_
+```
+docker run -it --rm --network=host --env="DISPLAY" \
+  --volume="$HOME/.Xauthority:/root/.Xauthority:rw" \
+  matpower/matpower:latest octave --force-gui
+```
+
+This runs Octave in your newly launched Docker container, with [MATPOWER][4]
+and the [MATPOWER Extras][5] already installed in the Octave path.
+
+
+### 3. Exectute MATPOWER commands
+
+For example ...
+```
+mpver
+test_matpower
+runpf('case9');
+mpopt = mpoption('verbose', 2);
+runopf('case2383wp', mpopt);
+```
+
+
+Additional Notes
+----------------
+
+- To run a different version of MATPOWER or Octave, replace the `latest` tag
+with the appropriate tag from the table below.
+
+- You can also replace `octave-cli` or `octave --force-gui` in the
+`docker run` command with `bash` to start your container at the shell
+prompt. From there you can, for example, start multiple GUI instances
+of Octave in the same container. Two useful aliases defined in the shell
+are `ot` and `otg` to start command-line and GUI versions of Octave.
+
+- You can also access Octave and [MATPOWER][4] in your running container
+  from the command-line on your host machine directly via `docker exec`
+  where `<container-name>` can be found via `docker container ls --all`.
+  ```
+  docker exec -it <container-name> octave-cli
+  ```
+
+
 Versions
 --------
 
@@ -28,12 +87,12 @@ GNU Octave versions, with the following tags and naming conventions:
 
 |       tag          |  MATPOWER version  |  Octave version   |
 | ------------------ | :----------------: | :---------------: |
-| *_development versions_* |                |                   |
+| **_development versions_** |            |                   |
 | `dev-latest`       | _latest_ `master`  | _current release_ |
 | `dev-latest-5.2.0` | _latest_ `master`  |       5.2.0       |
 | `dev-YYYY-MM-DD`   | `master` _on date_ | _current release_ |
 |                    |                    |                   |
-| **_release versions_** |                    |                   |
+| **_release versions_** |                |                   |
 | `latest`           | _current release_  | _current release_ |
 | `7.1c`             |        7.1         | _current release_ |
 | `7.1`              |        7.1         |       5.2.0       |
@@ -51,76 +110,10 @@ GNU Octave versions, with the following tags and naming conventions:
 | `4.0`              |        4.0         |       4.0.3       |
 
 Here _current release_ means the most recent numbered release (currently
-7.1 for MATPOWER, and 6.4.0 for Octave) and _latest__ `master` refers to
-the most recent build from the `master` branch on GitHub.
+7.1 for MATPOWER, and 6.4.0 for Octave) and _latest_ `master` refers to
+the most recent build from the `master` branch of the [MATPOWER][4] and [MATPOWER
+Extras][5] (and possibly [MP-Element][] GitHub repositories.
 
-
-Using the MATPOWER Docker Image
--------------------------------
-
-To set up and use the MATPOWER Docker image, please follow the instructions
-found in the [README][11] for the [compdatasci/octave-desktop][6] Docker image,
-with the following minor difference:
-
-- The Python script is called [`matpower_desktop.py`][12] instead of
-  `octave_desktop.py` and is found at
-  [`https://raw.githubusercontent.com/MATPOWER/matpower/master/docker/matpower_desktop.py`][12]
-  (not at `https://raw.githubusercontent.com/compdatasci/octave-desktop/master/octave_desktop.py`).
-
-
-Quick Start
------------
-
-#### Run via Python script — Access GUI through Web Browser
-With Python installed, Docker installed and running, and the
-[`matpower_desktop.py`][12] script in your working directory ...
-```
-python matpower_desktop.py -p
-```
-
-Then via the Terminal window of the Ubuntu desktop that appears in your
-web-browser window ...
-```
-octave &
-```
-
-This runs Octave in your newly launched Docker container, with [MATPOWER][4]
-and the [MATPOWER Extras][5] already installed in the Octave path.
-
-You can also access Octave and [MATPOWER][4] in this container (the one
-you launched via Python script) from the command-line on your host machine,
-either via SSH ...
-```
-ssh -X -p 2222 ubuntu@localhost
-```
-... then, in the container ...
-```
-octave-cli
-```
-
-... or directly via `docker exec` ...
-```
-docker exec -it <container-name> octave-cli
-```
-... where `<container-name>` can be found via `docker container ls --all`.
-
-
-#### Run Directly — Command-line Only
-
-If you do not have a need for the GUI, you can launch a shell or command-line
-Octave session directly in a new container (without the Python script) via
-`docker run`. The following command runs a new container from the MATPOWER
-Docker image, leaving you at the Octave command-line.
-```
-docker run --rm -it matpower/matpower-desktop:latest /sbin/my_init -- octave-cli
-```
-Or, if you prefer to enter a session where you can use shell commands
-(including `octave-cli`), use:
-```
-docker run --rm -it matpower/matpower-desktop:latest /sbin/my_init -- bash -l
-```
-In either case, [MATPOWER][4] and the [MATPOWER Extras][5] are already
-installed in the Octave path.
 
 ---
 
@@ -134,7 +127,4 @@ installed in the Octave path.
 [7]: https://hub.docker.com/r/gnuoctave/octave
 [8]: https://octave.org
 [9]: https://www.docker.com/products/docker-desktop
-    [10]: https://www.python.org
-[11]: https://github.com/compdatasci/octave-desktop/blob/master/README.md
-[12]: https://raw.githubusercontent.com/MATPOWER/matpower/master/docker/matpower_desktop.py
-[13]: https://hub.docker.com/r/matpower/matpower-desktop
+[10]: https://github.com/MATPOWER/mp-element
